@@ -18,8 +18,8 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 * **Behavior**
   Perilaku<br>
   >*Ex :*<br>
-  >Behavior Overt : tampak/terbuka<br>
-  >Behavior Covert : tidak tampak/tersembunyi
+  >Overt Behavior : Perilaku tampak/terbuka<br>
+  >Covert Behavior : Perilaku tidak tampak/tersembunyi
   
 ### K
 * **Knowledge**<br>
