@@ -13,7 +13,7 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 {:toc}
 
 ### B
-* **Back Azimuth**<br
+* **Back Azimuth**<br>
   Sasaran Balik
 * **Behavior**
   Perilaku<br>
