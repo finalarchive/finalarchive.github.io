@@ -23,6 +23,7 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
   >*Ex :*<br>
   >Overt Behavior : Perilaku tampak/terbuka<br>
   >Covert Behavior : Perilaku tidak tampak/tersembunyi
+  
 ### C
 ### D
 ### E
@@ -36,6 +37,7 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
   Pengetahuan
 * **Korespondensi**<br>
   aktivitas penyampaian maksud melalui surat dari satu pihak kepada pihak lain/aktivitas surat menyurat
+  
 ### L
 ### M
 ### N
@@ -46,6 +48,7 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 ### S
 * **Skeptis**<br>
   kurang percaya
+  
 ### T
 ### U
 ### V
