@@ -4,7 +4,7 @@ title: Term Collection
 permalink: /term/
 ---
 
-Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan istilah-istilah yang saya kumpulkan dan dirasa bermanfaat dikemudian hari.
+Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan istilah-istilah yang sering saya kumpulkan baik dalam bahasa indonesia, ingris, Ilmiah dan bahasa lainnya yang dirasa bermanfaat.
 
 ***Daftar Isi***
 {: .no_toc .text-delta }
@@ -13,4 +13,19 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 {:toc}
 
 ### B
-* **Back Azimuth** >> Sasaran Balik
+* **Back Azimuth**<br
+  Sasaran Balik
+* **Behavior**
+  Perilaku<br>
+  Behavior Overt : tampak/terbuka<br>
+  Behavior Covert : tidak tampak/tersembunyi
+  
+### K
+* **Knowledge***<br>
+  Pengetahuan
+* **Korespondensi**<br>
+  aktivitas penyampaian maksud melalui surat dari satu pihak kepada pihak lain/aktivitas surat menyurat
+
+### S
+* **Skeptis**<br>
+  kurang percaya
