@@ -17,7 +17,7 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
   Sasaran Balik
 * **Behavior**
   Perilaku<br>
-  Ex :<br>
+  >*Ex :*<br>
   >Behavior Overt : tampak/terbuka<br>
   >Behavior Covert : tidak tampak/tersembunyi
   
