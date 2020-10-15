@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Excel : Membuat Tombol Print"
-date:   2020-10-08 15:38
+date:   2020-10-15 18:48
 categories: [aplikasi, msexcel]
 permalink: /:year/:month/:title
 ---
