@@ -15,8 +15,8 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 ### B
 * **Back Azimuth**<br>
   Sasaran Balik
-* **Behavior**
-  Perilaku<br>
+* **Behavior**<br>
+  Perilaku
   >*Ex :*<br>
   >Overt Behavior : Perilaku tampak/terbuka<br>
   >Covert Behavior : Perilaku tidak tampak/tersembunyi
