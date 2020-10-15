@@ -26,7 +26,7 @@ permalink: /:year/:month/:title
 |Sheet1.PrintOut |	Mencetak Sheet 1 saja|
 |Sheets(Array("Sheet1","Sheet3")).PrintOut  | 	Mencetak Sheet1 dan Sheet3 (Sheet yg ada dalam Array)|
 |Selection.PrintOut |	Mencetak Range yang di Select atau di blok|
-R|ange ("A1:F10").PrintOut |	Mencetak data di range A1:F10|
+|Range ("A1:F10").PrintOut |	Mencetak data di range A1:F10|
 
 
 # Referensi
