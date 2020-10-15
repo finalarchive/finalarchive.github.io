@@ -3,6 +3,12 @@ layout: page
 title: Term Collection
 permalink: /term/
 ---
+***Daftar Isi***
+{: .no_toc .text-delta }
+
+{:toc}
+
+
 <h4> [A](#A) - [B](#B) </h4>
 
 
