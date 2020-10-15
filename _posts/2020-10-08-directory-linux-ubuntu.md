@@ -100,6 +100,13 @@ permalink: /:year/:month/:title
 |**/var/log/messages** | log pesan yang dihasilkan oleh daemon syslog pada boot.|
 |**/var/log/wtmp** | Daftar waktu login dan durasi setiap pengguna pada sistem saat ini.|
 
+# Directory Yang Sering di Akses
+
+| <center>Directory</center> | <center>Discripsi</center> |
+| :--- | :--- |
+| /usr/local/src/ | tempat file-file aplikasi yang tidak termasuk dalam paket resmi aplikasi distro Linux atau hasil download |
+
+
 # Referensi
 * https://coolnetkid.wordpress.com/2014/05/06/linux-struktur-direktori/
 * http://www.pintarkomputer.com/struktur-direktori-dan-lokasi-file-file-penting-dalam-linux/
