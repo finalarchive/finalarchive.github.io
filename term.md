@@ -5,7 +5,7 @@ permalink: /term/
 ---
 
 
-[A](#a) - [B](#b) - [Z](#z)
+[**A**](#a) - [**B**](#b) - [**C**](#c) - [**D**](#d) - [**E**](#e) - [**F**](#f) - [**G**](#g) - [**H**](#h) - [**I**](#i) - [**J**](#j) - [**K**](#k) - [**L**](#l) - [**M**](#m) - [**N**](#n) - [**O**](#p) - [**P**](#p) - [**Q**](#q) - [**R**](#r) - [**S**](#s) - [**T**](#t) - [**U**](#u) - [**V**](#v) - [**W**](#w) - [**X**](#x) - [**Y**](#y) - [**Z**](#z) - 
 
 
 Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan istilah-istilah yang kumpulkan baik istilah dalam bahasa indonesia, ingris dan bahasa lainnya yang dirasa bermanfaat.
