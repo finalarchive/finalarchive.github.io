@@ -15,6 +15,7 @@ permalink: /:year/:month/:title
   ActiveSheet.PrintOut
   End Sub
    ```
+   
 # Syntax Menarik
  
 |Code VBA |	Fungsi|
