@@ -6,10 +6,11 @@ permalink: /term/
 ***Daftar Isi***
 {: .no_toc .text-delta }
 
+TOC
 {:toc}
 
 
-<h4> [A](#A) - [B](#B) </h4>
+[A](#A) - [B](#B)
 
 
 Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan istilah-istilah yang kumpulkan baik istilah dalam bahasa indonesia, ingris dan bahasa lainnya yang dirasa bermanfaat.
