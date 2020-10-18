@@ -43,6 +43,8 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 ### S
 * **Skeptis**<br>
   kurang percaya
+* **Stunting**<br>
+  Kondisi gagal pertumbuhan pada anak (pertumbuhan tubuh dan otak) akibat kekurangan gizi dalam waktu yang lama. Sehingga, anak lebih pendek atau perawakan pendek dari anak normal seusianya dan memiliki keterlambatan dalam berpikir. Umumnya disebabkan asupan makan yang tidak sesuai dengan kebutuhan gizi.
   
 ### T
 ### U
