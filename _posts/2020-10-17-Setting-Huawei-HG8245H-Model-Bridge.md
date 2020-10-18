@@ -31,26 +31,26 @@ permalink: /:year/:month/:title
 * Konfigurasi interface Lan, Klik **LAN**
 	* **LAN Port Work Mode** Cetang Port LAN yang akan diaktifkan.
 	* **LAN Host Configuration**
-		>**Primary Address**
-		>Primary IP Address: 10.10.10.4 [No IP Bridge- digunakan untuk login ke modem]
-		>Primary Address Subnet Mask: 255.255.255.0
+		>**Primary Address**<br>
+		>Primary IP Address: 10.10.10.4 [No IP Bridge- digunakan untuk login ke modem]<br>
+		>Primary Address Subnet Mask: 255.255.255.0<br>
 		>
-		>**Secondary Address**
-		>Enable secondary address: [dikosongkan]
+		>**Secondary Address**<br>
+		>Enable secondary address: [dikosongkan]<br>
 	
 * Konfigurasi Interface WAN, Klik **WAN** --> **WAN Configuration** --> **New** ubaha parameter sebagai berikut :
 
-  >**Basic Information**
-  >Enable WAN : [V]
-  >Encapsulation Mode : IPoE
-  >Protocol Type : IPv4
-  >WAN Mode : Bridge WAN
-  >Service Type : OTHER
-  >Enable VLAN : [ ]
+  >**Basic Information**<br>
+  >Enable WAN : [V]<br>
+  >Encapsulation Mode : IPoE<br>
+  >Protocol Type : IPv4<br>
+  >WAN Mode : Bridge WAN<br>
+  >Service Type : OTHER<br>
+  >Enable VLAN : [ ]<br>
   >Binding Options : [Ceklis Port Lan atau SSID yang akan di Binding]
   >
-  >**IPv4 Information**
-  >Multicast VLAN ID: [ ]
+  >**IPv4 Information**<br>
+  >Multicast VLAN ID: [ ]<br>
 
   **Apply**
 
@@ -62,20 +62,20 @@ permalink: /:year/:month/:title
 
 	  Ubah parameter sebagai berikut ;
 
-	  >**SSID Configuration Details**
-	  >SSID Name: [Nama SSID]
-	  >Enable SSID: [V]	
-	  >Number of Associated Devices: 32
-	  >Broadcast SSID: [V]
-	  >Enable WMM: [V]
-	  >Authentication Mode: Open
-	  >Encryption Mode: None
+	  >**SSID Configuration Details**<br>
+	  >SSID Name: [Nama SSID]<br>
+	  >Enable SSID: [V]	<br>
+	  >Number of Associated Devices: 32<br>
+	  >Broadcast SSID: [V]<br>
+	  >Enable WMM: [V]<br>
+	  >Authentication Mode: Open<br>
+	  >Encryption Mode: None<br>
   
   	**Apply**
 
   * **WLAN Advanced Configuration**
 
     >**Advanced Configuration**
-	>Channel: [Isi nomor channel yang bagus]
-	>Channel Width:	20 Mhz
+	>Channel: [Isi nomor channel yang bagus]<br>
+	>Channel Width:	20 Mhz<br>
 	>Mode: 108.11 b/g/h
