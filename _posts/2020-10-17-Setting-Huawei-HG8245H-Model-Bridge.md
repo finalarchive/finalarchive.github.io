@@ -16,16 +16,16 @@ permalink: /:year/:month/:title
 
 * Huawai HG245H Ex. IndiHome
 
-  Username : Support<br>
-  Password: theworldinyourhand<br>
+  Username : **Support**<br>
+  Password: **theworldinyourhand**<br>
  
-  Username : telecomadmin<br>
-  Password: admintelecom<br>
+  Username : **telecomadmin**<br>
+  Password: **admintelecom**<br>
   
 * Huawai HG245H Ex. GIG Indosat
 
-  Username : telecomadmin<br>
-  Password : g1g.4dm1n<br>
+  Username : **telecomadmin**<br>
+  Password : **g1g.4dm1n**<br>
  
 ## Setting
 * Konfigurasi interface Lan, Klik **LAN**
@@ -34,9 +34,9 @@ permalink: /:year/:month/:title
 		>**Primary Address**
 		>Primary IP Address: 10.10.10.4 [No IP Bridge- digunakan untuk login ke modem]
 		>Primary Address Subnet Mask: 255.255.255.0
-		
+		>
 		>**Secondary Address**
-		>Enable secondary address:	[dikosongkan]
+		>Enable secondary address: [dikosongkan]
 	
 * Konfigurasi Interface WAN, Klik **WAN** --> **WAN Configuration** --> **New** ubaha parameter sebagai berikut :
 
@@ -48,17 +48,17 @@ permalink: /:year/:month/:title
   >Service Type : OTHER
   >Enable VLAN : [ ]
   >Binding Options : [Ceklis Port Lan atau SSID yang akan di Binding]
-  
+  >
   >**IPv4 Information**
   >Multicast VLAN ID: [ ]
-  
+
   **Apply**
-  
+
 * Setting SSID Klik  **WLAN**
 
-  * ** WLAN Advanced Configuration**
+  * **WLAN Advanced Configuration**
 
-	  >[V] Enablle WLAN  
+	  >[V] Enablle WLAN
 
 	  Ubah parameter sebagai berikut ;
 
@@ -66,18 +66,16 @@ permalink: /:year/:month/:title
 	  >SSID Name: [Nama SSID]
 	  >Enable SSID: [V]	
 	  >Number of Associated Devices: 32
-	  >Broadcast SSID: [V]	
-	  >Enable WMM: [V]	
+	  >Broadcast SSID: [V]
+	  >Enable WMM: [V]
 	  >Authentication Mode: Open
 	  >Encryption Mode: None
   
   	**Apply**
-  
+
   * **WLAN Advanced Configuration**
-  
+
     >**Advanced Configuration**
-	  >Channel: [Isi nomor channel yang bagus]
-    >Channel Width:	20 Mhz
-    >Mode: 108.11 b/g/h
-  
-  
+	>Channel: [Isi nomor channel yang bagus]
+	>Channel Width:	20 Mhz
+	>Mode: 108.11 b/g/h
