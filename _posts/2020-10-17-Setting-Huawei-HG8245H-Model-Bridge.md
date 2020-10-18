@@ -14,16 +14,18 @@ permalink: /:year/:month/:title
 
 ## Login Sebagi Super User
 
-* Huawai HG245H Ex. IndiHome<br>
-  >Username : Support
-  >Password: theworldinyourhand
+* Huawai HG245H Ex. IndiHome
+
+  Username : Support<br>
+  Password: theworldinyourhand<br>
+ 
+  Username : telecomadmin<br>
+  Password: admintelecom<br>
   
-  >Username : telecomadmin
-  >Password: admintelecom
-  
-* Huawai HG245H Ex. GIG Indosat<br>
-  >Username : telecomadmin
-  >Password : g1g.4dm1n
+* Huawai HG245H Ex. GIG Indosat
+
+  Username : telecomadmin<br>
+  Password : g1g.4dm1n<br>
  
   
   
