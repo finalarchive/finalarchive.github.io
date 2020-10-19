@@ -158,7 +158,6 @@
       </footer>
     </div>
     <div class="col-sm-2 main-layout ml-1">
-      <div class="border border-primary">
       <div class="fixed-condition">
         <h4>Category</h4>
         <hr>
@@ -166,39 +165,13 @@
         {% capture category_slug %}{{ category | first }}{% endcapture %}
         {% for c_slug in category_slug %}
         {% if c_slug == page.categories %}
-        <button class="btn btn-xs btn-primary active">{{ c_slug }}</button>
+        <button type="button" class="btn btn-xs btn-secondary active">{{ c_slug }}</button>
         {% else %}
-        <a href="/category/{{ c_slug }}" class="btn btn-xs btn-primary">{{ c_slug }}</a>
+        <a href="/category/{{ c_slug }}" type="button" class="btn btn-xs btn-secondary">{{ c_slug }}</a>
         {% endif %}
         {% endfor %}
         {% endfor %}
       </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
     <!-- end /.col-sm-8 -->
   </div>
