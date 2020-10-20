@@ -53,6 +53,8 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 ### O
 
 ### P
+* [**Pranala**](https://id.wikipedia.org/wiki/Pranala) (Bahasa Inggris: *Link*)<br>
+   sebuah acuan dalam dokumen ke dokumen yang lain atau sumber lain. Seperti halnya suatu kutipan di dalam literatur. Dikombinasikan dengan sebuah jaringan data dan sesuai dengan protokol akses, sebuah komputer dapat diminta untuk memperoleh sumber yang direferensikan. 
 
 ### Q
 
