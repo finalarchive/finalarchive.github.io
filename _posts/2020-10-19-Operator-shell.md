@@ -7,8 +7,8 @@ permalink: /:year/:month/:title
 ---
 
 
-
 Ini disebut operator shell dan ya, ada lebih banyak dari mereka. Saya akan memberikan gambaran singkat tentang yang paling umum di antara dua kelas utama, operator kontrol dan operator pengalihan , dan bagaimana mereka bekerja sehubungan dengan bash shell.
+
 ***Daftar Isi***
 {: .no_toc .text-delta }
 
