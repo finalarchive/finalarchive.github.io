@@ -13,7 +13,6 @@ permalink: /:year/:month/:title
 {:toc}
 
 # 1. Mengunakan ip
----
 
 #### Cek network yang tersedia
 
@@ -29,7 +28,6 @@ permalink: /:year/:month/:title
     ip link set dev eth0 down
 
 # 2. Mengunakan Ifconfig
----
 
 #### Cek network yang tersedia
     ifconfig -a

@@ -24,7 +24,6 @@ Pendekatan desain pengembang distro ini berfokus pada kesederhanaan, kebenaran p
 Archlinux adalah sebuah Distribusi Linux berbasis binary, yang artinya, paket-paket aplikasi didistribusikan dalam bentuk telah terkompilasi. Berbeda dengan Gentoo yang mendistribusikan paket-paketnya dalam bentuk kode sumber. 
 
 ## Step 0: Introduction
----
 
 Hello mas Bro, nama saya **Rizqi Nur Assyaufi**. Beberapa dari teman-teman mungkin sudah mengetahui bahwa saya adalah seorang Archer \(mungkin sebutan keren untuk pengguna Arch Linux\).
 
@@ -79,7 +78,6 @@ Target yang akan kita capai dari dokumentasi ini adalah :
 
 
 ## Step 1 : Connecting to the Internet
----
 
 ### 1.1 Pilih Network Adapter
 
@@ -165,7 +163,6 @@ $ pacman -Syy
 Tunggu proses sinkorinasi metadata hingga selesai. Setelah itu kita bisa bergerak ke-*step* selanjutnya.
 
 # STEP 2 : Disk Partitioning
----
 
 ## 2.1 Mengecek UEFI Mode
 
@@ -308,7 +305,6 @@ sr0                  11:0     1    523M   0  rom   /run/archiso/bootmnt
 Apabila telah sesuai, akan menampilkan susunan `/dev/sda` pada kolom **NAME**, seperti yang terdapat pada tabel di atas.
 
 # STEP 3 : Installing Arch Linux Base Packages
----
 
 Arch Linux adalah salah satu distribusi sistem operasi yang proses instalasinya membutuhkan koneksi internet untuk mengunduh paket-paket yang terdapat pada _server_ repositori.
 
@@ -405,7 +401,6 @@ Setelah `arch-chroot`.
 Pada tahap ini, kita dapat bergerak ke _step_ selanjutnya.
 
 # STEP 4 : Set up Bootloader
----
 
 ## 4.1 Install Bootloader \(systemd-boot\)
 
@@ -610,7 +605,6 @@ Untuk itu, sementara kita lanjutkan saja pada _session_ ini. Dan jangan *reboot*
 
 
 # STEP 5 : Set Language and Time Zone
----
 
 ## 5.1 Locale
 
@@ -688,7 +682,6 @@ Sampai sini, proses konfigurasi _locale_ dan _time zone_ telah selesai. Kita dap
 
 
 # STEP 6 : Create User, Password and Hostname
----
 
 ## 6.1 User and Password
 
@@ -826,7 +819,6 @@ Kalau pada tahap ini kalian berhasil. **Welcome to the BrotherHood !**
 
 
 # STEP 7 : Install GNOME and Complete Installation
----
 
 ## 7.1 Check Internet Connection
 
@@ -1418,5 +1410,4 @@ $ yaourt pamac-aur
 <span class="font-latin">Sedang dalam proses penulisan ...</span>
 
 # Referensi
----
 - <https://bandithijo.github.io/arch/>

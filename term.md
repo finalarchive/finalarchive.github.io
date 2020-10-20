@@ -10,6 +10,7 @@ permalink: /term/
 
 Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan istilah-istilah yang kumpulkan baik istilah dalam bahasa indonesia, ingris dan bahasa lainnya yang dirasa bermanfaat.
 ### A
+
 ### B
 * **Back Azimuth**<br>
   Sasaran Balik
@@ -20,13 +21,21 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
   >Covert Behavior : Perilaku tidak tampak/tersembunyi
   
 ### C
+
 ### D
+
 ### E
+
 ### F
+
 ### G
+
 ### H
+
 ### I
+
 ### J
+
 ### K
 * **Knowledge**<br>
   Pengetahuan
@@ -34,12 +43,19 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
   aktivitas penyampaian maksud melalui surat dari satu pihak kepada pihak lain/aktivitas surat menyurat
   
 ### L
+
 ### M
+
 ### N
+
 ### O
+
 ### P
+
 ### Q
+
 ### R
+
 ### S
 * **Skeptis**<br>
   kurang percaya
@@ -47,9 +63,15 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
   Kondisi gagal pertumbuhan pada anak (pertumbuhan tubuh dan otak) akibat kekurangan gizi dalam waktu yang lama. Sehingga, anak lebih pendek atau perawakan pendek dari anak normal seusianya dan memiliki keterlambatan dalam berpikir. Umumnya disebabkan asupan makan yang tidak sesuai dengan kebutuhan gizi.
   
 ### T
+
 ### U
+
 ### V
+
 ### W
+
 ### X
+
 ### Y
+
 ### Z
