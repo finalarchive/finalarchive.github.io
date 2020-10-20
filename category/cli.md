@@ -1,6 +1,6 @@
 ---
 layout: posts_by_category
-categories: CLI
+categories: cli
 title: CLI
 permalink: /category/cli
 ---

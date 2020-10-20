@@ -2,7 +2,7 @@
 layout: post
 title:  "Perintah Dasar Linux"
 date:   2020-10-19 14:04
-categories: [linux, ubuntu, CLI]
+categories: [linux, ubuntu, cli]
 permalink: /:year/:month/:title
 ---
 

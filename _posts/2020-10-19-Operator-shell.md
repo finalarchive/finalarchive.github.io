@@ -2,7 +2,7 @@
 layout: post
 title:  "Operator Shell"
 date:   2020-10-19 15:24
-categories: [linux, ubuntu, CLI]
+categories: [linux, ubuntu, cli]
 permalink: /:year/:month/:title
 ---
 
