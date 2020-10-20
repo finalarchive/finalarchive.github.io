@@ -23,9 +23,14 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 ### C
 
 ### D
+<<<<<<< HEAD
 * [**Defidensi**](https://kbbi.web.id/dependensi) (Bahasa Inggris: Deficiency)
 Keadaan bergantung kepada orang lain karena belum dapat hidup sendiri. Di Linux, dependensi berarti paket lain yang dibutuhkan untuk menjalankan sebuah paket.
 
+=======
+* [**Defidensi**](https://kbbi.web.id/dependensi) (Bahasa Inggris: *Deficiency*)<br>
+  Keadaan bergantung kepada orang lain karena belum dapat hidup sendiri. Di Linux, dependensi berarti paket lain yang dibutuhkan untuk menjalankan sebuah paket.
+>>>>>>> b2bd4724b26c26233a0cb26c1685a553b14486dc
 
 ### E
 
