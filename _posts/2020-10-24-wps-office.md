@@ -20,7 +20,13 @@ permalink: /:year/:month/:title
 ## Install
  
  dpkg -i wps-office.deb
- 
+
+* pindah ke user
+
+  exit
+  wps &
+
 Centang **(have read and agree to Kingsoft Office software License Agreement and Privacy Agreement)**, lalu klik tombol **Confirm(A)**
 
+ 
  
