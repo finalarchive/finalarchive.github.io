@@ -105,6 +105,7 @@ permalink: /:year/:month/:title
 | <center>Directory</center> | <center>Discripsi</center> |
 | :--- | :--- |
 | /usr/local/src/ | tempat file-file aplikasi yang tidak termasuk dalam paket resmi aplikasi distro Linux atau hasil download |
+| /usr/local/bin | tempat aplikasi aplikasi yang tidak termasuk dalam paket resmi aplikasi distro Linux atau hasil download |
 
 
 # Referensi
