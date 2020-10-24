@@ -10,6 +10,8 @@ permalink: /term/
 
 Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan istilah-istilah yang kumpulkan baik istilah dalam bahasa indonesia, ingris dan bahasa lainnya yang dirasa bermanfaat.
 ### A
+* [**ADS-B**](https://lms.onnocenter.or.id/wiki/index.php/ADS-B)<br>
+  *Automatic Dependent Surveillance-Broadcast* (disingkat **ADS-B**) adalah teknologi Pengawasan (Bahasa Inggris: *surveillance*) untuk melacak pesawat terbang sebagai bagian dari Next Generation Air Transportation System (NextGen). Amerika Serikat akan mewajibkan sebagian besar pesawat yang beroperasi di wilayah udaranya untuk dilengkapi dengan beberapa bentuk ADS-B Out pada tanggal 1 Januari 2020.
 
 ### B
 * **Back Azimuth**<br>
@@ -61,6 +63,8 @@ Kumpulan Istilah (bahasa Inggris: *Term Collection*) ini merupakan kumpulan isti
 ### R
 
 ### S
+* [**Sapiofilia**](https://www.vice.com/id/article/wjgkxq/apa-sih-sebetulnya-yang-bikin-sapioseksual-tertarik-sama-orang-lain) (Bahasa Inggris: *Sapiophilia*))<br>
+  Sapiofilia atau lebih umum, sapioseksual adalah sebutan bagi orang-orang yang menganggap kecerdasan sebagai aspek paling berharga dalam hubungan asmara
 * **Skeptis**<br>
   kurang percaya
 * **Stunting**<br>
