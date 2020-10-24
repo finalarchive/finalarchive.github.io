@@ -13,19 +13,19 @@ permalink: /:year/:month/:title
 {:toc}
 
 ## Download
-
+```
  sudo su
  wget -O wps-office.deb https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/9711/wps-office_11.1.0.9711.XA_amd64.deb
- 
+``` 
 ## Install
  
- dpkg -i wps-office.deb
+    dpkg -i wps-office.deb
 
 * pindah ke user
-
-  exit
-  wps &
-
+    ```
+    exit
+    wps &
+    ```
 Centang **(have read and agree to Kingsoft Office software License Agreement and Privacy Agreement)**, lalu klik tombol **Confirm(A)**
 
  
