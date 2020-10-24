@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Google chrome
+title:  "Google chrome"
 date:   2020-10-24 14:56
 categories: [linux, ubuntu, aplikasi]
 permalink: /:year/:month/:title
