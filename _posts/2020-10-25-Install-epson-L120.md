@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "Install Paket Printer Epson L120
+date:   2020-10-25 21:18
+categories: [linux, ubuntu, aplikasi]
+permalink: /:year/:month/:title
+---
+
+***Daftar Isi***
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
+
+## Persiapan
+Instal Gdebi
+
+sudo su
+apt update
+apt --fix-broken install
+apt install lsb
+
+
+
+Download Driver Epson L120 [disini](http://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=EN&CN2=SG&CTI=4&PRN=L120%20Series&OSC=LX)<br>
+1. epson-printer-utility_1.1.1-1lsb3.2_amd64.deb
+2. epson-inkjet-printer-201310w_1.0.0-1lsb3.2_amd64.deb
+
+Install<br>
+dpkg -i epson-printer-utility_1.1.1-1lsb3.2_amd64.deb epson-inkjet-printer-201310w_1.0.0-1lsb3.2_amd64.deb
+
+
+## Referensi
+* <http://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=EN&CN2=SG&CTI=4&PRN=L120%20Series&OSC=LX>
