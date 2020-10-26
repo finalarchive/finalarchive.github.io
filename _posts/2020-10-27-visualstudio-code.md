@@ -20,5 +20,7 @@ via Snap
 
 Start **Visual Studio Code** from the `command line` 
 
+	code
+
 ## Referensi
-https://linuxconfig.org/how-to-install-visual-studio-code-on-ubuntu-20-04-desktop
+<https://linuxconfig.org/how-to-install-visual-studio-code-on-ubuntu-20-04-desktop>
