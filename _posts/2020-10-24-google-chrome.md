@@ -14,17 +14,17 @@ permalink: /:year/:month/:title
 
 ## Download
 
- sudo su
- cd /usr/local/src
- wget -O google-chroe.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo su
+    cd /usr/local/src
+    wget -O google-chroe.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  
 ## Install
 
-  sudo dpkg -i google-chrome.deb
+    sudo dpkg -i google-chrome.deb
 
 ## Menjalankan
 kembali sebagai user
 
-  exit
-  google-chrome &
+    exit
+    google-chrome &
   
