@@ -99,7 +99,7 @@ sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt
 ```
 
 ## Install base paket dari Arch Linux dan beberapa paket pendukung
-	pacstrap /mnt base linux linux-firmware vim [amd-ucode / intel-ucode]
+	pacstrap /mnt base linux linux-firmware vim sudo [amd-ucode / intel-ucode]
 
 ## Mounting semua partisi yang telah dibuat secara permanen
 	genfstab -U /mnt >> /mnt/etc/fstab
@@ -124,11 +124,11 @@ Set Time Zone
 
 Atur jam
 
-	  hwclock --systohc --utc
+	hwclock --systohc --utc
 
 Set Locale
 
-	  vim /etc/locale.gen
+	vim /etc/locale.gen
 
 Edit
 
@@ -269,57 +269,114 @@ Printer
     umount -a
     reboot
 
-## Install OpenSsh
-Install Open SSH
-
-	pacman -Sy openssh
-
-Set password
-	passwd
-
-Start service ssh
-	systemctl start sshd
-
-akses open ssh
-	ssh root@[ip addres]
-
-
-## Install dan Configurasi i3wm
-
-Install
-
-	#sudo pacman -Sy xorg xorg-xinit i3
-
-Copy congigurasi Xinitrc
-
-	#sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
+## Aktifkan dukungan 32 bit Architecture
+	sudo vim /etc/pacman.conf
 
 edit
-
-	$vim .xinitrc
 
 <pre>
 ...
 ...
-# start some nice programs
-
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
-fi
-
-# twm &
-# xclock -geometry 50x50-1+1 &
-# xterm -geometry 80x50+494+51 &
-# xterm -geometry 80x20+494-0 &
-# exec xterm -geometry 80x66+0+0 -name login
-
-<mark>exec i3</mark>
+#[multilib-testing]
+#Include = /etc/pacman.d/mirrorlist
+<mark>
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+</mark>
+# An example of a custom package repository.  See the pacman manpage for
+# tips on creating your own repositories.
+...
+...
 </pre>
 
-	  $ startx
+## Install Package Manager AUR Yay (Yet another Yaourt)
+	cd /home/final/Downloads/
+	pacman -Syy
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+	
+## install grafhic Card Driver
+#### Mesa Driver
+Paket yang menyediakan dukungan terhadap DRI (Direct Reading Infrastructur) driver untuk akselerasi gambar 3D
+
+	sudo pacman -S mesa
+
+#### DDX Driver (xf86-vidio)
+dukungan terhadap DDX driver (yang menyediakan akselarasi gambar 2D pada Xorg)
+
+	pacman -S xf86-video-intel
+
+## Setting Terminal
+#### Install ST sttruck
+install Emulator Terimanl
+
+	yay -Sy st
+
+#### Install ZSH Shell
+Referensi : <https://computingforgeeks.com/installingconfiguring-and-customizing-zsh-on-linux/>
+
+Install Shell
+
+cek Shell Defaul
+		
+	$ echo $SHELL
+	/bin/bash
+
+Secara defaul shell bawaan adalah bash shell
+
+install ZSH Shell
+
+	sudo pacman -S zsh zsh-completions
+
+buat ZHS Shell menjadi defaul Shell
+
+	chsh -s /usr/bin/zsh
+
+restar shell
+
+	exec $SHELL
+
+untuk dapat memanggil program-program yang baru saja di install atau di update kita perlu melakukan restar terminal
+
+pindahkan pengaturan shell ~/.bashrc ke dalam ~/.zshrc
+
+	vim ~/.zshrc
+edit
+
+	# PKGBUILD YAOURT
+	export VISUAL="vim"
+
+save and exit
+
+##### Install Oh My Zsh
+	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+seteh install akan ada pilihan tema yang terletak di `~/.oh-my-zsh/themes/`
+
+Terdapat juga direktori plugin untuk melihat semua plugin yang tersedia `ls -lh ~/.oh-my-zsh/plugins`
+
+##### Install Oh My Zsh themes for Zsh
+kita akan memasang tema `honukai.zsh-theme` di `~/.oh-my-zsh/themes/` dan mengcofigurasinnya di `.zshrc`
+
+	cd /home/final/Downloads
+	git clone https://github.com/oskarkrawczyk/honukai-iterm-zsh.git
+	cp honukai-iterm-zsh/honukai.zsh-theme ~/.oh-my-zsh/themes/
+
+midifiy variabel theme
+
+	vim ~/.zshrc
+
+edit
+	
+	ZSH_THEME=”honukai”
+
+reload config
+
+	source ~/.zshrc
+
+
+
 
 
 
