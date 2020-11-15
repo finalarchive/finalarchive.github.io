@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Install ArchLinux"
+title:  "i3 Windows Manager"
 date:   2020-11-15 15:10
 categories: [linux, aplikasi:]
 permalink: /:year/:month/:title
