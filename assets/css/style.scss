@@ -3,6 +3,6 @@
 ---
 
 @import
-  "styles",
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
+  "styles";
+  // "minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  // "minima/initialize";
