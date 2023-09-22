@@ -1,0 +1,35 @@
+---
+layout: base
+title: Daftar Tag
+---
+
+<h3>Daftar Tag</h3>
+<hr class="mt-0">
+<div class="border rounded-1 p-2 border-secondary">
+  {% assign sorted_tags = site.tags | sort %}
+  {% for tag in sorted_tags %}
+  <span class="badge bg-warning p-1"><a class="text-decoration-none text-black p-2" href="#{{ tag[0] }}">{{ tag[0] |
+      capitalize }}</a></span>
+  {% endfor %}
+</div>
+
+<div class="mt-3">
+  {% for tag in site.tags %}
+  <h5 id="{{ tag[0] }}"><i class=" nf nf-fa-tags text-white"></i> {{ tag[0] }}</h5>
+  <ul>
+    {% for post in tag[1] %}
+    <li>
+    <div class="d-flex justify-content-between">
+      <div class="mb-0"><a class="text-decoration-none text-white" href="{{ post.url }}">{{ post.title }}</a></div>
+      <div class="fw-light small">{{ post.date | date: "%Y%m%d"}}</div>
+    </div>
+    <hr class="m-0">
+    {% for category in post.categories %}
+    <span class="badge bg-transparent border border-1 border-secondary rounded-1 text-secondary p-1 fw-normal mb-1">{{
+      category }}</span>
+    {% endfor %}
+  </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>
