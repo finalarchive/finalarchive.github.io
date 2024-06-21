@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-06-22T00:53:38+07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">FinalArchive</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><author><name>Final</name></author><entry><title type="html">Cara penggunaan GIT</title><link href="http://localhost:4000/archive/20240621/GIT" rel="alternate" type="text/html" title="Cara penggunaan GIT" /><published>2024-06-21T23:28:00+07:00</published><updated>2024-06-21T23:28:00+07:00</updated><id>http://localhost:4000/archive/20240621/GIT</id><content type="html" xml:base="http://localhost:4000/archive/20240621/GIT"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#konfigurasi-awal-yang-harus-dilakukan" id="markdown-toc-konfigurasi-awal-yang-harus-dilakukan">Konfigurasi Awal yang Harus Dilakukan</a>    <ul>
+      <li><a href="#install-git" id="markdown-toc-install-git">Install GIT</a></li>
+      <li><a href="#konfigurasi" id="markdown-toc-konfigurasi">Konfigurasi</a></li>
+      <li><a href="#setup-ssh-key-untuk-github-agar-bisa-ngepush-tanpa-password" id="markdown-toc-setup-ssh-key-untuk-github-agar-bisa-ngepush-tanpa-password">Setup SSH Key untuk Github agar Bisa Ngepush Tanpa Password</a></li>
+    </ul>
+  </li>
+  <li><a href="#untuk-kontributor" id="markdown-toc-untuk-kontributor">Untuk Kontributor</a>    <ul>
+      <li><a href="#1-git-clone" id="markdown-toc-1-git-clone">1. git clone</a></li>
+      <li><a href="#2-git-pull" id="markdown-toc-2-git-pull">2. git pull</a></li>
+      <li><a href="#3-git-add" id="markdown-toc-3-git-add">3. git add</a></li>
+    </ul>
+  </li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+<p><strong>Git</strong> adalah perangkat lunak pengendali versi atau proyek manajemen kode perangkat lunak yang diciptakan oleh Linus Torvalds, yang pada awalnya ditujukan untuk pengembangan kernel Linux.</p>
+
+<p>Dalam konteks Git adalah konsep yang menggambarkan tiga tahap utama dalam manajemen kode versi yang digunakan oleh Git yaitu <strong>Diagram “Three Tree”</strong>.Diagram Three Tree pada Git merujuk pada tiga jenis objek yang menjadi dasar struktur dan manajemen kode dalam sistem kontrol versi Git, yang digunakan oleh GitHub. Ketiga objek tersebut adalah: <strong>Working Directory (Working Tree), Staging Area (Index), dan Repository (Git Directory)</strong>. Berikut adalah penjelasan masing-masing bagian dari Three Tree:</p>
+
+<p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--M_fHUEqA--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/128hsgntnsu9bww0y8sz.png" alt="diagram Git" /></p>
+
+<ul>
+  <li><strong>Working Directory (Working Tree)</strong></li>
+</ul>
+
+<p><strong>Definisi</strong>: Working Directory adalah tempat di mana Anda bekerja dengan file dan membuat perubahan. Ini adalah direktori kerja lokal Anda yang berisi salinan dari file proyek.
+<strong>Fungsi</strong>: Di sini Anda dapat membuat, mengedit, menghapus, dan mengatur file sesuai kebutuhan proyek.
+<strong>Perubahan</strong>: Perubahan yang dilakukan di Working Directory belum dilacak oleh Git hingga Anda secara eksplisit menambahkan file yang telah diubah ke Staging Area.</p>
+
+<ul>
+  <li><strong>Staging Area (Index)</strong></li>
+</ul>
+
+<p><strong>Definisi</strong>: Staging Area adalah tempat sementara yang digunakan untuk menampung perubahan sebelum mereka di-commit ke repository. Ini adalah area transit di mana perubahan yang Anda buat akan ditandai untuk di-commit.
+<strong>Fungsi</strong>: Dengan menambahkan perubahan ke Staging Area, Anda dapat mempersiapkan commit secara lebih selektif, memilih file atau bagian file mana yang ingin Anda commit.
+<strong>Perubahan</strong>: Untuk menambahkan perubahan ke Staging Area, Anda menggunakan perintah <code class="language-plaintext highlighter-rouge">git add</code>. Setelah itu, perubahan akan berada di Index hingga Anda melakukan commit.</p>
+
+<ul>
+  <li><strong>Repository (Git Directory)</strong></li>
+</ul>
+
+<p><strong>Definisi</strong>: Repository adalah tempat penyimpanan permanen untuk semua perubahan yang telah di-commit. Ini adalah basis data dari semua commit yang melacak sejarah proyek.
+<strong>Fungsi</strong>: Repository menyimpan semua commit, branches, tags, dan metadata proyek lainnya. Ini adalah pusat dari sistem kontrol versi yang memastikan semua versi proyek terdokumentasi dengan baik.
+<strong>Perubahan</strong>: Perubahan yang ditambahkan ke Staging Area akan dipindahkan ke Repository saat Anda menjalankan perintah <code class="language-plaintext highlighter-rouge">git commit</code>. Setiap commit diidentifikasi oleh hash unik dan menyimpan snapshot dari perubahan.</p>
+
+<p>Hal pertama yang harus di pahami:</p>
+<ul>
+  <li>
+    <p><strong>Repository (Repo)</strong>: Tempat penyimpanan kode dan berbagai file proyek Anda. Setiap proyek di GitHub disimpan dalam sebuah repository.</p>
+  </li>
+  <li>
+    <p><strong>Commit</strong>: Tindakan menyimpan perubahan yang dibuat pada file dalam repository. Setiap commit memiliki pesan commit yang menjelaskan perubahan yang dilakukan.</p>
+  </li>
+  <li>
+    <p><strong>Branch</strong>: Cabang dari repository utama (master atau main) yang memungkinkan Anda untuk mengerjakan fitur atau perbaikan secara terpisah. Setiap branch dapat memiliki sejarah commit yang independen.</p>
+  </li>
+  <li>
+    <p><strong>Merge</strong>: Proses menggabungkan perubahan dari satu branch ke branch lain. Biasanya digunakan untuk menggabungkan fitur atau perbaikan yang telah selesai kembali ke branch utama.</p>
+  </li>
+  <li>
+    <p><strong>Pull Request (PR)</strong>: Permintaan untuk menggabungkan perubahan dari satu branch ke branch lain. PR memungkinkan kolaborator untuk meninjau dan mendiskusikan perubahan sebelum digabungkan.</p>
+  </li>
+  <li>
+    <p><strong>Fork</strong>: Salinan repository yang berada di akun GitHub Anda sendiri. Fork memungkinkan Anda untuk membuat perubahan pada proyek lain tanpa mempengaruhi repository aslinya.</p>
+  </li>
+  <li>
+    <p><strong>Clone</strong>: Menyalin repository dari GitHub ke komputer lokal Anda. Ini memungkinkan Anda untuk bekerja pada proyek secara offline.</p>
+  </li>
+  <li>
+    <p><strong>Push</strong>: Mengirimkan perubahan yang telah di-commit di komputer lokal Anda ke repository di GitHub.</p>
+  </li>
+  <li>
+    <p><strong>Pull</strong>: Mengambil perubahan terbaru dari repository GitHub ke komputer lokal Anda.</p>
+  </li>
+  <li>
+    <p><strong>Remote</strong>: Versi repository yang di-host di server (seperti GitHub). Remote memungkinkan Anda untuk menghubungkan repository lokal dengan repository yang di-host.</p>
+  </li>
+</ul>
+
+<h2 id="konfigurasi-awal-yang-harus-dilakukan">Konfigurasi Awal yang Harus Dilakukan</h2>
+<h3 id="install-git">Install GIT</h3>
+<p><strong>Linux/GNU</strong>
+<code class="language-plaintext highlighter-rouge">sudo apt install git</code>
+<strong>Windows</strong>
+Download Website Official Git
+<a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+
+<h3 id="konfigurasi">Konfigurasi</h3>
+<p>Konfigurasi awal yang harus dilakukan sebelum mulai menggunakan git, seperti menentukan <strong>nama</strong> dan <strong>email</strong></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "&lt;nama&gt;"
+git config --global user.email &lt;email&gt;
+</code></pre></div></div>
+<h3 id="setup-ssh-key-untuk-github-agar-bisa-ngepush-tanpa-password">Setup SSH Key untuk Github agar Bisa Ngepush Tanpa Password</h3>
+<p>Kita bisa push ke Githut dengan dua metode yaitu melalui Protokol HTTPS dan SSH, Jika kita menggunakan HTTPS maka kita akan di minta password disetiap kali melakukan push, sedangkan kalu SSH tidak perlu, karena passwordnya akan diwakili oleh SSH Key.</p>
+
+<p><strong>Membuat SSH Key</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Users\Final&gt; ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\Users\Final/.ssh/id_rsa): &lt;enter&gt;
+Enter passphrase (empty for no passphrase):&lt;enter&gt;
+Enter same passphrase again:&lt;enter&gt;
+</code></pre></div></div>
+<p>Terdapat 2 key di <code class="language-plaintext highlighter-rouge">C:\Users\Final/.ssh</code>, yaitu <strong>private key</strong> dan <strong>public key</strong>
+file <code class="language-plaintext highlighter-rouge">id_rsa</code> adalah private key dan <code class="language-plaintext highlighter-rouge">id_rsa.pub</code> adalah public key</p>
+
+<p><strong>Tambahkan SSH Key ke Github</strong>
+Copy kunci publik yang sudah dibuat pada file <code class="language-plaintext highlighter-rouge">id_rsa.pub</code></p>
+
+<p>Lalu masuk ke Github buka di bagian <strong>Settings&gt;SSH and GPG Keys</strong>, tambahkan SSH Key baru dengan mengelik <strong>New SSH Key</strong>.</p>
+
+<h2 id="untuk-kontributor">Untuk Kontributor</h2>
+<h3 id="1-git-clone">1. git clone</h3>
+
+<p>Perintah “<strong>git clone</strong>” digunakan untuk mengunduh code yang ada pada repository.</p>
+
+<p><strong>git clone &lt; repository yang akan di gunakan &gt;</strong></p>
+
+<p><strong>contoh penggunaan perintah “git clone”:</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/bantenprov/advancetrust.git
+<span class="nv">$ </span><span class="nb">cd </span>advancetrust/
+</code></pre></div></div>
+
+<h3 id="2-git-pull">2. git pull</h3>
+<p>Perintah git pull ini akan sering kali digunakan apabila kita dalam bekerja membuat suatu aplikasi atau mengembangkan aplikasi secara tim.</p>
+
+<p><strong>contoh penggunaan git pull</strong></p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git pull origin master
+</code></pre></div></div>
+
+<p><br /><br />
+Setelah berhasil menjalankan perintah <strong>git clone</strong>, di sini akan di contohkan bagaimana menambahkan folder baru yang di beri nama <strong>flowchart</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">mkdir </span>flowchart
+</code></pre></div></div>
+
+<p>setelah menjalankan perintah diatas maka akan ada folder baru dengan nama <strong>flowchart</strong>, selanjutnya berpindah ke folder / directory yang telah dibuat tadi, dengan menggunakan perintah:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>flowchart
+</code></pre></div></div>
+
+<p>setelah berada di folder / directory “<strong>flowchart</strong>”, pada contoh ini akan mencoba menambahkan file baru yang di beri nama “<strong>.gitignore</strong>” dengab cara menjalankan perintah seperti di bawah ini:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">echo</span> <span class="s2">""</span> <span class="o">&gt;</span> .gitignore
+</code></pre></div></div>
+
+<p>jika berhasil maka akan ada file baru dengan nama “<strong>.gitignore</strong>”, untuk melihat file yang telah berhasil di buat tadi jalankan perintah berikut:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">ls</span> <span class="nt">-la</span>
+</code></pre></div></div>
+<p>maka akan terlihat seperti gambar berikut:</p>
+
+<p>sampai pada langkah ini kita telah berhasil menambahkan folder “<strong>flowchart</strong>” dan di dalam folder tersebut telah ada file “<strong>.gitignore</strong>”</p>
+
+<p>berikutnya kita akan update folder dan file yang sudah di buat tadi ke repository yang di clone di awal tadi dengan cara kita kembali ke folder awal yang di clone tadi dengan perintah berikut:</p>
+
+<h3 id="3-git-add">3. git add</h3>
+<p>Dengan menggunakan perintah ini, maka artinya sama aja kita menyuruh agar di git untuk melakukan penambahan (add) pada semua file dalam folder</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd</span> ../
+<span class="nv">$ </span>git add flowchart/
+<span class="nv">$ </span>git status
+
+</code></pre></div></div>
+<p>jika semua berhasil dan tidak ada masalah maka akan tampil seperti gambar berikut:</p>
+
+<p>perintah selanjutnya</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nv">$ </span>git commit <span class="nt">-m</span> <span class="s2">"&lt;isi pesan&gt;"</span>
+
+</code></pre></div></div>
+
+<h2 id="referensi">Referensi</h2>
+<p><a href="https://github.com/bantenprov/cara-penggunaan-github">https://github.com/bantenprov/cara-penggunaan-github</a></p>]]></content><author><name>Final</name></author><category term="Archive" /><category term="Git" /><category term="Aplikasi" /><summary type="html"><![CDATA[Daftar Isi Introduction Konfigurasi Awal yang Harus Dilakukan Install GIT Konfigurasi Setup SSH Key untuk Github agar Bisa Ngepush Tanpa Password Untuk Kontributor 1. git clone 2. git pull 3. git add Referensi Introduction Git adalah perangkat lunak pengendali versi atau proyek manajemen kode perangkat lunak yang diciptakan oleh Linus Torvalds, yang pada awalnya ditujukan untuk pengembangan kernel Linux. Dalam konteks Git adalah konsep yang menggambarkan tiga tahap utama dalam manajemen kode versi yang digunakan oleh Git yaitu Diagram “Three Tree”.Diagram Three Tree pada Git merujuk pada tiga jenis objek yang menjadi dasar struktur dan manajemen kode dalam sistem kontrol versi Git, yang digunakan oleh GitHub. Ketiga objek tersebut adalah: Working Directory (Working Tree), Staging Area (Index), dan Repository (Git Directory). Berikut adalah penjelasan masing-masing bagian dari Three Tree: Working Directory (Working Tree) Definisi: Working Directory adalah tempat di mana Anda bekerja dengan file dan membuat perubahan. Ini adalah direktori kerja lokal Anda yang berisi salinan dari file proyek. Fungsi: Di sini Anda dapat membuat, mengedit, menghapus, dan mengatur file sesuai kebutuhan proyek. Perubahan: Perubahan yang dilakukan di Working Directory belum dilacak oleh Git hingga Anda secara eksplisit menambahkan file yang telah diubah ke Staging Area. Staging Area (Index) Definisi: Staging Area adalah tempat sementara yang digunakan untuk menampung perubahan sebelum mereka di-commit ke repository. Ini adalah area transit di mana perubahan yang Anda buat akan ditandai untuk di-commit. Fungsi: Dengan menambahkan perubahan ke Staging Area, Anda dapat mempersiapkan commit secara lebih selektif, memilih file atau bagian file mana yang ingin Anda commit. Perubahan: Untuk menambahkan perubahan ke Staging Area, Anda menggunakan perintah git add. Setelah itu, perubahan akan berada di Index hingga Anda melakukan commit. Repository (Git Directory) Definisi: Repository adalah tempat penyimpanan permanen untuk semua perubahan yang telah di-commit. Ini adalah basis data dari semua commit yang melacak sejarah proyek. Fungsi: Repository menyimpan semua commit, branches, tags, dan metadata proyek lainnya. Ini adalah pusat dari sistem kontrol versi yang memastikan semua versi proyek terdokumentasi dengan baik. Perubahan: Perubahan yang ditambahkan ke Staging Area akan dipindahkan ke Repository saat Anda menjalankan perintah git commit. Setiap commit diidentifikasi oleh hash unik dan menyimpan snapshot dari perubahan. Hal pertama yang harus di pahami: Repository (Repo): Tempat penyimpanan kode dan berbagai file proyek Anda. Setiap proyek di GitHub disimpan dalam sebuah repository. Commit: Tindakan menyimpan perubahan yang dibuat pada file dalam repository. Setiap commit memiliki pesan commit yang menjelaskan perubahan yang dilakukan. Branch: Cabang dari repository utama (master atau main) yang memungkinkan Anda untuk mengerjakan fitur atau perbaikan secara terpisah. Setiap branch dapat memiliki sejarah commit yang independen. Merge: Proses menggabungkan perubahan dari satu branch ke branch lain. Biasanya digunakan untuk menggabungkan fitur atau perbaikan yang telah selesai kembali ke branch utama. Pull Request (PR): Permintaan untuk menggabungkan perubahan dari satu branch ke branch lain. PR memungkinkan kolaborator untuk meninjau dan mendiskusikan perubahan sebelum digabungkan. Fork: Salinan repository yang berada di akun GitHub Anda sendiri. Fork memungkinkan Anda untuk membuat perubahan pada proyek lain tanpa mempengaruhi repository aslinya. Clone: Menyalin repository dari GitHub ke komputer lokal Anda. Ini memungkinkan Anda untuk bekerja pada proyek secara offline. Push: Mengirimkan perubahan yang telah di-commit di komputer lokal Anda ke repository di GitHub. Pull: Mengambil perubahan terbaru dari repository GitHub ke komputer lokal Anda. Remote: Versi repository yang di-host di server (seperti GitHub). Remote memungkinkan Anda untuk menghubungkan repository lokal dengan repository yang di-host. Konfigurasi Awal yang Harus Dilakukan Install GIT Linux/GNU sudo apt install git Windows Download Website Official Git https://git-scm.com/download/win Konfigurasi Konfigurasi awal yang harus dilakukan sebelum mulai menggunakan git, seperti menentukan nama dan email git config --global user.name "&lt;nama&gt;" git config --global user.email &lt;email&gt; Setup SSH Key untuk Github agar Bisa Ngepush Tanpa Password Kita bisa push ke Githut dengan dua metode yaitu melalui Protokol HTTPS dan SSH, Jika kita menggunakan HTTPS maka kita akan di minta password disetiap kali melakukan push, sedangkan kalu SSH tidak perlu, karena passwordnya akan diwakili oleh SSH Key. Membuat SSH Key C:\Users\Final&gt; ssh-keygen Generating public/private rsa key pair. Enter file in which to save the key (C:\Users\Final/.ssh/id_rsa): &lt;enter&gt; Enter passphrase (empty for no passphrase):&lt;enter&gt; Enter same passphrase again:&lt;enter&gt; Terdapat 2 key di C:\Users\Final/.ssh, yaitu private key dan public key file id_rsa adalah private key dan id_rsa.pub adalah public key Tambahkan SSH Key ke Github Copy kunci publik yang sudah dibuat pada file id_rsa.pub Lalu masuk ke Github buka di bagian Settings&gt;SSH and GPG Keys, tambahkan SSH Key baru dengan mengelik New SSH Key. Untuk Kontributor 1. git clone Perintah “git clone” digunakan untuk mengunduh code yang ada pada repository. git clone &lt; repository yang akan di gunakan &gt; contoh penggunaan perintah “git clone”: $ git clone https://github.com/bantenprov/advancetrust.git $ cd advancetrust/ 2. git pull Perintah git pull ini akan sering kali digunakan apabila kita dalam bekerja membuat suatu aplikasi atau mengembangkan aplikasi secara tim. contoh penggunaan git pull $ git pull origin master Setelah berhasil menjalankan perintah git clone, di sini akan di contohkan bagaimana menambahkan folder baru yang di beri nama flowchart $ mkdir flowchart setelah menjalankan perintah diatas maka akan ada folder baru dengan nama flowchart, selanjutnya berpindah ke folder / directory yang telah dibuat tadi, dengan menggunakan perintah: $ cd flowchart setelah berada di folder / directory “flowchart”, pada contoh ini akan mencoba menambahkan file baru yang di beri nama “.gitignore” dengab cara menjalankan perintah seperti di bawah ini: $ echo "" &gt; .gitignore jika berhasil maka akan ada file baru dengan nama “.gitignore”, untuk melihat file yang telah berhasil di buat tadi jalankan perintah berikut: $ ls -la maka akan terlihat seperti gambar berikut: sampai pada langkah ini kita telah berhasil menambahkan folder “flowchart” dan di dalam folder tersebut telah ada file “.gitignore” berikutnya kita akan update folder dan file yang sudah di buat tadi ke repository yang di clone di awal tadi dengan cara kita kembali ke folder awal yang di clone tadi dengan perintah berikut: 3. git add Dengan menggunakan perintah ini, maka artinya sama aja kita menyuruh agar di git untuk melakukan penambahan (add) pada semua file dalam folder $ cd ../ $ git add flowchart/ $ git status jika semua berhasil dan tidak ada masalah maka akan tampil seperti gambar berikut: perintah selanjutnya $ git commit -m "&lt;isi pesan&gt;" Referensi https://github.com/bantenprov/cara-penggunaan-github]]></summary></entry><entry><title type="html">Install Mikrotik CHR di VPS</title><link href="http://localhost:4000/archive/20240621/Install-Mikrotik-CHR-di-VPS" rel="alternate" type="text/html" title="Install Mikrotik CHR di VPS" /><published>2024-06-21T23:28:00+07:00</published><updated>2024-06-21T23:28:00+07:00</updated><id>http://localhost:4000/archive/20240621/Install-Mikrotik-CHR-di-VPS</id><content type="html" xml:base="http://localhost:4000/archive/20240621/Install-Mikrotik-CHR-di-VPS"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#install" id="markdown-toc-install">Install</a>    <ul>
+      <li><a href="#penjelasan" id="markdown-toc-penjelasan">Penjelasan</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="install">Install</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://download.mikrotik.com/routeros/6.49.15/chr-6.49.15.img.zip
+gunzip -c chr-6.49.15.img.zip &gt; chr.img
+mount -o loop,offset=512 chr.img /mnt
+ls /mnt
+ls /mnt/rw/
+IP=&lt;address&gt;
+GW=&lt;gateway&gt;
+echo "/ip address add address=$IP interface=[/interface ethernet find where name=eth0]
+&gt; /ip route add gateway=$GW" &gt; /mnt/rw/autorun.scr
+cat /mnt/rw/autorun.scr
+umount /mnt
+echo u &gt; /proc/sysrq-trigger
+cek disk 
+	
+fdisk -l
+
+dd if=chr.img of=/dev/sda bs=1024
+
+Reboot : echo b &gt; /proc/sysrq-trigger
+</code></pre></div></div>
+
+<h3 id="penjelasan">Penjelasan</h3>
+<p><strong>Mengunduh File Image MikroTik</strong>
+<code class="language-plaintext highlighter-rouge">wget https://download.mikrotik.com/routeros/6.49.15/chr-6.49.15.img.zip</code>
+wget: Perintah untuk mengunduh file dari internet.
+URL: Alamat tempat file chr-6.49.15.img.zip diunduh.</p>
+
+<p><strong>Mengekstrak File Zip</strong>
+<code class="language-plaintext highlighter-rouge">gunzip -c chr-6.49.15.img.zip &gt; chr.img</code>
+gunzip -c: Mengekstrak file zip tanpa menghapus file zip asli.</p>
+<blockquote>
+  <p>chr.img: Menyimpan hasil ekstraksi sebagai chr.img.</p>
+</blockquote>
+
+<p><strong>Memasang File Image</strong>
+<code class="language-plaintext highlighter-rouge">mount -o loop,offset=512 chr.img /mnt</code>
+mount -o loop,offset=512: Memasang file image chr.img ke direktori /mnt menggunakan loopback dengan offset 512 byte.
+/mnt: Direktori tempat file image dipasang.</p>
+
+<p><strong>Menampilkan Isi Direktori Mount</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls /mnt
+ls /mnt/rw/
+</code></pre></div></div>
+<p>ls /mnt: Menampilkan isi direktori /mnt.
+ls /mnt/rw/: Menampilkan isi sub-direktori /mnt/rw/.</p>
+
+<p><strong>Mendefinisikan Alamat IP dan Gateway</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IP=&lt;alamat IP/subnet mask&gt;
+GW=&lt;gateway&gt;
+</code></pre></div></div>
+<p>IP: Variabel yang berisi alamat IP dan subnet mask.
+GW: Variabel yang berisi alamat IP gateway.</p>
+
+<p><strong>Menulis Konfigurasi Jaringan ke File autorun.scr</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo "/ip address add address=$IP interface=[/interface ethernet find where name=eth0]
+/ip route add gateway=$GW" &gt; /mnt/rw/autorun.scr
+</code></pre></div></div>
+<p>echo: Menulis teks ke dalam file.</p>
+<blockquote>
+  <p>/mnt/rw/autorun.scr: Menyimpan teks konfigurasi ke file autorun.scr di direktori /mnt/rw/.</p>
+</blockquote>
+
+<p><strong>Memeriksa Isi File autorun.scr</strong>
+<code class="language-plaintext highlighter-rouge">cat /mnt/rw/autorun.scr</code>
+cat: Menampilkan isi file.
+/mnt/rw/autorun.scr: File yang berisi konfigurasi jaringan.</p>
+
+<p><strong>Melepas Mounting</strong>
+<code class="language-plaintext highlighter-rouge">umount /mnt</code>
+umount /mnt: Melepas mounting dari direktori /mnt.</p>
+
+<p><strong>Sinkronisasi Buffer File Sistem</strong>
+<code class="language-plaintext highlighter-rouge">echo u &gt; /proc/sysrq-trigger</code>
+echo u &gt; /proc/sysrq-trigger: Memicu sinkronisasi semua buffer file sistem.</p>
+
+<p><strong>Memeriksa Disk yang Tersedia</strong>
+<code class="language-plaintext highlighter-rouge">fdisk -l</code>
+fdisk -l: Menampilkan daftar partisi disk yang tersedia.</p>
+
+<p><strong>Menulis Image ke Disk</strong>
+<code class="language-plaintext highlighter-rouge">dd if=chr.img of=/dev/sda bs=1024</code>
+dd if=chr.img: Membaca dari file image chr.img.
+of=/dev/sda: Menulis image ke disk sda.
+bs=1024: Mengatur ukuran blok menjadi 1024 byte.</p>
+
+<p><strong>Merestart Sistem</strong>
+<code class="language-plaintext highlighter-rouge">echo b &gt; /proc/sysrq-trigger</code>
+echo b &gt; /proc/sysrq-trigger: Memicu restart sistem.</p>]]></content><author><name>Final</name></author><category term="Archive" /><category term="Mikrotik" /><category term="Server" /><category term="VPS" /><summary type="html"><![CDATA[Daftar Isi Install Penjelasan Install wget https://download.mikrotik.com/routeros/6.49.15/chr-6.49.15.img.zip gunzip -c chr-6.49.15.img.zip &gt; chr.img mount -o loop,offset=512 chr.img /mnt ls /mnt ls /mnt/rw/ IP=&lt;address&gt; GW=&lt;gateway&gt; echo "/ip address add address=$IP interface=[/interface ethernet find where name=eth0] &gt; /ip route add gateway=$GW" &gt; /mnt/rw/autorun.scr cat /mnt/rw/autorun.scr umount /mnt echo u &gt; /proc/sysrq-trigger cek disk fdisk -l dd if=chr.img of=/dev/sda bs=1024 Reboot : echo b &gt; /proc/sysrq-trigger Penjelasan Mengunduh File Image MikroTik wget https://download.mikrotik.com/routeros/6.49.15/chr-6.49.15.img.zip wget: Perintah untuk mengunduh file dari internet. URL: Alamat tempat file chr-6.49.15.img.zip diunduh. Mengekstrak File Zip gunzip -c chr-6.49.15.img.zip &gt; chr.img gunzip -c: Mengekstrak file zip tanpa menghapus file zip asli. chr.img: Menyimpan hasil ekstraksi sebagai chr.img. Memasang File Image mount -o loop,offset=512 chr.img /mnt mount -o loop,offset=512: Memasang file image chr.img ke direktori /mnt menggunakan loopback dengan offset 512 byte. /mnt: Direktori tempat file image dipasang. Menampilkan Isi Direktori Mount ls /mnt ls /mnt/rw/ ls /mnt: Menampilkan isi direktori /mnt. ls /mnt/rw/: Menampilkan isi sub-direktori /mnt/rw/. Mendefinisikan Alamat IP dan Gateway IP=&lt;alamat IP/subnet mask&gt; GW=&lt;gateway&gt; IP: Variabel yang berisi alamat IP dan subnet mask. GW: Variabel yang berisi alamat IP gateway. Menulis Konfigurasi Jaringan ke File autorun.scr echo "/ip address add address=$IP interface=[/interface ethernet find where name=eth0] /ip route add gateway=$GW" &gt; /mnt/rw/autorun.scr echo: Menulis teks ke dalam file. /mnt/rw/autorun.scr: Menyimpan teks konfigurasi ke file autorun.scr di direktori /mnt/rw/. Memeriksa Isi File autorun.scr cat /mnt/rw/autorun.scr cat: Menampilkan isi file. /mnt/rw/autorun.scr: File yang berisi konfigurasi jaringan. Melepas Mounting umount /mnt umount /mnt: Melepas mounting dari direktori /mnt. Sinkronisasi Buffer File Sistem echo u &gt; /proc/sysrq-trigger echo u &gt; /proc/sysrq-trigger: Memicu sinkronisasi semua buffer file sistem. Memeriksa Disk yang Tersedia fdisk -l fdisk -l: Menampilkan daftar partisi disk yang tersedia. Menulis Image ke Disk dd if=chr.img of=/dev/sda bs=1024 dd if=chr.img: Membaca dari file image chr.img. of=/dev/sda: Menulis image ke disk sda. bs=1024: Mengatur ukuran blok menjadi 1024 byte. Merestart Sistem echo b &gt; /proc/sysrq-trigger echo b &gt; /proc/sysrq-trigger: Memicu restart sistem.]]></summary></entry><entry><title type="html">i3 Windows Manager</title><link href="http://localhost:4000/archive/20201115/i3wm" rel="alternate" type="text/html" title="i3 Windows Manager" /><published>2020-11-15T10:07:00+07:00</published><updated>2020-11-15T10:07:00+07:00</updated><id>http://localhost:4000/archive/20201115/i3wm</id><content type="html" xml:base="http://localhost:4000/archive/20201115/i3wm"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#install-dan-configurasi-i3wm" id="markdown-toc-install-dan-configurasi-i3wm">Install dan Configurasi i3wm</a></li>
+</ul>
+
+<p>i3 adalah sebuah manajer jendela yang dirancang untuk X11, terinspirasi oleh wmii, dan ditulis menggunakan bahasa pemrograman C. i3 mendukung tata letak ubin, bertumpuk, dan ber-tab yang mana diatur secara dinamis. Untuk mengatur konfigurasinya dapat menggunakan berkas teks biasa dan dapat menggunakan soket domain Unix dan berkas JSON yang berbasis antarmuka IPC dari banyak bahasa pemrograman</p>
+
+<h2 id="install-dan-configurasi-i3wm">Install dan Configurasi i3wm</h2>
+
+<p>Install</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#sudo pacman -Sy xorg xorg-xinit i3
+</code></pre></div></div>
+
+<p>Copy congigurasi Xinitrc</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
+</code></pre></div></div>
+
+<p>edit</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$vim .xinitrc
+</code></pre></div></div>
+
+<pre>
+...
+...
+# start some nice programs
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] &amp;&amp; . "$f"
+ done
+ unset f
+fi
+
+# twm &amp;
+# xclock -geometry 50x50-1+1 &amp;
+# xterm -geometry 80x50+494+51 &amp;
+# xterm -geometry 80x20+494-0 &amp;
+# exec xterm -geometry 80x66+0+0 -name login
+
+<mark>exec i3</mark>
+</pre>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ startx
+</code></pre></div></div>]]></content><author><name>Final</name></author><category term="Archive" /><category term="linux" /><category term="archlinux" /><summary type="html"><![CDATA[Daftar Isi Install dan Configurasi i3wm i3 adalah sebuah manajer jendela yang dirancang untuk X11, terinspirasi oleh wmii, dan ditulis menggunakan bahasa pemrograman C. i3 mendukung tata letak ubin, bertumpuk, dan ber-tab yang mana diatur secara dinamis. Untuk mengatur konfigurasinya dapat menggunakan berkas teks biasa dan dapat menggunakan soket domain Unix dan berkas JSON yang berbasis antarmuka IPC dari banyak bahasa pemrograman Install dan Configurasi i3wm Install #sudo pacman -Sy xorg xorg-xinit i3 Copy congigurasi Xinitrc #sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc edit $vim .xinitrc ... ... # start some nice programs if [ -d /etc/X11/xinit/xinitrc.d ] ; then for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do [ -x "$f" ] &amp;&amp; . "$f" done unset f fi # twm &amp; # xclock -geometry 50x50-1+1 &amp; # xterm -geometry 80x50+494+51 &amp; # xterm -geometry 80x20+494-0 &amp; # exec xterm -geometry 80x66+0+0 -name login exec i3 $ startx]]></summary></entry><entry><title type="html">Install ArchLinux</title><link href="http://localhost:4000/archive/20201114/install-archlinux" rel="alternate" type="text/html" title="Install ArchLinux" /><published>2020-11-14T10:07:00+07:00</published><updated>2020-11-14T10:07:00+07:00</updated><id>http://localhost:4000/archive/20201114/install-archlinux</id><content type="html" xml:base="http://localhost:4000/archive/20201114/install-archlinux"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#cek-connection" id="markdown-toc-cek-connection">Cek Connection</a></li>
+  <li><a href="#memilih-mirrorlist" id="markdown-toc-memilih-mirrorlist">Memilih Mirrorlist</a></li>
+  <li><a href="#buat-partisi" id="markdown-toc-buat-partisi">Buat partisi</a></li>
+  <li><a href="#format-partisi" id="markdown-toc-format-partisi">Format partisi</a></li>
+  <li><a href="#install-base-paket-dari-arch-linux-dan-beberapa-paket-pendukung" id="markdown-toc-install-base-paket-dari-arch-linux-dan-beberapa-paket-pendukung">Install base paket dari Arch Linux dan beberapa paket pendukung</a></li>
+  <li><a href="#mounting-semua-partisi-yang-telah-dibuat-secara-permanen" id="markdown-toc-mounting-semua-partisi-yang-telah-dibuat-secara-permanen">Mounting semua partisi yang telah dibuat secara permanen</a></li>
+  <li><a href="#beralih-ke-mode-root-untuk-mengatur-instalasi-sistem-baru" id="markdown-toc-beralih-ke-mode-root-untuk-mengatur-instalasi-sistem-baru">Beralih ke mode root untuk mengatur instalasi sistem baru</a></li>
+  <li><a href="#set-language-dan-time-zone" id="markdown-toc-set-language-dan-time-zone">Set Language dan Time Zone</a></li>
+  <li><a href="#set-hostname-dan-host" id="markdown-toc-set-hostname-dan-host">Set Hostname dan Host</a></li>
+  <li><a href="#setting-password-dan-user" id="markdown-toc-setting-password-dan-user">Setting Password dan User</a>    <ul>
+      <li><a href="#set-password-root" id="markdown-toc-set-password-root">Set password root</a></li>
+      <li><a href="#tambah-user" id="markdown-toc-tambah-user">Tambah User</a></li>
+      <li><a href="#buat-user" id="markdown-toc-buat-user">Buat user</a></li>
+    </ul>
+  </li>
+  <li><a href="#install-paket-bootloader-and-networking-tools" id="markdown-toc-install-paket-bootloader-and-networking-tools">Install Paket Bootloader and Networking tools:</a></li>
+  <li><a href="#install-boot-loader-grub" id="markdown-toc-install-boot-loader-grub">Install boot loader GRUB</a></li>
+  <li><a href="#activate-servis-for-nex-reboot" id="markdown-toc-activate-servis-for-nex-reboot">Activate servis for nex reboot</a></li>
+  <li><a href="#return-to-the-installer-unmount-all-partitions-and-reboot" id="markdown-toc-return-to-the-installer-unmount-all-partitions-and-reboot">Return to the installer, unmount all partitions and reboot</a></li>
+  <li><a href="#aktifkan-dukungan-32-bit-architecture" id="markdown-toc-aktifkan-dukungan-32-bit-architecture">Aktifkan dukungan 32 bit Architecture</a></li>
+  <li><a href="#install-package-manager-aur-yay-yet-another-yaourt" id="markdown-toc-install-package-manager-aur-yay-yet-another-yaourt">Install Package Manager AUR Yay (Yet another Yaourt)</a></li>
+  <li><a href="#install-grafhic-card-driver" id="markdown-toc-install-grafhic-card-driver">install grafhic Card Driver</a>    <ul>
+      <li><a href="#mesa-driver" id="markdown-toc-mesa-driver">Mesa Driver</a></li>
+      <li><a href="#ddx-driver-xf86-vidio" id="markdown-toc-ddx-driver-xf86-vidio">DDX Driver (xf86-vidio)</a></li>
+    </ul>
+  </li>
+  <li><a href="#setting-terminal" id="markdown-toc-setting-terminal">Setting Terminal</a>    <ul>
+      <li><a href="#install-st-sttruck" id="markdown-toc-install-st-sttruck">Install ST sttruck</a></li>
+      <li><a href="#install-zsh-shell" id="markdown-toc-install-zsh-shell">Install ZSH Shell</a>        <ul>
+          <li><a href="#install-oh-my-zsh" id="markdown-toc-install-oh-my-zsh">Install Oh My Zsh</a></li>
+          <li><a href="#install-oh-my-zsh-themes-for-zsh" id="markdown-toc-install-oh-my-zsh-themes-for-zsh">Install Oh My Zsh themes for Zsh</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="cek-connection">Cek Connection</h2>
+
+<p>ip a</p>
+
+<h2 id="memilih-mirrorlist">Memilih Mirrorlist</h2>
+
+<p>Sinkronisasi Database</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman -Syy
+</code></pre></div></div>
+
+<p>Install reflector</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman -S reflector
+</code></pre></div></div>
+
+<p>Pilih 5 mirror dengan kualitas kecepatan download yang bagus</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+</code></pre></div></div>
+
+<p>Cek</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat /etc/pacman.d/mirrorlist
+</code></pre></div></div>
+
+<p>Sinkron Database</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman -Syy
+</code></pre></div></div>
+
+<h2 id="buat-partisi">Buat partisi</h2>
+
+<p>cek partisi</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME  MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0   7:0    0 556.2M  1 loop /run/archiso/sfs/airootfs
+sda     8:0    0     8G  0 disk
+sr0    11:0    1   679M  0 rom  /run/archiso/bootmnt
+</code></pre></div></div>
+
+<p>Buat partisi</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  fdisk /dev/sda
+</code></pre></div></div>
+
+<p><strong>n</strong> → <strong>↵</strong> → <strong>↵</strong> → <strong>↵</strong> → <strong>↵</strong> → <strong>↵</strong> → <strong>w</strong></p>
+
+<p>cek hasil</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lsblk
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0 556.2M  1 loop /run/archiso/sfs/airootfs
+sda      8:0    0     8G  0 disk
+└─sda1   8:1    0     8G  0 part
+sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt
+</code></pre></div></div>
+
+<h2 id="format-partisi">Format partisi</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkfs.ext4 /dev/sda1
+lsblk
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0 556.2M  1 loop /run/archiso/sfs/airootfs
+sda      8:0    0     8G  0 disk
+└─sda1   8:1    0     8G  0 part
+sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt
+</code></pre></div></div>
+
+<p>mount <code class="language-plaintext highlighter-rouge">/dev/sda1</code> ke <code class="language-plaintext highlighter-rouge">/mnt</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount /dev/sda1 /mnt
+lsblk
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0    7:0    0 556.2M  1 loop /run/archiso/sfs/airootfs
+sda      8:0    0     8G  0 disk
+└─sda1   8:1    0     8G  0 part /mnt
+sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt  
+</code></pre></div></div>
+
+<h2 id="install-base-paket-dari-arch-linux-dan-beberapa-paket-pendukung">Install base paket dari Arch Linux dan beberapa paket pendukung</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacstrap /mnt base linux linux-firmware vim sudo [amd-ucode / intel-ucode]
+</code></pre></div></div>
+
+<h2 id="mounting-semua-partisi-yang-telah-dibuat-secara-permanen">Mounting semua partisi yang telah dibuat secara permanen</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+cat /mnt/etc/fstab
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Static information about the filesystems.
+# See fstab(5) for details.
+
+# &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt;
+# /dev/sda1
+UUID=8b29657e-14fd-422c-82fa-21ee1ab6614e       /               ext4            rw,relatime     0 1
+</code></pre></div></div>
+
+<h2 id="beralih-ke-mode-root-untuk-mengatur-instalasi-sistem-baru">Beralih ke mode root untuk mengatur instalasi sistem baru</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arch-chroot /mnt
+</code></pre></div></div>
+
+<h2 id="set-language-dan-time-zone">Set Language dan Time Zone</h2>
+<p>Set Time Zone</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+</code></pre></div></div>
+
+<p>Atur jam</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hwclock --systohc --utc
+</code></pre></div></div>
+
+<p>Set Locale</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim /etc/locale.gen
+</code></pre></div></div>
+
+<p>Edit</p>
+
+<pre>
+...
+...
+#en_SG.UTF-8 UTF-8
+#en_SG ISO-8859-1
+<mark>en_US.UTF-8 UTF-8</mark>
+#en_US ISO-8859-1
+#en_ZA.UTF-8 UTF-8
+...
+...
+#ia_FR UTF-8
+<mark>id_ID.UTF-8 UTF-8</mark>
+#id_ID ISO-8859-1
+#ig_NG UTF-8
+...
+...
+</pre>
+
+<p>Cek konfigurasi</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>locale-gen
+</code></pre></div></div>
+
+<p>set locale yang sudah kita generet ke dalam file <code class="language-plaintext highlighter-rouge">/etc/locale.conf</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>locale &gt; /etc/locale.conf
+</code></pre></div></div>
+
+<p>cek konfigurasi</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat /etc/locale.conf
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LANG=en_US.UTF-8
+LC_CTYPE="en_US.UTF-8"
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES=
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=
+</code></pre></div></div>
+
+<h2 id="set-hostname-dan-host">Set Hostname dan Host</h2>
+<p>Set Hostname</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  echo “arch” &gt; /etc/hostname
+</code></pre></div></div>
+
+<p>set Host</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  vim /etc/host
+</code></pre></div></div>
+
+<p>add</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>127.0.0.1 localhost
+::1       localhost
+127.0.1.1 arch.localdomain arch
+</code></pre></div></div>
+
+<h2 id="setting-password-dan-user">Setting Password dan User</h2>
+
+<h4 id="set-password-root">Set password root</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  passwd root
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New password:
+Retype new password:
+passwd: password updated successfully
+</code></pre></div></div>
+
+<h4 id="tambah-user">Tambah User</h4>
+<p>buat group ‘sudo’ terlebih dahulu</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>groupadd sudo
+</code></pre></div></div>
+
+<h4 id="buat-user">Buat user</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>useradd -m -g users -G sudo,storage,wheel,power,input,network final
+</code></pre></div></div>
+
+<p>set password user final</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>passwd final
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New password:
+Retype new password:
+passwd: password updated successfully
+</code></pre></div></div>
+
+<p>Setting agar user final agar memiliki kemapuan seperti superuser</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>EDITOR=vim visudo
+</code></pre></div></div>
+
+<p>edit</p>
+<pre>
+...
+...
+## Uncomment to allow members of group sudo to execute any command
+<mark>%sudo ALL=(ALL) ALL</mark>
+...
+...
+</pre>
+
+<h2 id="install-paket-bootloader-and-networking-tools">Install Paket Bootloader and Networking tools:</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman -S grub networkmanager network-manager-applet dialog mtools dosfstools base-devel linux-headers reflector git cups xdg-utils xdg-user-dirs
+</code></pre></div></div>
+
+<h2 id="install-boot-loader-grub">Install boot loader GRUB</h2>
+<p>Grub Install</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grub-install --target=i386-pc /dev/sda
+</code></pre></div></div>
+
+<p>Grub configuration file</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre></div></div>
+
+<h2 id="activate-servis-for-nex-reboot">Activate servis for nex reboot</h2>
+
+<p>Network</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl enable NetworkManager
+</code></pre></div></div>
+
+<p>Printer</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>systemctl enable org.cups.cupsd
+</code></pre></div></div>
+
+<h2 id="return-to-the-installer-unmount-all-partitions-and-reboot">Return to the installer, unmount all partitions and reboot</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exit
+umount -a
+reboot
+</code></pre></div></div>
+
+<h2 id="aktifkan-dukungan-32-bit-architecture">Aktifkan dukungan 32 bit Architecture</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo vim /etc/pacman.conf
+</code></pre></div></div>
+
+<p>edit</p>
+
+<pre>
+...
+...
+#[multilib-testing]
+#Include = /etc/pacman.d/mirrorlist
+<mark>
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+</mark>
+# An example of a custom package repository.  See the pacman manpage for
+# tips on creating your own repositories.
+...
+...
+</pre>
+
+<h2 id="install-package-manager-aur-yay-yet-another-yaourt">Install Package Manager AUR Yay (Yet another Yaourt)</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/final/Downloads/
+pacman -Syy
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+</code></pre></div></div>
+
+<h2 id="install-grafhic-card-driver">install grafhic Card Driver</h2>
+<h4 id="mesa-driver">Mesa Driver</h4>
+<p>Paket yang menyediakan dukungan terhadap DRI (Direct Reading Infrastructur) driver untuk akselerasi gambar 3D</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S mesa
+</code></pre></div></div>
+
+<h4 id="ddx-driver-xf86-vidio">DDX Driver (xf86-vidio)</h4>
+<p>dukungan terhadap DDX driver (yang menyediakan akselarasi gambar 2D pada Xorg)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pacman -S xf86-video-intel
+</code></pre></div></div>
+
+<h2 id="setting-terminal">Setting Terminal</h2>
+<h4 id="install-st-sttruck">Install ST sttruck</h4>
+<p>install Emulator Terimanl</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yay -Sy st
+</code></pre></div></div>
+
+<h4 id="install-zsh-shell">Install ZSH Shell</h4>
+<p>Referensi : <a href="https://computingforgeeks.com/installingconfiguring-and-customizing-zsh-on-linux/">https://computingforgeeks.com/installingconfiguring-and-customizing-zsh-on-linux/</a></p>
+
+<p>Install Shell</p>
+
+<p>cek Shell Defaul</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo $SHELL
+/bin/bash
+</code></pre></div></div>
+
+<p>Secara defaul shell bawaan adalah bash shell</p>
+
+<p>install ZSH Shell</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo pacman -S zsh zsh-completions
+</code></pre></div></div>
+
+<p>buat ZHS Shell menjadi defaul Shell</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chsh -s /usr/bin/zsh
+</code></pre></div></div>
+
+<p>restar shell</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exec $SHELL
+</code></pre></div></div>
+
+<p>untuk dapat memanggil program-program yang baru saja di install atau di update kita perlu melakukan restar terminal</p>
+
+<p>pindahkan pengaturan shell ~/.bashrc ke dalam ~/.zshrc</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.zshrc edit
+
+# PKGBUILD YAOURT
+export VISUAL="vim"
+</code></pre></div></div>
+
+<p>save and exit</p>
+
+<h5 id="install-oh-my-zsh">Install Oh My Zsh</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+</code></pre></div></div>
+
+<p>seteh install akan ada pilihan tema yang terletak di <code class="language-plaintext highlighter-rouge">~/.oh-my-zsh/themes/</code></p>
+
+<p>Terdapat juga direktori plugin untuk melihat semua plugin yang tersedia <code class="language-plaintext highlighter-rouge">ls -lh ~/.oh-my-zsh/plugins</code></p>
+
+<h5 id="install-oh-my-zsh-themes-for-zsh">Install Oh My Zsh themes for Zsh</h5>
+<p>kita akan memasang tema <code class="language-plaintext highlighter-rouge">honukai.zsh-theme</code> di <code class="language-plaintext highlighter-rouge">~/.oh-my-zsh/themes/</code> dan mengcofigurasinnya di <code class="language-plaintext highlighter-rouge">.zshrc</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /home/final/Downloads
+git clone https://github.com/oskarkrawczyk/honukai-iterm-zsh.git
+cp honukai-iterm-zsh/honukai.zsh-theme ~/.oh-my-zsh/themes/
+</code></pre></div></div>
+
+<p>midifiy variabel theme</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim ~/.zshrc
+</code></pre></div></div>
+
+<p>edit</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ZSH_THEME=”honukai”
+</code></pre></div></div>
+
+<p>reload config</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source ~/.zshrc
+</code></pre></div></div>]]></content><author><name>Final</name></author><category term="Archive" /><category term="linux" /><category term="archlinux" /><summary type="html"><![CDATA[Daftar Isi Cek Connection Memilih Mirrorlist Buat partisi Format partisi Install base paket dari Arch Linux dan beberapa paket pendukung Mounting semua partisi yang telah dibuat secara permanen Beralih ke mode root untuk mengatur instalasi sistem baru Set Language dan Time Zone Set Hostname dan Host Setting Password dan User Set password root Tambah User Buat user Install Paket Bootloader and Networking tools: Install boot loader GRUB Activate servis for nex reboot Return to the installer, unmount all partitions and reboot Aktifkan dukungan 32 bit Architecture Install Package Manager AUR Yay (Yet another Yaourt) install grafhic Card Driver Mesa Driver DDX Driver (xf86-vidio) Setting Terminal Install ST sttruck Install ZSH Shell Install Oh My Zsh Install Oh My Zsh themes for Zsh Cek Connection ip a Memilih Mirrorlist Sinkronisasi Database pacman -Syy Install reflector pacman -S reflector Pilih 5 mirror dengan kualitas kecepatan download yang bagus cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist Cek cat /etc/pacman.d/mirrorlist Sinkron Database pacman -Syy Buat partisi cek partisi lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 556.2M 1 loop /run/archiso/sfs/airootfs sda 8:0 0 8G 0 disk sr0 11:0 1 679M 0 rom /run/archiso/bootmnt Buat partisi fdisk /dev/sda n → ↵ → ↵ → ↵ → ↵ → ↵ → w cek hasil lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 556.2M 1 loop /run/archiso/sfs/airootfs sda 8:0 0 8G 0 disk └─sda1 8:1 0 8G 0 part sr0 11:0 1 679M 0 rom /run/archiso/bootmnt Format partisi mkfs.ext4 /dev/sda1 lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 556.2M 1 loop /run/archiso/sfs/airootfs sda 8:0 0 8G 0 disk └─sda1 8:1 0 8G 0 part sr0 11:0 1 679M 0 rom /run/archiso/bootmnt mount /dev/sda1 ke /mnt mount /dev/sda1 /mnt lsblk NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT loop0 7:0 0 556.2M 1 loop /run/archiso/sfs/airootfs sda 8:0 0 8G 0 disk └─sda1 8:1 0 8G 0 part /mnt sr0 11:0 1 679M 0 rom /run/archiso/bootmnt Install base paket dari Arch Linux dan beberapa paket pendukung pacstrap /mnt base linux linux-firmware vim sudo [amd-ucode / intel-ucode] Mounting semua partisi yang telah dibuat secara permanen genfstab -U /mnt &gt;&gt; /mnt/etc/fstab cat /mnt/etc/fstab # Static information about the filesystems. # See fstab(5) for details. # &lt;file system&gt; &lt;dir&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt; # /dev/sda1 UUID=8b29657e-14fd-422c-82fa-21ee1ab6614e / ext4 rw,relatime 0 1 Beralih ke mode root untuk mengatur instalasi sistem baru arch-chroot /mnt Set Language dan Time Zone Set Time Zone ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime Atur jam hwclock --systohc --utc Set Locale vim /etc/locale.gen Edit ... ... #en_SG.UTF-8 UTF-8 #en_SG ISO-8859-1 en_US.UTF-8 UTF-8 #en_US ISO-8859-1 #en_ZA.UTF-8 UTF-8 ... ... #ia_FR UTF-8 id_ID.UTF-8 UTF-8 #id_ID ISO-8859-1 #ig_NG UTF-8 ... ... Cek konfigurasi locale-gen set locale yang sudah kita generet ke dalam file /etc/locale.conf locale &gt; /etc/locale.conf cek konfigurasi cat /etc/locale.conf LANG=en_US.UTF-8 LC_CTYPE="en_US.UTF-8" LC_NUMERIC="en_US.UTF-8" LC_TIME="en_US.UTF-8" LC_COLLATE="en_US.UTF-8" LC_MONETARY="en_US.UTF-8" LC_MESSAGES= LC_PAPER="en_US.UTF-8" LC_NAME="en_US.UTF-8" LC_ADDRESS="en_US.UTF-8" LC_TELEPHONE="en_US.UTF-8" LC_MEASUREMENT="en_US.UTF-8" LC_IDENTIFICATION="en_US.UTF-8" LC_ALL= Set Hostname dan Host Set Hostname echo “arch” &gt; /etc/hostname set Host vim /etc/host add 127.0.0.1 localhost ::1 localhost 127.0.1.1 arch.localdomain arch Setting Password dan User Set password root passwd root New password: Retype new password: passwd: password updated successfully Tambah User buat group ‘sudo’ terlebih dahulu groupadd sudo Buat user useradd -m -g users -G sudo,storage,wheel,power,input,network final set password user final passwd final New password: Retype new password: passwd: password updated successfully Setting agar user final agar memiliki kemapuan seperti superuser EDITOR=vim visudo edit ... ... ## Uncomment to allow members of group sudo to execute any command %sudo ALL=(ALL) ALL ... ... Install Paket Bootloader and Networking tools: pacman -S grub networkmanager network-manager-applet dialog mtools dosfstools base-devel linux-headers reflector git cups xdg-utils xdg-user-dirs Install boot loader GRUB Grub Install grub-install --target=i386-pc /dev/sda Grub configuration file grub-mkconfig -o /boot/grub/grub.cfg Activate servis for nex reboot Network systemctl enable NetworkManager Printer systemctl enable org.cups.cupsd Return to the installer, unmount all partitions and reboot exit umount -a reboot Aktifkan dukungan 32 bit Architecture sudo vim /etc/pacman.conf edit ... ... #[multilib-testing] #Include = /etc/pacman.d/mirrorlist [multilib] Include = /etc/pacman.d/mirrorlist # An example of a custom package repository. See the pacman manpage for # tips on creating your own repositories. ... ... Install Package Manager AUR Yay (Yet another Yaourt) cd /home/final/Downloads/ pacman -Syy git clone https://aur.archlinux.org/yay.git cd yay makepkg -si install grafhic Card Driver Mesa Driver Paket yang menyediakan dukungan terhadap DRI (Direct Reading Infrastructur) driver untuk akselerasi gambar 3D sudo pacman -S mesa DDX Driver (xf86-vidio) dukungan terhadap DDX driver (yang menyediakan akselarasi gambar 2D pada Xorg) pacman -S xf86-video-intel Setting Terminal Install ST sttruck install Emulator Terimanl yay -Sy st Install ZSH Shell Referensi : https://computingforgeeks.com/installingconfiguring-and-customizing-zsh-on-linux/ Install Shell cek Shell Defaul $ echo $SHELL /bin/bash Secara defaul shell bawaan adalah bash shell install ZSH Shell sudo pacman -S zsh zsh-completions buat ZHS Shell menjadi defaul Shell chsh -s /usr/bin/zsh restar shell exec $SHELL untuk dapat memanggil program-program yang baru saja di install atau di update kita perlu melakukan restar terminal pindahkan pengaturan shell ~/.bashrc ke dalam ~/.zshrc vim ~/.zshrc edit # PKGBUILD YAOURT export VISUAL="vim" save and exit Install Oh My Zsh sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)" seteh install akan ada pilihan tema yang terletak di ~/.oh-my-zsh/themes/ Terdapat juga direktori plugin untuk melihat semua plugin yang tersedia ls -lh ~/.oh-my-zsh/plugins Install Oh My Zsh themes for Zsh kita akan memasang tema honukai.zsh-theme di ~/.oh-my-zsh/themes/ dan mengcofigurasinnya di .zshrc cd /home/final/Downloads git clone https://github.com/oskarkrawczyk/honukai-iterm-zsh.git cp honukai-iterm-zsh/honukai.zsh-theme ~/.oh-my-zsh/themes/ midifiy variabel theme vim ~/.zshrc edit ZSH_THEME=”honukai” reload config source ~/.zshrc]]></summary></entry><entry><title type="html">Jekyll</title><link href="http://localhost:4000/archive/20201027/jekyll" rel="alternate" type="text/html" title="Jekyll" /><published>2020-10-27T00:29:00+07:00</published><updated>2020-10-27T00:29:00+07:00</updated><id>http://localhost:4000/archive/20201027/jekyll</id><content type="html" xml:base="http://localhost:4000/archive/20201027/jekyll"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#install" id="markdown-toc-install">Install</a></li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="install">Install</h2>
+<p>dependencies</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install ruby-full build-essential zlib1g-dev
+</code></pre></div></div>
+
+<p>Tambahkan baris berikut pada <code class="language-plaintext highlighter-rouge">~/.bashrc</code></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo '# Install Ruby Gems to ~/gems' &gt;&gt; ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' &gt;&gt; ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div></div>
+
+<p>terakhir, install jekyll</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install jekyll bundler
+bundler install
+</code></pre></div></div>
+
+<p>Memulai Jekyll</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  gem install bundler jekyll
+
+  jekyll new my-awesome-site
+
+  cd my-awesome-site
+
+  bundle exec jekyll serve
+</code></pre></div></div>
+<p>Now browse to http://localhost:4000</p>
+
+<h2 id="referensi">Referensi</h2>
+<p><a href="https://jekyllrb.com/">https://jekyllrb.com/</a></p>]]></content><author><name>Final</name></author><category term="Archive" /><category term="web" /><category term="aplikasi" /><summary type="html"><![CDATA[Daftar Isi Install Referensi Install dependencies sudo apt-get install ruby-full build-essential zlib1g-dev Tambahkan baris berikut pada ~/.bashrc echo '# Install Ruby Gems to ~/gems' &gt;&gt; ~/.bashrc echo 'export GEM_HOME="$HOME/gems"' &gt;&gt; ~/.bashrc echo 'export PATH="$HOME/gems/bin:$PATH"' &gt;&gt; ~/.bashrc source ~/.bashrc terakhir, install jekyll gem install jekyll bundler bundler install Memulai Jekyll gem install bundler jekyll jekyll new my-awesome-site cd my-awesome-site bundle exec jekyll serve Now browse to http://localhost:4000 Referensi https://jekyllrb.com/]]></summary></entry><entry><title type="html">Zoom</title><link href="http://localhost:4000/archive/20201027/zoom" rel="alternate" type="text/html" title="Zoom" /><published>2020-10-27T00:26:00+07:00</published><updated>2020-10-27T00:26:00+07:00</updated><id>http://localhost:4000/archive/20201027/zoom</id><content type="html" xml:base="http://localhost:4000/archive/20201027/zoom"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#install" id="markdown-toc-install">Install</a></li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="install">Install</h2>
+<p>via Snap</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo snap install zoom-client
+</code></pre></div></div>
+
+<p>Start <strong>Zoom</strong> from the <code class="language-plaintext highlighter-rouge">command line</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zoom-client
+</code></pre></div></div>
+
+<h2 id="referensi">Referensi</h2>
+<p><a href="https://linuxconfig.org/ubuntu-20-04-zoom-installation">https://linuxconfig.org/ubuntu-20-04-zoom-installation</a></p>]]></content><author><name>Final</name></author><category term="Archive" /><category term="aplikasi" /><summary type="html"><![CDATA[Daftar Isi Install Referensi Install via Snap sudo snap install zoom-client Start Zoom from the command line zoom-client Referensi https://linuxconfig.org/ubuntu-20-04-zoom-installation]]></summary></entry><entry><title type="html">Visual Studio Code</title><link href="http://localhost:4000/archive/20201027/visualstudio-code" rel="alternate" type="text/html" title="Visual Studio Code" /><published>2020-10-27T00:25:00+07:00</published><updated>2020-10-27T00:25:00+07:00</updated><id>http://localhost:4000/archive/20201027/visualstudio-code</id><content type="html" xml:base="http://localhost:4000/archive/20201027/visualstudio-code"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#install" id="markdown-toc-install">Install</a></li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="install">Install</h2>
+<p>via Snap</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo snap install --classic code
+</code></pre></div></div>
+
+<p>Start <strong>Visual Studio Code</strong> from the <code class="language-plaintext highlighter-rouge">command line</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code
+</code></pre></div></div>
+
+<h2 id="referensi">Referensi</h2>
+<p><a href="https://linuxconfig.org/how-to-install-visual-studio-code-on-ubuntu-20-04-desktop">https://linuxconfig.org/how-to-install-visual-studio-code-on-ubuntu-20-04-desktop</a></p>]]></content><author><name>Final</name></author><category term="Archive" /><category term="aplikasi" /><summary type="html"><![CDATA[Daftar Isi Install Referensi Install via Snap sudo snap install --classic code Start Visual Studio Code from the command line code Referensi https://linuxconfig.org/how-to-install-visual-studio-code-on-ubuntu-20-04-desktop]]></summary></entry><entry><title type="html">Neovim/Nvim</title><link href="http://localhost:4000/archive/20201026/neovim" rel="alternate" type="text/html" title="Neovim/Nvim" /><published>2020-10-26T17:35:00+07:00</published><updated>2020-10-26T17:35:00+07:00</updated><id>http://localhost:4000/archive/20201026/neovim</id><content type="html" xml:base="http://localhost:4000/archive/20201026/neovim"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#install-neovim" id="markdown-toc-install-neovim">Install Neovim</a></li>
+  <li><a href="#install-vim-plug" id="markdown-toc-install-vim-plug">Install vim-plug</a></li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="install-neovim">Install Neovim</h2>
+
+<p>Ubuntu</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt install neovim
+</code></pre></div></div>
+
+<p>Buat file config</p>
+
+<p>Buat directory untuk config Neovim</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir ~/.config/nvim
+</code></pre></div></div>
+
+<p>Create sebuah file <code class="language-plaintext highlighter-rouge">init.vim</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nvim touch ~/.config/nvim/init.vim
+</code></pre></div></div>
+
+<h2 id="install-vim-plug">Install vim-plug</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+</code></pre></div></div>
+
+<h2 id="referensi">Referensi</h2>
+<p>https://www.chrisatmachine.com/Neovim/
+https://medium.com/better-programming/setting-up-neovim-for-web-development-in-2020-d800de3efacd
+https://github.com/junegunn/vim-plug</p>]]></content><author><name>Final</name></author><category term="Archive" /><category term="aplikasi" /><summary type="html"><![CDATA[Daftar Isi Install Neovim Install vim-plug Referensi Install Neovim Ubuntu sudo apt install neovim Buat file config Buat directory untuk config Neovim mkdir ~/.config/nvim Create sebuah file init.vim nvim touch ~/.config/nvim/init.vim Install vim-plug sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' Referensi https://www.chrisatmachine.com/Neovim/ https://medium.com/better-programming/setting-up-neovim-for-web-development-in-2020-d800de3efacd https://github.com/junegunn/vim-plug]]></summary></entry><entry><title type="html">Install Paket Printer Epson L120</title><link href="http://localhost:4000/archive/20201025/Install-epson-L120" rel="alternate" type="text/html" title="Install Paket Printer Epson L120" /><published>2020-10-25T21:18:00+07:00</published><updated>2020-10-25T21:18:00+07:00</updated><id>http://localhost:4000/archive/20201025/Install-epson-L120</id><content type="html" xml:base="http://localhost:4000/archive/20201025/Install-epson-L120"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#persiapan" id="markdown-toc-persiapan">Persiapan</a></li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="persiapan">Persiapan</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo su
+apt update
+apt install lsb
+</code></pre></div></div>
+<p>Apabila terjadi error</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt --fix-broken install
+</code></pre></div></div>
+
+<p>Download Driver Epson L120 <a href="http://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=EN&amp;CN2=SG&amp;CTI=4&amp;PRN=L120%20Series&amp;OSC=LX">disini</a><br /></p>
+<ol>
+  <li>epson-printer-utility_1.1.1-1lsb3.2_amd64.deb</li>
+  <li>epson-inkjet-printer-201310w_1.0.0-1lsb3.2_amd64.deb</li>
+</ol>
+
+<p>Install<br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dpkg -i epson-printer-utility_1.1.1-1lsb3.2_amd64.deb epson-inkjet-printer-201310w_1.0.0-1lsb3.2_amd64.deb
+</code></pre></div></div>
+
+<h2 id="referensi">Referensi</h2>
+<ul>
+  <li><a href="http://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=EN&amp;CN2=SG&amp;CTI=4&amp;PRN=L120%20Series&amp;OSC=LX">http://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=EN&amp;CN2=SG&amp;CTI=4&amp;PRN=L120%20Series&amp;OSC=LX</a></li>
+</ul>]]></content><author><name>Final</name></author><category term="Archive" /><category term="linux" /><category term="ubuntu" /><category term="aplikasi" /><summary type="html"><![CDATA[Daftar Isi Persiapan Referensi Persiapan sudo su apt update apt install lsb Apabila terjadi error apt --fix-broken install Download Driver Epson L120 disini epson-printer-utility_1.1.1-1lsb3.2_amd64.deb epson-inkjet-printer-201310w_1.0.0-1lsb3.2_amd64.deb Install dpkg -i epson-printer-utility_1.1.1-1lsb3.2_amd64.deb epson-inkjet-printer-201310w_1.0.0-1lsb3.2_amd64.deb Referensi http://download.ebz.epson.net/dsc/du/02/DriverDownloadInfo.do?LG2=EN&amp;CN2=SG&amp;CTI=4&amp;PRN=L120%20Series&amp;OSC=LX]]></summary></entry><entry><title type="html">Mount</title><link href="http://localhost:4000/archive/20201025/Mount" rel="alternate" type="text/html" title="Mount" /><published>2020-10-25T08:18:00+07:00</published><updated>2020-10-25T08:18:00+07:00</updated><id>http://localhost:4000/archive/20201025/Mount</id><content type="html" xml:base="http://localhost:4000/archive/20201025/Mount"><![CDATA[<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#mount-partition" id="markdown-toc-mount-partition">Mount Partition</a></li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="mount-partition">Mount Partition</h2>
+<p>Dalam ubuntu, partisi harus selalu di ‘mount’ terlebih dahulu sebelum di access</p>
+
+<ul>
+  <li>Cek file system’s physical information</li>
+</ul>
+
+<p>lsblk -f atau blkid</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NAME   FSTYPE   LABEL UUID                                 FSAVAIL FSUSE% MOUNTPOINT
+loop0  squashfs                                                  0   100% /snap/core18/1880
+loop1  squashfs                                                  0   100% /snap/gtk-common-themes/1506
+loop2  squashfs                                                  0   100% /snap/snap-store/467
+loop3  squashfs                                                  0   100% /snap/gnome-3-34-1804/36
+loop4  squashfs                                                  0   100% /snap/snapd/8542
+sda                                                                       
+└─sda1 ext4           94ef7372-ae22-4b07-aff8-9328aa97be79   95,4G     8% /
+sdb                                                                       
+└─sdb1 ntfs     Data  1A722FD8722FB801                
+</code></pre></div></div>
+
+<p>Terlihat pada hardisk saya terdapat partisi bertype <code class="language-plaintext highlighter-rouge">ntfs</code></p>
+
+<ul>
+  <li>
+    <p>Buat directiry untuk mounting</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo mkdir /media/hdd500gb
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>edit</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo nano /etc/fstab
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>saya menambahkan baris sebagai berikut untuk perintah mount drive sdb1.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Mount Partisi ntfs
+UUID=[No UUID] [Lokasi Mounting] ntfs rw,auto,users,exec,nls=utf8,umask=003,gid=46,uid=1000    0   0
+</code></pre></div></div>
+<p>cek id</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>id
+
+uid=1000(final) gid=1000(final) groups=1000(final),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare)
+</code></pre></div></div>
+
+<p>Ex</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# &lt;file system&gt; &lt;mount point&gt;   &lt;type&gt;  &lt;options&gt;       &lt;dump&gt;  &lt;pass&gt;
+# / was on /dev/sda1 during installation
+UUID=94ef7372-ae22-4b07-aff8-9328aa97be79 /               ext4    errors=remoun&gt;
+/swapfile                                 none            swap    sw           &gt;
+
+# Mounting Hdd 500 Gb
+UUID=1A722FD8722FB801 /media/hdd500gb ntfs rw,auto,users,exec,nls=utf8,umask=003,gid=1000,uid=1000    0   0
+
+</code></pre></div></div>
+<blockquote>
+  <p>Apabila tidak bisa di execute lakukan Perintah Berikut:<br />
+sudo ntfsfix /dev/sdb1</p>
+</blockquote>
+
+<h2 id="referensi">Referensi</h2>
+<p>https://qastack.id/ubuntu/46588/how-to-automount-ntfs-partitions</p>]]></content><author><name>Final</name></author><category term="Archive" /><category term="linux" /><category term="ubuntu" /><category term="cli" /><summary type="html"><![CDATA[Daftar Isi Mount Partition Referensi Mount Partition Dalam ubuntu, partisi harus selalu di ‘mount’ terlebih dahulu sebelum di access Cek file system’s physical information lsblk -f atau blkid NAME FSTYPE LABEL UUID FSAVAIL FSUSE% MOUNTPOINT loop0 squashfs 0 100% /snap/core18/1880 loop1 squashfs 0 100% /snap/gtk-common-themes/1506 loop2 squashfs 0 100% /snap/snap-store/467 loop3 squashfs 0 100% /snap/gnome-3-34-1804/36 loop4 squashfs 0 100% /snap/snapd/8542 sda └─sda1 ext4 94ef7372-ae22-4b07-aff8-9328aa97be79 95,4G 8% / sdb └─sdb1 ntfs Data 1A722FD8722FB801 Terlihat pada hardisk saya terdapat partisi bertype ntfs Buat directiry untuk mounting sudo mkdir /media/hdd500gb edit sudo nano /etc/fstab saya menambahkan baris sebagai berikut untuk perintah mount drive sdb1. #Mount Partisi ntfs UUID=[No UUID] [Lokasi Mounting] ntfs rw,auto,users,exec,nls=utf8,umask=003,gid=46,uid=1000 0 0 cek id id uid=1000(final) gid=1000(final) groups=1000(final),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare) Ex # /etc/fstab: static file system information. # # Use 'blkid' to print the universally unique identifier for a # device; this may be used with UUID= as a more robust way to name devices # that works even if disks are added and removed. See fstab(5). # # &lt;file system&gt; &lt;mount point&gt; &lt;type&gt; &lt;options&gt; &lt;dump&gt; &lt;pass&gt; # / was on /dev/sda1 during installation UUID=94ef7372-ae22-4b07-aff8-9328aa97be79 / ext4 errors=remoun&gt; /swapfile none swap sw &gt; # Mounting Hdd 500 Gb UUID=1A722FD8722FB801 /media/hdd500gb ntfs rw,auto,users,exec,nls=utf8,umask=003,gid=1000,uid=1000 0 0 Apabila tidak bisa di execute lakukan Perintah Berikut: sudo ntfsfix /dev/sdb1 Referensi https://qastack.id/ubuntu/46588/how-to-automount-ntfs-partitions]]></summary></entry></feed>

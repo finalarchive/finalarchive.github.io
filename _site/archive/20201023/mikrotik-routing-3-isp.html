@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="application-name" content="FinalArchive">
+  <meta name="theme-color" content="">
+
+  <meta content="index,follow" name="robots"><!-- All Search Engines -->
+  <meta content="index,follow" name="googlebot"><!-- Google Specific -->
+  <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/github-markdown-dark.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/styles.css"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Mikrotik: Routing 3 ISP | FinalArchive</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Mikrotik: Routing 3 ISP" />
+<meta name="author" content="Final" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/archive/20201023/mikrotik-routing-3-isp" />
+<meta property="og:url" content="http://localhost:4000/archive/20201023/mikrotik-routing-3-isp" />
+<meta property="og:site_name" content="FinalArchive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-23T09:09:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mikrotik: Routing 3 ISP" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Final"},"dateModified":"2020-10-23T09:09:00+07:00","datePublished":"2020-10-23T09:09:00+07:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Mikrotik: Routing 3 ISP","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/20201023/mikrotik-routing-3-isp"},"url":"http://localhost:4000/archive/20201023/mikrotik-routing-3-isp"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- <link rel="stylesheet" href="/assets/css/style.css"> --><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="FinalArchive" />
+</head>
+<body class="container background mt-sm-3 mb-sm-3 small shadow p-3 rounded-4 text-white fontdefault">
+    <div class="border border-1 rounded-3 p-3 border-secondary">
+        <section>
+            <div class="row justify-content-center">
+                <div>
+                    <header>
+  <div class="d-flex justify-content-center pb-3">
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-0 pt-0 pb-0 text-warning" href="/index"
+        role="button"><i class="nf nf-custom-home text-white"></i> Home</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/archive" role="button"><i class="nf nf-fa-archive text-white"></i> Archive</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/tag" role="button"><i class=" nf nf-fa-hashtag text-white"></i> Tags</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/note" role="button"><i class="nf nf-md-notebook_edit text-white"></i> Note</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning" href="/page/about"
+        role="button"><i class="nf nf-md-signature_freehand text-white"></i> About</a>
+</div>
+<div>
+    <form class="d-flex" role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    </form>
+</div>
+</header>
+
+                </div>
+            </div>
+        </section>
+        <div class="p-3 flex-shrink-0">
+            <div class="pt-3"><h2 class="m-0 fw-bold">Mikrotik: Routing 3 ISP</h2>
+<hr class="m-0">
+<div class="small fw-light">Final | 23 Oct 2020</div>
+<div class="mt-2 markdown-body">
+  <p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#intro" id="markdown-toc-intro">Intro</a></li>
+  <li><a href="#pemisahan-jalur-game" id="markdown-toc-pemisahan-jalur-game">Pemisahan Jalur Game</a>    <ul>
+      <li><a href="#konfigurasi-raw" id="markdown-toc-konfigurasi-raw">Konfigurasi RAW</a></li>
+      <li><a href="#protocol-udp" id="markdown-toc-protocol-udp">Protocol UDP</a></li>
+      <li><a href="#konfigurasi-mangle" id="markdown-toc-konfigurasi-mangle">Konfigurasi Mangle</a></li>
+      <li><a href="#konfigurasi-ip-routes" id="markdown-toc-konfigurasi-ip-routes">Konfigurasi IP Routes</a></li>
+    </ul>
+  </li>
+  <li><a href="#pemisahan-jalur-sosmed-ytfbigwadkk" id="markdown-toc-pemisahan-jalur-sosmed-ytfbigwadkk">PEMISAHAN JALUR SOSMED (YT,FB,IG,WA,DKK)</a>    <ul>
+      <li><a href="#konfigurasi-raw-1" id="markdown-toc-konfigurasi-raw-1">Konfigurasi RAW</a></li>
+      <li><a href="#konfigurasi-mangle-1" id="markdown-toc-konfigurasi-mangle-1">Konfigurasi Mangle</a></li>
+      <li><a href="#konfigurasi-ip-routes-1" id="markdown-toc-konfigurasi-ip-routes-1">Konfigurasi IP Routes</a></li>
+    </ul>
+  </li>
+  <li><a href="#setting-failover-recursive-next-hop" id="markdown-toc-setting-failover-recursive-next-hop">Setting Failover Recursive Next Hop.</a>    <ul>
+      <li><a href="#recursive-koneski-game" id="markdown-toc-recursive-koneski-game">Recursive Koneski GAME</a></li>
+      <li><a href="#recursive-koneksi-unlimitedapps" id="markdown-toc-recursive-koneksi-unlimitedapps">Recursive Koneksi UnlimitedApps</a></li>
+    </ul>
+  </li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="intro">Intro</h2>
+<p>Berdasarkan data TOP Sites dari <a href="https://www.alexa.com/topsites/countries/ID">ALEXA</a>, dibawah ini adalah daftar websites yang paling banyak diakses di indonesia</p>
+
+<p><img src="/img/1.jpg" alt="img" /></p>
+
+<p>3 dari daftar website diatas adalah yang paling boros makan bandwidth termasuk teman-temannya yang lain: Instagram, TikTok, Viu, Spotify, Joox, Deezer, etc.
+Pasti pusing dong mikirin penggunaan kuota yang besar. Apalagi kalo GSM. Tapi dengan adanya paket unlimited Apps dari Telkomsel,  kita dapat menekan biaya pengeluaran pembelian kuota jadi lebih murah. Nah agar lebih efektif, paket Unlimited ini akan kita kombinasikan dengan Koneksi Umum dan Koneksi Game, sehingga nantinya Koneksi Umum hanya akan melayani koneksi diluar koneksi Unlimited Apps. Jadi lebih hemat pastinya :) Doakan saja paket Unlimited Apps ini akan ada terus yaaa..</p>
+
+<p>All right, study case kali ini kita akan menggunakan 3 ISP / 3 Modem, dengan rincian sbb:</p>
+<ul>
+  <li>Modem 1/ISP Umum sebagai koneksi utama,</li>
+  <li>Modem 2/ISP Game untuk koneksi game,</li>
+  <li>Modem 3/ISP Unlimited Apps  untuk  koneksi sosmed (Youtube, Facebook, Whatsapp, Instagram dkk)</li>
+</ul>
+
+<p><img src="/img/2.jpg" alt="img" /></p>
+
+<p><strong>Simulasi Paket</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ether1-ISPUMUM -&gt; Kartu Byu Reguler/Unlimited
+Ether2-ISPGAME -&gt; Tsel GameMax/Tri H3ro Games/Kuota Reguler
+Ether3-ISPUNLIAPPS -&gt; Kartu Tsel Combo Sakti Unlimited Apps + Youtube
+</code></pre></div></div>
+<p>Contoh pembagian IP dan Gateway nya sebagai berikut:</p>
+
+<p><img src="/img/3.jpg" alt="img" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Ether1-ISPUMUM - &gt;  IP Gateway: 192.168.4.1
+Ether2-ISPGAME -&gt; IP Gateway: 192.168.9.254
+Ether3-ISPUNLIAPPS -&gt; IP Gateway 192.168.7.254
+Ether4-IP-KOMPUTER -&gt; IP Gateway 192.168.2.1
+Ether5-IP-HOTSPOT -&gt; IP Gateway 192.168.3.1
+</code></pre></div></div>
+<p>Initial Configuration
+Langkah pertama yang akan kita lakukan adalah, menambahkan IP LOKAL yaitu (IP LAN dan Hotspot) kedalam address list di firewall.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/ip firewall address-list
+add address=192.168.3.0/24 list=LOKAL
+add address=192.168.2.0/24 list=LOKAL
+</code></pre></div></div>
+<p>Sesuaikan dengan IP LOKAL Kalian masing2.</p>
+
+<p><img src="/img/4.jpg" alt="img" /></p>
+
+<p><img src="/img/5.jpg" alt="img" /></p>
+
+<p>Setelah ditambahkan<br />
+Address List Lokal</p>
+
+<h2 id="pemisahan-jalur-game">Pemisahan Jalur Game</h2>
+
+<p>Untuk memisahkan jalur game kita bisa menggunakan metode matching port atau content baik di rule mangle, raw, atau pun layer7.  Kali ini kita akan menggunakan port game di table raw agar lebih ringan. Bagi yang koneksi gamenya ga dipisah jalur(cuma ada 2 modem), skip aja tahap ini langsung ke tahap 2. Pemisahan Jalur Sosmed dibawah.</p>
+
+<h3 id="konfigurasi-raw">Konfigurasi RAW</h3>
+<p>Disini kita akan menambahkan port game tcp dan udp ke dalam raw, tambahkan rule baru di raw, pilih protocolnya TCP dan masukkan port game nya.
+Menambahkan Port Game
+Karena di field dst. port dibatasi hanya muat 15 port berbeda, maka jika kolom port penuh, silahkan copy rule yang sama dan lanjutkan isi kolom port dengan port game yang tersisa
+Untuk list port game ada dibawah ini:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PORT GAME
+---------------------
+PUBG
+TCP : 7889,10012,17500,18081
+UDP : 8011,9030,10010-10650,11000-14000,17000,20000,20001,20002
+
+FREE FIRE
+TCP : 7006,14000,20561,39698,39779,39003
+UDP : 7008,10000-10009,17000
+
+MOBILE LEGENDS
+TCP : 5500-5700,8001,30000-30300,9000-9010,30097-30147,30000-30150,9001,30101-30105,5057,5228,5001-5009,5520-5529,5551,5651,5153
+UDP : 5000-5200,5500-5700,8001,30000-30300,9000-9010,5601-5602,5025,5605,5005,5503,5101-5109,5001-5009,30101,5520-5529,5020-5024,5501-5509,5517
+
+CALL OF DUTY MOBILE
+TCP : 3013,18082,65010,65050
+UDP : 7500-7700,17000-20100
+
+POINT BLANK
+TCP : 39190-39200,49001-49190
+UDP : 40000-40010
+
+AOV
+TCP : 10001-10094
+UDP : 10101-10201,10080-10110,17000-18000
+
+GARENA LEAGUE OF LEGEND (LOL)
+TCP : 2080-2099
+UDP : 5100
+
+DOTA 2 
+TCP : 9100-9200,8230-8250,8110-8120,27000-28998
+UDP : 27000-28998,39000
+
+FIFA ONLINE
+TCP : 7770-7790
+UDP : 16300-16350
+
+LYTO CROSS FIRE
+TCP : 10009,13008,16666,28012
+UDP : 12060-12070,13000-13080
+
+ORIGIN APEX LEGENDS
+TCP: 9960-9969,1024-1124,3216,18000,18120,18060,27900,28910,29900
+UDP: 1024-1124,18000,29900,37000-40000
+
+GRAND CHASE
+TCP : 9300,9400,9700
+UDP : 9401,9600,16440-16450
+
+WORLD IN AYODANCE
+TCP : 52510,53100-53110,54100,55100
+
+Clash of God
+TCP : 9430-9450,5220-5230
+
+CABAL INDONESIA
+TCP : 63000-64000,38101,38110-38130
+
+DRAGON NEST INDONESIA
+TCP : 14300-15512
+UDP : 15000-15500
+
+LOST SAGA
+TCP : 14000-14010
+UDP : 14000-14010
+
+SWORD OF ANGELS
+TCP : 15490-15510
+
+WARFLARE
+TCP : 64990-65010
+
+LEAGUE OF ANGELS 2
+TCP : 51700-51715
+
+Left4Dead 2 Steam
+UDP : 4360-4390
+</code></pre></div></div>
+<p><img src="/img/6.jpg" alt="img" /></p>
+
+<p>Jangan lupa kasih pengecualian di dst. Address List nya
+Untuk source address list isi dengan LOKAL dan destination address list isi dengan pengecualian LOKAL</p>
+
+<p><img src="/img/7.jpg" alt="img" /></p>
+
+<p>Pada</p>
+
+<p>tab action pilih add dst to adress list, lalu adress listnya beri nama dengan IP-GAME</p>
+
+<p><img src="/img/8.jpg" alt="img" /></p>
+
+<p>Jangan lupa kasih comment dengan nama Game yang sesuai. misal “MOBILE LEGENDS” untuk memudahkan jika ada penambahan atau update port.</p>
+
+<h3 id="protocol-udp">Protocol UDP</h3>
+
+<p><img src="/img/9.jpg" alt="img" /></p>
+
+<p>Sama seperti diatas, pilih protocol UDP dan masukkna port Game nya.</p>
+
+<p>Di tab Advanced, tambahkan src address list LOKAL dan dst adress list dengan pengecualian LOKAL</p>
+
+<p><img src="/img/10.jpg" alt="img" /></p>
+
+<p>Pada tab Action pilih add dst to adress list, lalu adress listnya beri nama dengan IP-GAME</p>
+
+<p><img src="/img/11.jpg" alt="img" /></p>
+
+<p>Lanjutkan dengan Game yang lain, FF, COD, PUBG dkk. Kalau mau cepat copy aja rulesnya. 
+Sekilas hasilnya akan seperti ini:</p>
+
+<p><img src="/img/12.jpg" alt="img" /></p>
+
+<h3 id="konfigurasi-mangle">Konfigurasi Mangle</h3>
+<p>Setelah filtering ip port game masuk kedalam adress list, langkah selanjutnya adalah kita akan menandai adress list tadi ke dalam mark routing.</p>
+
+<p>Masuk ke dalam mangle, buat rule baru. chain prerouting</p>
+
+<p><img src="/img/13.jpg" alt="img" /></p>
+
+<p>Pada dst adress list pilih IP-GAME</p>
+
+<p><img src="/img/14.jpg" alt="img" /></p>
+
+<p>Actionnya pilih mark routing,</p>
+
+<p><img src="/img/15.jpg" alt="img" /></p>
+
+<p>untuk New Routing Mark buat Routing-Game</p>
+
+<p><img src="/img/16.jpg" alt="img" /></p>
+
+<p>Jangan lupa kasih commentnya ROUTING GAME biar enak diliat.
+Hasilnya akan seperti ini:</p>
+
+<p><img src="/img/17.jpg" alt="img" /></p>
+
+<h3 id="konfigurasi-ip-routes">Konfigurasi IP Routes</h3>
+<p>Setelah menambahkan raw dan mangle, langkah terakhir adalah meroutingkan atau menambahkan ip gateway modem ke dalam ip routes, tambahkan route baru. Masukkan IP Gateway Modem (192.168.9.254) set check gatewaynya ke ping. lalu pilih routing mark: Routing-Game yang kita buat tadi.</p>
+
+<p><img src="/img/18.jpg" alt="img" /></p>
+
+<p>Routing Game Done!</p>
+
+<p>Bagi yang ga mau ribet bisa paste script dibawah ini, tinggal sesuaikan dengan nama address list Lokal kalian dan Gateway IP Modem khusus Game masing2.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/ip firewall raw
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting comment="MOBILE LEGENDS" dst-address-list=!LOKAL \
+    dst-port=\
+    30097-30147,30000-30150,30101-30106,5057,5228,5001-5009,5520-5529 \
+    protocol=tcp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting dst-address-list=!LOKAL dst-port=\
+    5153,5543,5500-5700,8001,30000-30300,9000-9010,30101-30105 protocol=tcp \
+    src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting dst-address-list=!LOKAL dst-port=\
+    5601-5602,5025,5605,5005,5101-5109,5001-5009,30101,5520-5529,5020-5024 \
+    protocol=udp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting dst-address-list=!LOKAL dst-port=\
+    5501-5509,5517,5510,5650,5000-5200,5500-5700,8001,30000-30300,9000-9010 \
+    protocol=udp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting comment=FREEFIRE dst-address-list=!LOKAL dst-port=\
+    7006,39003,39698,39779,6006,7889,8001,10012,8006,9006,10006,11006,13006 \
+    protocol=tcp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting dst-address-list=!LOKAL dst-port=\
+    10012,6006,6008,7008,2000,20001,10100,8008,9008,10001-10008,11008,13008 \
+    protocol=udp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting comment=PUBG dst-address-list=!LOKAL dst-port=\
+    7889,10012,13004,17500,18081,20371 protocol=tcp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting comment=COD dst-address-list=!LOKAL dst-port=\
+    8013,8085,20000,3013,18082,65010,65050 protocol=tcp src-address-list=\
+    LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting dst-address-list=!LOKAL dst-port=\
+    7500-7700,17000-20100 protocol=udp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting comment=AOV dst-address-list=!LOKAL dst-port=\
+    10001-10094 protocol=tcp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting dst-address-list=!LOKAL dst-port=\
+    10101-10201,10080-10110,17000-18000 protocol=udp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting comment="PORT RINGAN" dst-address-list=!LOKAL \
+    dst-port="10147,10491,10010,10013,10612,20002,20001,20000,12235,13748,1397\
+    2,13894,11455,10096,10039" protocol=udp src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-GAME address-list-timeout=\
+    1h chain=prerouting dst-address-list=!LOKAL dst-port=\
+    8011,9030,10010-10650,11000-14000,17000,10289,10451,19305 protocol=udp \
+    src-address-list=LOKAL	
+
+/ip firewall mangle	
+add action=mark-routing chain=prerouting comment="ROUTING GAME" \
+    dst-address-list=IP-GAME new-routing-mark=Routing-Game passthrough=yes \
+    src-address-list=""	
+
+/ip route
+add check-gateway=ping distance=1 gateway=192.168.9.254 routing-mark=\
+    "Routing-Game"
+</code></pre></div></div>
+
+<h2 id="pemisahan-jalur-sosmed-ytfbigwadkk">PEMISAHAN JALUR SOSMED (YT,FB,IG,WA,DKK)</h2>
+
+<p>Untuk pemisahan jalur sosmed langkahnya hampir sama dengan routing game diatas, tapi kali ini kita menggunakan matcher content, kenapa ga pake layer7? biar lebih ringan aja :D</p>
+
+<h3 id="konfigurasi-raw-1">Konfigurasi RAW</h3>
+<p>Tambahkan rules baru, dengan chain prerouting</p>
+
+<p><img src="/img/19.jpg" alt="img" /></p>
+
+<p>Src. Address list atur ke LOKAL, dst. Addresslist nya juga LOKAL dengan pengecualian.</p>
+
+<p><img src="/img/20.jpg" alt="img" /></p>
+
+<p>Lalu isi content nya dengan domain dibawah ini:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.youtube.com
+.googlevideo.com
+.ytimg.com.facebook.com
+.facebook.net
+.fbcdn.net
+.fbsbx.com
+.whatsapp.com
+.whatsapp.net
+.line.me
+.line-scdn.net
+.naver.jp
+.instagram.com
+.cdninstagram.com
+.akamaihd.net
+.tiktokv.com gunakan tiktok jika memang ada paket tiktoknya, kalo ga ntar lemot
+.tiktokcdn.com
+.joox.com
+.spotify.com
+.deezer.com
+.dzcdn.net
+.langitmusik.co.id
+.svara.id
+.suararadio.com
+.svara.fm
+.smule.com
+.vidio.com
+.viu.com
+.segment.io
+.wzrkt.com
+.iflix.com
+</code></pre></div></div>
+
+<p>Actionnya pilih add dst adress to adress list, di adress list kasih nama dengan IP-SOSMED</p>
+
+<p><img src="/img/21.jpg" alt="img" /></p>
+
+<p>Jangan lupa kasih comment juga misal “SOSMED”</p>
+
+<p><img src="/img/22.jpg" alt="img" /></p>
+
+<p>Lanjut dengan domain content yang lain, copy aja rulenya biar cepat lalu ganti isi content nya dengan list domain diatas. Hasilnya nanti kira2 akan seperti ini:</p>
+
+<p><img src="/img/23.jpg" alt="img" /></p>
+
+<p>Setelah semuanya masuk ke adress list lanjut ke mangle.</p>
+
+<h3 id="konfigurasi-mangle-1">Konfigurasi Mangle</h3>
+<p>Masuk ke dalam mangle, buat rule baru. chain prerouting,</p>
+
+<p><img src="/img/24.jpg" alt="img" /></p>
+
+<p>di dst adress list pilih IP-SOSMED</p>
+
+<p><img src="/img/25.jpg" alt="img" /></p>
+
+<p>Kemudian actionnya pilih mark routing, new routing mark buat Routing-Sosmed.</p>
+
+<p><img src="/img/26.jpg" alt="img" /></p>
+
+<p>Kasih comment dengan nama Routing-Sosmed</p>
+
+<p><img src="/img/27.jpg" alt="img" /></p>
+
+<h3 id="konfigurasi-ip-routes-1">Konfigurasi IP Routes</h3>
+<p>Setelah menambahkan raw dan mangle, langkah terakhir adalah menambahkan ip gateway modem ISPUNLIAPPS tadi ke dalam ip routes, tambahkan route baru, tambahkan ip gateway modemnya (192.168.7.254) set check gatewaynya ke ping. lalu pada pilihan routing mark, pilih Routing-Sosmed yang kita buat tadi.</p>
+
+<p><img src="/img/28.jpg" alt="img" /></p>
+
+<p>Done.</p>
+
+<p>Bagi yang ga mau ribet bisa pake script dibawah ini sesuaikan dengan nama address list  Lokal dan IP Gateway Modem UnlimitedApps kalian masing2.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting comment=SOSMED content=\
+    .youtube.com dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.googlevideo.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.ytimg.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.facebook.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.facebook.net \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.fbsbx.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.tiktokcdn.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.tiktokv.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.akamaihd.net \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.cdninstagram.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.instagram.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.whatsapp.net \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.whatsapp.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.fbcdn.net \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.spotify.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.deezer.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.dzcdn.net \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.langitmusik.co.id \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.suararadio.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.svara.id \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.svara.fm \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.joox.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.line.me \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.line-scdn.net \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.naver.jp \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.vidio.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.viu.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.segment.io \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.wzrkt.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL
+
+add action=add-dst-to-address-list address-list=IP-SOSMED \
+    address-list-timeout=12h chain=prerouting content=.iflix.com \
+    dst-address-list=!LOKAL src-address-list=LOKAL	/ip firewall mangle	
+
+add action=mark-routing chain=prerouting comment="ROUTING SOSMED" \
+    dst-address-list=IP-SOSMED new-routing-mark=Routing-Sosmed passthrough=\
+    yes	/ip routeadd check-gateway=ping distance=1 gateway=192.168.7.254 routing-mark=\
+    "Routing-Sosmed"
+</code></pre></div></div>
+
+<h2 id="setting-failover-recursive-next-hop">Setting Failover Recursive Next Hop.</h2>
+
+<p>Ini adalah tips tambahan, dengan metode recursive failover ini kita bisa gunakan isp umum (koneksi utama) sebagai backup jika isp game dan unlimited apps sedang down/tidak ada koneksi.</p>
+
+<h3 id="recursive-koneski-game">Recursive Koneski GAME</h3>
+<p>Pertama yang harus kita lakukan adalah mengedit gateway koneksi game dengan dns yang jarang down misal DNS Cloudflare (1.1.1.1) atau Quad9 DNS (9.9.9.9), lalu arahkan target scope ke scope koneksi utama yang mau dijadikan backup.</p>
+
+<p><img src="/img/29.jpg" alt="img" /></p>
+
+<p>Disini scope koneksi utama saya adalah 30, untuk check gateway ke IP yang ingin dipantau saya tetap gunakan target scope 10</p>
+
+<p><img src="/img/30.jpg" alt="img" /></p>
+
+<p>Setelah itu tambahkan lagi ip gateway modem game tapi kali ini dst adressnya isi dengan dns cloudflare 1.1.1.1 check gateway ping distance samakan dengan gateway koneksi game diawal.</p>
+
+<p><img src="/img/31.jpg" alt="img" /></p>
+
+<p>Done.</p>
+
+<h3 id="recursive-koneksi-unlimitedapps">Recursive Koneksi UnlimitedApps</h3>
+<p>Langkah selanjutnya yang kita lakukan adalah mengedit gateway koneksi unlimited Apps dengan DNS yang berbeda selain cloudflare tadi, misal quad9, (9.9.9.9) lalu arahkan target-scope ke scope koneksi yang mau dijadikan backup, disini saya juga pilih koneksi utama (Umum) sebagai backupnya.</p>
+
+<p><img src="/img/32.jpg" alt="img" /></p>
+
+<p>Setelah itu tambahkan lagi gateway modem unlimited Apps dengan tambahan dst adressnya dns Quad9 9.9.9.9 check gateway ping distance samakan dengan gateway koneksi unlimited apps diawal.</p>
+
+<p><img src="/img/33.jpg" alt="img" /></p>
+
+<p>Done.</p>
+
+<p>Yang ga mau ribet:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/ip route
+add check-gateway=ping distance=1 gateway=1.1.1.1 routing-mark=Routing-Game \
+    target-scope=30
+add check-gateway=ping distance=1 gateway=9.9.9.9 routing-mark=Routing-Sosmed \
+    target-scope=30
+add check-gateway=ping distance=1 gateway=192.168.4.1
+add check-gateway=ping distance=1 dst-address=1.1.1.1/32 gateway=\
+    192.168.9.254
+add check-gateway=ping distance=1 dst-address=9.9.9.9/32 gateway=\
+    192.168.7.254
+</code></pre></div></div>
+<p>Sesuaikan dengan IP Gateway Modem Masing2.</p>
+
+<p>Dengan cara ini kita bisa membuat failover yang bekerja tidak hanya ketika kabel putus dimakan tikus tapi ketika kuota habis atau koneksi internet kita sedang down atau rto, sehingga nantinya ketika koneksi putus,  gateway koneksi akan otomatis berpindah memanggil gateway yg lain (recursive) ke koneksi utama yang kita jadikan backup tadi.</p>
+
+<p>Selamat mencoba</p>
+
+<p>Thanks!</p>
+
+<h2 id="referensi">Referensi</h2>
+<ul>
+  <li><a href="https://www.facebook.com/notes/pejuang-gsm/tutorial-routing-game-ke-isp-game-routing-yt-fb-wa-ig-viu-spotify-dkk-ke-isp-unl/348847116349713/">https://www.facebook.com/notes/pejuang-gsm/tutorial-routing-game-ke-isp-game-routing-yt-fb-wa-ig-viu-spotify-dkk-ke-isp-unl/348847116349713/</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <section>
+            <div class="p-3">
+                <hr>
+<footer class="site-footer h-card">
+<div class="text-center">Final Afriola 2023</div>
+
+</footer>
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

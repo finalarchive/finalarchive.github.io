@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="application-name" content="FinalArchive">
+  <meta name="theme-color" content="">
+
+  <meta content="index,follow" name="robots"><!-- All Search Engines -->
+  <meta content="index,follow" name="googlebot"><!-- Google Specific -->
+  <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/github-markdown-dark.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/styles.css"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Operator Shell | FinalArchive</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Operator Shell" />
+<meta name="author" content="Final" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/archive/20201019/Operator-shell" />
+<meta property="og:url" content="http://localhost:4000/archive/20201019/Operator-shell" />
+<meta property="og:site_name" content="FinalArchive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-19T15:24:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Operator Shell" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Final"},"dateModified":"2020-10-19T15:24:00+07:00","datePublished":"2020-10-19T15:24:00+07:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Operator Shell","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/20201019/Operator-shell"},"url":"http://localhost:4000/archive/20201019/Operator-shell"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- <link rel="stylesheet" href="/assets/css/style.css"> --><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="FinalArchive" />
+</head>
+<body class="container background mt-sm-3 mb-sm-3 small shadow p-3 rounded-4 text-white fontdefault">
+    <div class="border border-1 rounded-3 p-3 border-secondary">
+        <section>
+            <div class="row justify-content-center">
+                <div>
+                    <header>
+  <div class="d-flex justify-content-center pb-3">
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-0 pt-0 pb-0 text-warning" href="/index"
+        role="button"><i class="nf nf-custom-home text-white"></i> Home</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/archive" role="button"><i class="nf nf-fa-archive text-white"></i> Archive</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/tag" role="button"><i class=" nf nf-fa-hashtag text-white"></i> Tags</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/note" role="button"><i class="nf nf-md-notebook_edit text-white"></i> Note</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning" href="/page/about"
+        role="button"><i class="nf nf-md-signature_freehand text-white"></i> About</a>
+</div>
+<div>
+    <form class="d-flex" role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    </form>
+</div>
+</header>
+
+                </div>
+            </div>
+        </section>
+        <div class="p-3 flex-shrink-0">
+            <div class="pt-3"><h2 class="m-0 fw-bold">Operator Shell</h2>
+<hr class="m-0">
+<div class="small fw-light">Final | 19 Oct 2020</div>
+<div class="mt-2 markdown-body">
+  <p>Ini disebut operator shell dan ya, ada lebih banyak dari mereka. Saya akan memberikan gambaran singkat tentang yang paling umum di antara dua kelas utama, operator kontrol dan operator pengalihan , dan bagaimana mereka bekerja sehubungan dengan bash shell.</p>
+
+<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#kontrol-operator" id="markdown-toc-kontrol-operator">Kontrol operator</a>    <ul>
+      <li><a href="#daftar-terminator" id="markdown-toc-daftar-terminator">Daftar terminator</a></li>
+      <li><a href="#operator-logis" id="markdown-toc-operator-logis">Operator logis</a></li>
+      <li><a href="#operator-pipa" id="markdown-toc-operator-pipa">Operator pipa</a></li>
+      <li><a href="#tanda-baca-daftar-lainnya" id="markdown-toc-tanda-baca-daftar-lainnya">Tanda baca daftar lainnya</a></li>
+    </ul>
+  </li>
+  <li><a href="#operator-pengalihan" id="markdown-toc-operator-pengalihan">Operator Pengalihan</a></li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h1 id="kontrol-operator">Kontrol operator</h1>
+
+<p>Dalam bahasa perintah shell, token yang melakukan fungsi kontrol.
+Ini adalah salah satu dari simbol berikut:</p>
+
+<p><code class="language-plaintext highlighter-rouge">&amp;   &amp;&amp;   (   )   ;   ;;   &lt;newline&gt;   |   ||</code> Dan <code class="language-plaintext highlighter-rouge">|&amp;</code> dalam bash.</p>
+
+<p>Sebuah <code class="language-plaintext highlighter-rouge">!</code> adalah tidak operator control tapi Reserved Firman . Ini menjadi BUKAN [operator negasi] logis di dalam Ekspresi Aritmatika dan konstruksi uji dalam (sementara masih membutuhkan pembatas ruang).</p>
+
+<h3 id="daftar-terminator">Daftar terminator</h3>
+
+<p><code class="language-plaintext highlighter-rouge">;</code> : Akan menjalankan satu perintah setelah yang lain selesai, terlepas dari hasil yang pertama.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  command1 ; command2
+</code></pre></div></div>
+
+<p>Pertama command1dijalankan, di latar depan, dan setelah selesai, command2akan dijalankan.</p>
+
+<p>Baris baru yang tidak dalam string literal atau setelah kata kunci tertentu tidak setara dengan operator titik koma. Daftar <code class="language-plaintext highlighter-rouge">;</code> perintah sederhana terbatas masih merupakan daftar - karena dalam parser shell masih harus terus membaca dalam perintah sederhana yang mengikuti <code class="language-plaintext highlighter-rouge">;</code> perintah sederhana terbatas sebelum dieksekusi, sedangkan baris baru dapat membatasi seluruh daftar perintah - atau daftar daftar. Perbedaannya halus, tetapi rumit: mengingat shell tidak memiliki keharusan sebelumnya untuk membaca data mengikuti baris baru, baris baru menandai titik di mana shell dapat mulai mengevaluasi perintah-perintah sederhana yang sudah dibaca, sedangkan ;semi-colon tidak tidak.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&amp;</code> : Ini akan menjalankan perintah di latar belakang, memungkinkan Anda untuk terus bekerja di shell yang sama.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  command1 &amp; command2
+</code></pre></div></div>
+
+<p>Di sini, command1diluncurkan di latar belakang dan command2mulai berjalan di latar depan segera, tanpa menunggu untuk command1keluar.</p>
+
+<p>Baris baru setelahnya command1 adalah opsional.</p>
+
+<h3 id="operator-logis">Operator logis</h3>
+
+<p><code class="language-plaintext highlighter-rouge">&amp;&amp;</code> : Digunakan untuk membangun DAN daftar, ini memungkinkan Anda untuk menjalankan satu perintah hanya jika yang lain berhasil keluar.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  command1 &amp;&amp; command2
+</code></pre></div></div>
+
+<p>Di sini, command2akan dijalankan setelah command1selesai dan hanya jika command1berhasil (jika kode keluarnya adalah 0). Kedua perintah dijalankan di latar depan.</p>
+
+<p>Perintah ini juga bisa ditulis</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if command1
+then command2
+else false
+fi
+</code></pre></div></div>
+<p>atau hanya <code class="language-plaintext highlighter-rouge">if command1; then command2; fi</code> jika status pengembalian diabaikan.</p>
+
+<p><code class="language-plaintext highlighter-rouge">||</code> : Digunakan untuk membuat daftar ATAU, ini memungkinkan Anda untuk menjalankan satu perintah hanya jika yang lain tidak berhasil.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  command1 || command2
+</code></pre></div></div>
+
+<p>Di sini, <code class="language-plaintext highlighter-rouge">command2</code> hanya akan berjalan jika <code class="language-plaintext highlighter-rouge">command1</code> gagal (jika mengembalikan status keluar selain 0). Kedua perintah dijalankan di latar depan.</p>
+
+<p>Perintah ini juga bisa ditulis</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if command1
+then true
+else command2
+fi
+</code></pre></div></div>
+<p>atau dengan cara yang lebih pendek <code class="language-plaintext highlighter-rouge">if ! command1; then command2; fi</code>.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Perhatikan itu <code class="language-plaintext highlighter-rouge">&amp;&amp;</code>dan <code class="language-plaintext highlighter-rouge">||</code> asosiatif kiri; lihat diutamakan operator logika shell &amp;&amp;,</td>
+      <td> </td>
+      <td>untuk informasi lebih lanjut.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">!</code>: Ini adalah kata yang dilindungi undang-undang yang bertindak sebagai operator “bukan” (tetapi harus memiliki pembatas), digunakan untuk meniadakan status pengembalian suatu perintah - mengembalikan 0 jika perintah mengembalikan status bukan nol, mengembalikan 1 jika mengembalikan status 0 Juga TIDAK logis untuk testutilitas.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>! command1
+
+[ ! a = a ]
+
+Dan operator BUKAN yang sebenarnya dalam Ekspresi Aritmatika:
+
+$ echo $((!0)) $((!23))
+1 0
+</code></pre></div></div>
+<h3 id="operator-pipa">Operator pipa</h3>
+
+<p><code class="language-plaintext highlighter-rouge">|</code>: Operator pipa, meneruskan output dari satu perintah sebagai input ke yang lain. Perintah yang dibangun dari operator pipa disebut pipeline .</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  command1 | command2
+</code></pre></div></div>
+
+<p>Output apa pun yang dicetak oleh command1diteruskan sebagai input command2.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">|&amp;</code>: Ini adalah singkatan untuk 2&gt;&amp;1</td>
+      <td>dalam bash dan zsh. Ini melewati standar output dan standard error dari satu perintah sebagai input ke perintah lainnya.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  command1 |&amp; command2
+</code></pre></div></div>
+
+<h3 id="tanda-baca-daftar-lainnya">Tanda baca daftar lainnya</h3>
+
+<p><code class="language-plaintext highlighter-rouge">;;</code> digunakan hanya untuk menandai akhir dari pernyataan kasus . Ksh, bash dan zsh juga mendukung ;&amp;untuk masuk ke kasus berikutnya dan <code class="language-plaintext highlighter-rouge">;;&amp;</code>(tidak di ATT ksh) untuk melanjutkan dan menguji kasus-kasus berikutnya.</p>
+
+<p><code class="language-plaintext highlighter-rouge">(</code>dan <code class="language-plaintext highlighter-rouge">)</code>digunakan untuk mengelompokkan perintah dan meluncurkannya dalam subkulit. <code class="language-plaintext highlighter-rouge">{</code> dan <code class="language-plaintext highlighter-rouge">}</code> juga perintah grup, tetapi jangan meluncurkannya dalam subkulit. Lihat jawaban ini untuk diskusi tentang berbagai jenis kurung, kurung dan kurung kurawal dalam sintaksis shell.</p>
+<h1 id="operator-pengalihan">Operator Pengalihan</h1>
+
+<p>Operator Pengalihan</p>
+
+<p>Dalam bahasa perintah shell, token yang melakukan fungsi pengalihan. Ini adalah salah satu dari simbol berikut:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  &lt;     &gt;     &gt;|     &lt;&lt;     &gt;&gt;     &lt;&amp;     &gt;&amp;     &lt;&lt;-     &lt;&gt;
+</code></pre></div></div>
+
+<p>Ini memungkinkan Anda untuk mengontrol input dan output dari perintah Anda. Mereka dapat muncul di mana saja dalam perintah sederhana atau dapat mengikuti perintah. Pengalihan diproses sesuai urutan kemunculannya, dari kiri ke kanan.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;</code> : Memberikan input ke perintah.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command &lt; file.txt
+</code></pre></div>    </div>
+
+    <p>Di atas akan mengeksekusi commandpada isi file.txt.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;&gt;</code>: sama seperti di atas, tetapi file terbuka dalam mode baca + tulis alih-alih hanya baca :</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command &lt;&gt; file.txt
+</code></pre></div>    </div>
+
+    <p>Jika file tidak ada, itu akan dibuat.</p>
+
+    <p>Operator itu jarang digunakan karena perintah umumnya hanya membaca dari stdin mereka, meskipun itu bisa berguna dalam sejumlah situasi tertentu .</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&gt;</code> : Mengarahkan output perintah ke file.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      command &gt; out.txt
+</code></pre></div>    </div>
+
+    <p>Di atas akan menyimpan output commandsebagai out.txt. Jika file ada, isinya akan ditimpa dan jika tidak ada maka akan dibuat.</p>
+
+    <p>Operator ini juga sering digunakan untuk memilih apakah sesuatu harus dicetak ke kesalahan standar atau output standar :</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      command &gt;out.txt 2&gt;error.txt
+</code></pre></div>    </div>
+
+    <p>Pada contoh di atas, &gt;akan mengarahkan output standar dan 2&gt;mengarahkan ulang kesalahan standar. Output juga dapat diarahkan menggunakan 1&gt;tetapi, karena ini adalah default, 1biasanya dihilangkan dan ditulis hanya sebagai &gt;.</p>
+
+    <p>Jadi, untuk menjalankan commandpada file.txtdan menyimpan output dalam out.txtdan pesan kesalahan di error.txtAnda akan menjalankan:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command &lt; file.txt &gt; out.txt 2&gt; error.txt
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&gt;|</code>: Apakah sama dengan &gt;, tetapi akan menimpa target, bahkan jika shell telah dikonfigurasi untuk menolak menimpa (dengan set -Catau set -o noclobber).</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      command &gt;| out.txt
+</code></pre></div>    </div>
+
+    <p>Jika out.txtada, output dari commandakan mengganti kontennya. Jika tidak ada maka akan dibuat.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&gt;&gt;</code>: Apakah sama dengan &gt;, kecuali bahwa jika file target ada, data baru ditambahkan.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      command &gt;&gt; out.txt
+</code></pre></div>    </div>
+
+    <p>Jika out.txtada, output dari commandakan ditambahkan padanya, setelah apa pun yang sudah ada di dalamnya. Jika tidak ada maka akan dibuat.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&amp;&gt;</code>, <code class="language-plaintext highlighter-rouge">&gt;&amp;</code>, <code class="language-plaintext highlighter-rouge">&gt;&gt;&amp;</code>Dan <code class="language-plaintext highlighter-rouge">&amp;&gt;&gt;</code>: (non-standar). Arahkan masing-masing kesalahan standar dan output standar, menggantikan atau menambahkan.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      command &amp;&gt; out.txt
+</code></pre></div>    </div>
+
+    <p>Baik standard error dan output standar commandakan disimpan out.txt, menimpa isinya atau membuatnya jika tidak ada.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command &amp;&gt;&gt; out.txt
+</code></pre></div>    </div>
+
+    <p>Seperti di atas, kecuali jika out.txtada, output dan kesalahan commandakan ditambahkan padanya.</p>
+
+    <p>The <code class="language-plaintext highlighter-rouge">&amp;&gt;</code>varian berasal bash, sedangkan <code class="language-plaintext highlighter-rouge">&gt;&amp;</code>varian berasal dari csh (dekade sebelumnya). Keduanya bertentangan dengan operator shell POSIX lain dan tidak boleh digunakan dalam shskrip portabel .</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;&lt;</code>: Dokumen di sini. Ini sering digunakan untuk mencetak string multi-line.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command &lt;&lt; WORD
+      Text
+WORD
+</code></pre></div>    </div>
+
+    <p>Di sini, commandakan mengambil semuanya hingga menemukan kemunculan berikutnya WORD, Textdalam contoh di atas, sebagai input. Meskipun WORDsering EoFatau variasi daripadanya, itu bisa berupa string alfanumerik (dan bukan hanya) yang Anda suka. Ketika WORDdikutip, teks dalam dokumen di sini diperlakukan secara harfiah dan tidak ada ekspansi yang dilakukan (pada variabel misalnya). Jika tidak dikutip, variabel akan diperluas. Untuk detail lebih lanjut, lihat manual bash .</p>
+
+    <p>Jika Anda ingin menyalurkan output command « WORD … WORDlangsung ke perintah atau perintah lain, Anda harus meletakkan pipa pada baris yang sama dengan « WORD, Anda tidak dapat meletakkannya setelah KATA penghentian atau pada baris berikutnya. Sebagai contoh:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    command &lt;&lt; WORD | command2 | command3...
+          Text
+    WORD
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;&lt;&lt;</code>: Berikut string, mirip dengan dokumen di sini, tetapi dimaksudkan untuk satu baris. Ini hanya ada di port Unix atau rc (dari mana asalnya), zsh, beberapa implementasi ksh, yash dan bash.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>command &lt;&lt;&lt; WORD
+</code></pre></div>    </div>
+
+    <p>Apa pun yang diberikan saat WORDdiperluas dan nilainya diteruskan sebagai input command. Ini sering digunakan untuk meneruskan konten variabel sebagai input ke perintah. Sebagai contoh:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
+$ foo="bar"
+$ sed 's/a/A/' &lt;&lt;&lt; "$foo"
+bAr
+# as a short-cut for the standard:
+$ printf '%s\n' "$foo" | sed 's/a/A/'
+bAr
+# or
+sed 's/a/A/' &lt;&lt; EOF
+$foo
+EOF
+```
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p>Beberapa operator lain ( &gt;&amp;-, x&gt;&amp;y x&lt;&amp;y) dapat digunakan untuk menutup atau menggandakan deskriptor file. Untuk detailnya, silakan lihat bagian yang relevan dari manual shell Anda (di sini misalnya untuk bash).</p>
+
+<p>Itu hanya mencakup operator paling umum dari kerang mirip Bourne. Beberapa shell memiliki beberapa operator pengalihan tambahan mereka sendiri.</p>
+
+<p>Ksh, bash dan zsh juga memiliki konstruksi &lt;(…), &gt;(…)dan =(…)(yang terakhir zshhanya dalam konstruksi ). Ini bukan pengalihan, tetapi proses substitusi .</p>
+
+<h1 id="referensi">Referensi</h1>
+<ul>
+  <li><a href="https://qastack.id/unix/159513/what-are-the-shells-control-and-redirection-operators">https://qastack.id/unix/159513/what-are-the-shells-control-and-redirection-operators</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <section>
+            <div class="p-3">
+                <hr>
+<footer class="site-footer h-card">
+<div class="text-center">Final Afriola 2023</div>
+
+</footer>
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

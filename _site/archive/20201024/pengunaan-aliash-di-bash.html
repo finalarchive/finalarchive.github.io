@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="application-name" content="FinalArchive">
+  <meta name="theme-color" content="">
+
+  <meta content="index,follow" name="robots"><!-- All Search Engines -->
+  <meta content="index,follow" name="googlebot"><!-- Google Specific -->
+  <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/github-markdown-dark.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/styles.css"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Pengunaan Alias di Bash | FinalArchive</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Pengunaan Alias di Bash" />
+<meta name="author" content="Final" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/archive/20201024/pengunaan-aliash-di-bash" />
+<meta property="og:url" content="http://localhost:4000/archive/20201024/pengunaan-aliash-di-bash" />
+<meta property="og:site_name" content="FinalArchive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-24T17:13:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Pengunaan Alias di Bash" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Final"},"dateModified":"2020-10-24T17:13:00+07:00","datePublished":"2020-10-24T17:13:00+07:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Pengunaan Alias di Bash","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/20201024/pengunaan-aliash-di-bash"},"url":"http://localhost:4000/archive/20201024/pengunaan-aliash-di-bash"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- <link rel="stylesheet" href="/assets/css/style.css"> --><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="FinalArchive" />
+</head>
+<body class="container background mt-sm-3 mb-sm-3 small shadow p-3 rounded-4 text-white fontdefault">
+    <div class="border border-1 rounded-3 p-3 border-secondary">
+        <section>
+            <div class="row justify-content-center">
+                <div>
+                    <header>
+  <div class="d-flex justify-content-center pb-3">
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-0 pt-0 pb-0 text-warning" href="/index"
+        role="button"><i class="nf nf-custom-home text-white"></i> Home</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/archive" role="button"><i class="nf nf-fa-archive text-white"></i> Archive</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/tag" role="button"><i class=" nf nf-fa-hashtag text-white"></i> Tags</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/note" role="button"><i class="nf nf-md-notebook_edit text-white"></i> Note</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning" href="/page/about"
+        role="button"><i class="nf nf-md-signature_freehand text-white"></i> About</a>
+</div>
+<div>
+    <form class="d-flex" role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    </form>
+</div>
+</header>
+
+                </div>
+            </div>
+        </section>
+        <div class="p-3 flex-shrink-0">
+            <div class="pt-3"><h2 class="m-0 fw-bold">Pengunaan Alias di Bash</h2>
+<hr class="m-0">
+<div class="small fw-light">Final | 24 Oct 2020</div>
+<div class="mt-2 markdown-body">
+  <p>Alias Bash adalah shortcut untuk mempermudah kita mengakses perintah terminal melalui kata yang lebih mudah diingat dan juga lebih singkat.</p>
+
+<p class="no_toc text-delta"><strong><em>Daftar Isi</em></strong></p>
+
+<ul id="markdown-toc">
+  <li><a href="#membuat-alias-bash" id="markdown-toc-membuat-alias-bash">Membuat Alias Bash</a></li>
+  <li><a href="#membuat-bash-alias-dengan-argumen-bash-functions" id="markdown-toc-membuat-bash-alias-dengan-argumen-bash-functions">Membuat Bash Alias dengan Argumen (bash functions)</a></li>
+  <li><a href="#referensi" id="markdown-toc-referensi">Referensi</a></li>
+</ul>
+
+<h2 id="membuat-alias-bash">Membuat Alias Bash</h2>
+
+<p>Pertama, buka file ~/.bashrc lalu pastika baris berikut tidak dikomentari:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if [ -f ~/.bash_aliases ]; then
+. ~/.bash_aliases
+fi
+</code></pre></div></div>
+
+<p>Baris tersebut bermaksud untuk membaca file bernama <code class="language-plaintext highlighter-rouge">.bash_aliases</code>. Jika file ini ada, maka kita dapat mulai menulis alias yang diinginkan didalamnya. Jika belum ada, maka buat sebuah file bernama <code class="language-plaintext highlighter-rouge">~/.bash_aliases</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano ~/.bash_aliases
+</code></pre></div></div>
+
+<p>lalu tambahkan alias:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias alias_name="nama_perintah"
+</code></pre></div></div>
+
+<p>ex</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias ll="ls -la"
+</code></pre></div></div>
+
+<p>Simpan lalu jalankan perintah berikut di terminal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source ~/.bashrc
+</code></pre></div></div>
+
+<h2 id="membuat-bash-alias-dengan-argumen-bash-functions">Membuat Bash Alias dengan Argumen (bash functions)</h2>
+<p>Terkadang Anda mungkin perlu membuat alias yang menerima satu atau lebih argumen, di situlah fungsi bash menjadi berguna.</p>
+
+<p>Sintaks untuk membuat fungsi bash sangat mudah. Mereka dapat dideklarasikan dalam dua format berbeda:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function_name () {
+  [perintah]
+}
+</code></pre></div></div>
+<p>atau</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function function_name {
+  [perintah]
+}
+</code></pre></div></div>
+<p>Untuk meneruskan sejumlah argumen ke fungsi bash cukup letakkan tepat setelah nama fungsi, dipisahkan dengan spasi. Parameter yang diteruskan adalah $1, $2, $3, dll, sesuai dengan posisi parameter setelah nama fungsi. Variabel $0 dicadangkan untuk nama fungsi.</p>
+
+<p>Mari kita buat fungsi bash sederhana yang akan membuat direktori (dengan perintah mkdir) lalu masuk ke dalamnya (dengan perintah cd) :</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano ~/.bashrc
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkcd ()
+{
+  mkdir -p -- "$1" &amp;&amp; cd -P -- "$1"
+}
+</code></pre></div></div>
+<p>Sama seperti dengan alias, tambahkan fungsi ke file <code class="language-plaintext highlighter-rouge">~/.bashrc</code> dan jalankan <code class="language-plaintext highlighter-rouge">source ~/.bash_profile</code> untuk memuat ulang file.</p>
+
+<p>Sekarang alih-alih menggunakan mkdir untuk membuat direktori baru dan kemudian cd untuk masuk ke direktori tersebut , cukup mengetik:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkcd direktori_baru
+</code></pre></div></div>
+
+<p>Jika Anda bertanya-tanya apa yang <code class="language-plaintext highlighter-rouge">--</code> dan <code class="language-plaintext highlighter-rouge">&amp;&amp;</code> lakukan di sini?, ini adalah penjelasan singkat.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--</code> – tambahan ke perintah. Misalnya, jika mencoba membuat direktori yang dimulai dengan <code class="language-plaintext highlighter-rouge">-</code> (tanda hubung), jika tanpa menggunakan <code class="language-plaintext highlighter-rouge">-</code> nama direktori akan ditafsirkan sebagai argumen perintah.</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;&amp;</code> – memastikan bahwa perintah kedua hanya berjalan jika perintah pertama berhasil.</li>
+</ul>
+
+<h2 id="referensi">Referensi</h2>
+<ul>
+  <li><a href="https://www.codepolitan.com/cara-menggunakan-bash-alias-5a4d964105599">https://www.codepolitan.com/cara-menggunakan-bash-alias-5a4d964105599</a></li>
+  <li><a href="https://www.linuxid.net/32839/tutorial-membuat-alias-di-bash-linux-terminal/">https://www.linuxid.net/32839/tutorial-membuat-alias-di-bash-linux-terminal/</a></li>
+</ul>
+
+
+</div>
+</div>
+        </div>
+        <section>
+            <div class="p-3">
+                <hr>
+<footer class="site-footer h-card">
+<div class="text-center">Final Afriola 2023</div>
+
+</footer>
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

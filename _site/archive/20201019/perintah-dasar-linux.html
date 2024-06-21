@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="application-name" content="FinalArchive">
+  <meta name="theme-color" content="">
+
+  <meta content="index,follow" name="robots"><!-- All Search Engines -->
+  <meta content="index,follow" name="googlebot"><!-- Google Specific -->
+  <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/github-markdown-dark.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/styles.css"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Perintah Dasar Linux | FinalArchive</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Perintah Dasar Linux" />
+<meta name="author" content="Final" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+<link rel="canonical" href="http://localhost:4000/archive/20201019/perintah-dasar-linux" />
+<meta property="og:url" content="http://localhost:4000/archive/20201019/perintah-dasar-linux" />
+<meta property="og:site_name" content="FinalArchive" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-19T14:04:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Perintah Dasar Linux" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Final"},"dateModified":"2020-10-19T14:04:00+07:00","datePublished":"2020-10-19T14:04:00+07:00","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Perintah Dasar Linux","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/archive/20201019/perintah-dasar-linux"},"url":"http://localhost:4000/archive/20201019/perintah-dasar-linux"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- <link rel="stylesheet" href="/assets/css/style.css"> --><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="FinalArchive" />
+</head>
+<body class="container background mt-sm-3 mb-sm-3 small shadow p-3 rounded-4 text-white fontdefault">
+    <div class="border border-1 rounded-3 p-3 border-secondary">
+        <section>
+            <div class="row justify-content-center">
+                <div>
+                    <header>
+  <div class="d-flex justify-content-center pb-3">
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-0 pt-0 pb-0 text-warning" href="/index"
+        role="button"><i class="nf nf-custom-home text-white"></i> Home</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/archive" role="button"><i class="nf nf-fa-archive text-white"></i> Archive</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/tag" role="button"><i class=" nf nf-fa-hashtag text-white"></i> Tags</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning"
+        href="/page/note" role="button"><i class="nf nf-md-notebook_edit text-white"></i> Note</a>
+    <a class="btn btn-outline-secondary rounded-0 border-1 border-start border-0 pt-0 pb-0 text-warning" href="/page/about"
+        role="button"><i class="nf nf-md-signature_freehand text-white"></i> About</a>
+</div>
+<div>
+    <form class="d-flex" role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+    </form>
+</div>
+</header>
+
+                </div>
+            </div>
+        </section>
+        <div class="p-3 flex-shrink-0">
+            <div class="pt-3"><h2 class="m-0 fw-bold">Perintah Dasar Linux</h2>
+<hr class="m-0">
+<div class="small fw-light">Final | 19 Oct 2020</div>
+<div class="mt-2 markdown-body">
+  <h4 id="a---b---c---d---e---f---g---h---i---j---k---l---m---n---o---p---q---r---s---t---u---v---w---x---y---z"><a href="#a"><strong>A</strong></a> - <a href="#b"><strong>B</strong></a> - <a href="#c"><strong>C</strong></a> - <a href="#d"><strong>D</strong></a> - <a href="#e"><strong>E</strong></a> - <a href="#f"><strong>F</strong></a> - <a href="#g"><strong>G</strong></a> - <a href="#h"><strong>H</strong></a> - <a href="#i"><strong>I</strong></a> - <a href="#j"><strong>J</strong></a> - <a href="#k"><strong>K</strong></a> - <a href="#l"><strong>L</strong></a> - <a href="#m"><strong>M</strong></a> - <a href="#n"><strong>N</strong></a> - <a href="#p"><strong>O</strong></a> - <a href="#p"><strong>P</strong></a> - <a href="#q"><strong>Q</strong></a> - <a href="#r"><strong>R</strong></a> - <a href="#s"><strong>S</strong></a> - <a href="#t"><strong>T</strong></a> - <a href="#u"><strong>U</strong></a> - <a href="#v"><strong>V</strong></a> - <a href="#w"><strong>W</strong></a> - <a href="#x"><strong>X</strong></a> - <a href="#y"><strong>Y</strong></a> - <a href="#z"><strong>Z</strong></a></h4>
+
+<p>Berikut ini kumpulan lengkap perintah dasar-dasar linux di terminal :</p>
+
+<h1 id="a">A</h1>
+<p>adduser = Tambah pengguna ke sistem
+addgroup = Tambah grup ke sistem
+alias = Buat sebuah alias
+apropos = Cari Bantuan halaman manual (man-k)
+apt-get = Cari dan menginstal paket perangkat lunak (Debian)
+aspell = Pemeriksa Ejaan
+awk = Cari dan Ganti teks, database sort / validate / index</p>
+
+<h1 id="b">B</h1>
+<p>basename = Strip direktori dan akhiran dari nama file
+bash = GNU Bourne-Again Shell
+bc = Arbitrary bahasa kalkulator presisi
+bg = Kirim ke latar belakang
+break = Keluar dari sebuah loop
+builtin = Jalankan shell builtin
+bzip2 = Compress atau dekompresi file bernama (s)</p>
+
+<h1 id="c">C</h1>
+<p>cal = Tampilkan kalender
+case = kondisional melakukan perintah
+cat = Menampilkan isi file
+cd = Mengganti Directori
+cfdisk = Tabel partisi manipulator untuk Linux
+chgrp = Mengubah kepemilikan grup
+chmod = Mengubah izin akses
+chown = Mengubah pemilik file dan grup
+chroot = Jalankan perintah dengan direktori root yang berbeda
+chkconfig = Sistem layanan (runlevel)
+cksum = Cetak byte CRC checksum dan menghitung
+clear = Hapus layar terminal
+cmp = Membandingkan dua file
+comm = Bandingkan dua file diurutkan baris demi baris
+command = Jalankan perintah – shell mengabaikan fungsi
+continue = Resume iterasi berikutnya dari suatu loop
+cp = Menyalin satu atau lebih file ke lokasi lain
+cron = Daemon menjalankan perintah yang dijadwalkan
+crontab = Jadwalkan perintah untuk menjalankan di lain waktu
+csplit = Split file ke dalam konteks – potongan ditentukan
+cut = membagi file menjadi beberapa bagian</p>
+
+<h1 id="d">D</h1>
+<p>date = Menampilkan atau mengubah tanggal &amp; waktu
+dc = Desk Kalkulator
+dd = Mengkonversi dan menyalin file, menulis header disk, boot record
+ddrescue = Alat untuk memperbaiki data
+declare = Deklarasikan variabel dan memberi mereka atribut
+df = Tampilkan ruang disk
+diff = Tampilkan perbedaan antara dua file
+diff3 = Tampilkan perbedaan di antara tiga file
+menggali = DNS lookup
+dir = Daftar isi direktori singkat
+dircolors = Warna setup untuk ls ‘
+dirname = Convert semua pathname ke beberapa path
+dirs = Tampilkan daftar direktori yang diingat
+dmesg = Mencetak pesan-pesan kernel &amp; driver
+du = Perkiraan penggunaan kapasitas file</p>
+
+<h1 id="e">E</h1>
+<p>echo = Tampilkan pesan di layar
+egrep = Cari file untuk baris yang sesuai dengan ekspresi yang diperpanjang
+eject = Mengeluarkan media removable
+enable = Mengaktifkan dan menonaktifkan perintah shell builtin
+env = Environment variabel
+ethtool = Pengaturan kartu Ethernet
+eval = Evaluasi beberapa perintah / argumen
+exec = Menjalankan perintah
+exit = Keluar dari shell
+expect = mengotomatiskan aplikasi yang bebas diakses melalui terminal
+expand = Convert tab ke spasi
+eksport = Set variabel lingkungan
+expr = Evaluasi ekspresi</p>
+
+<h1 id="f">F</h1>
+<p>false = Tidak melakukan apa-apa, tidak berhasil
+fdformat = Tingkat rendah format sebuah floppy disk
+fdisk = tabel partisi manipulator untuk Linux
+fg = Kirim pekerjaan untuk foreground
+fgrep = Cari file untuk baris yang cocok dengan string yang tetap
+file = Tentukan jenis file
+find = Cari file yang memenuhi kriteria yang diinginkan
+fmt = Format ulang tipe teks
+fold = Wrap teks agar sesuai dengan lebar tertentu.
+for = Memperluas kata-kata, dan menjalankan perintah
+format = Format disk atau kaset
+free = Tampilkan penggunaan memori
+fsck = Memeriksa dan memperbaiki sistem File konsistensi
+ftp = File Transfer Protocol
+fungsi = Tentukan fungsi macro
+fuser = Identifikasi / memutuskan proses yang sedang mengakses file</p>
+
+<h1 id="g">G</h1>
+<p>gawk = Cari dan Ganti teks dalam file
+getopts = Menguraikan parameter sesuai posisi
+grep = Cari file untuk baris yang cocok dengan pola tertentu
+group = Cetak nama grup pada pengguna
+gzip = Compress atau dekompresi nama file</p>
+
+<h1 id="h">H</h1>
+<p>hash = Mengingat seluruh pathname dari sebuah nama argumen
+head = Output bagian pertama dari file
+help = Tampilkan bantuan untuk perintah built-in
+history = Perintah history
+hostname = Cetak atau mengatur nama sistem</p>
+
+<h1 id="i">I</h1>
+<p>id = Cetak user dan grup id
+if = melakukan perintah kondisional
+ifconfig = Konfigurasi antarmuka jaringan
+ifdown = Menghentikan antarmuka jaringan
+ifup = Memulai antarmuka jaringan keatas
+import = Menangkap layar server X dan menyimpan sebuah gambar ke file
+install = Menyalin file dan mengatur atribut</p>
+
+<h1 id="j">J</h1>
+<p>join = gabung garis pada field umum</p>
+
+<h1 id="k">K</h1>
+<p>kill = Memberhentikan proses yang sedang berjalan
+killall = Memberhentikan proses oleh nama</p>
+
+<h1 id="l">L</h1>
+<p>less = Tampilan output satu layar pada satu waktu
+let = Melakukan aritmatika pada variabel shell
+ln = Membuat hubungan antara file
+local = Membuat variabel
+locate = Cari file
+logname = Cetak nama login
+logout = Keluar dari sebuah login shell
+look = Tampilan baris yang dimulai dengan string tertentu
+lpc = Program Kontrol jalur printer
+lpr = Off line print
+lprint = Mencetak file / Print file
+lprintd = Abort pekerjaan print
+lprintq = Daftar antrian print
+lprm = Hapus pekerjaan dari antrian print
+ls = List informasi tentang file
+lsof = List membuka file</p>
+
+<h1 id="m">M</h1>
+<p>make = Sekelompok Kompilasi ulang dari program
+man = Bantuan manual
+mkdir = Membuat folder baru
+mkfifo = Membuat FIFOs (bernama pipa)
+mkisofs = Buat hybrid ISO9660/JOLIET/HFS filesystem
+mknod = Membuat blok atau karakter file khusus
+more = Tampilan output satu layar pada satu waktu
+mount = Mount file system
+mtools = Memanipulasi file MS-DOS
+mv = Memindahkan atau mengubah nama file atau direktori
+mmv = Pindahkan massa dan mengubah nama (file)</p>
+
+<h1 id="n">N</h1>
+<p>netstat = Informasi Jaringan
+nice = Mengatur prioritas perintah atau pekerjaan
+nl = Nomor baris dan menulis file
+nohup = Jalankan perintah kebal terhadap hangups
+nslookup = Query Internet menyebut server secara interaktip
+notify-send = Mengirim desktop notifications</p>
+
+<h1 id="o">O</h1>
+<p>open = membuka file dalam aplikasi default
+op = Operator akses</p>
+
+<h1 id="p">P</h1>
+<p>passwd Memodifikasi password user
+paste = Menggabungkan baris file
+pathchk = Periksa nama file portabilitas
+ping = Test sambungan jaringan
+pkill = memberhentikan proses running
+popd = Mengembalikan nilai sebelumnya dari direktori sekarang
+pr = Siapkan file untuk dicetak /print
+printcap = kemampuan pencetak Database
+printenv = Cetak variabel lingkungan
+printf = Format dan mencetak data
+ps = Status Proses
+pushd = Simpan dan kemudian mengubah direktori sekarang
+pwd = Mengetahui direktori kita berada</p>
+
+<h1 id="q">Q</h1>
+<p>quota = Tampikan penggunaan disk dan membatasinya
+quotacheck = Meneliti sistem file untuk penggunaan disk
+quotactl = Set kuota disk</p>
+
+<h1 id="r">R</h1>
+<p>ram = perangkat disk ram
+rcp = Salin file antara dua mesin
+read = Membaca baris dari standar input
+readarray = Baca dari stdin ke variabel array
+readonly = Menandai variabel / fungsi sebagai readonly
+reboot = Reboot sistem
+rename = Ubah nama file
+renice = Ubah prioritas dari proses yang berjalan
+remsync = Sinkronisasi remote file melalui email
+return = Keluar fungsi shell
+rev = Membalikkan baris dari sebuah file
+rm = Menghapus file
+rmdir = Remove folder
+rsync = Remote file copy (Synchronize file pohon)</p>
+
+<h1 id="s">S</h1>
+<p>screen = Multiplex terminal, run remote shells via ssh
+scp = Secure copy (remote file copy)
+sdiff = Menggabungkan dua file secara interaktif
+sed = Stream Editor
+select = Menerima input keyboard
+seq = Print urutan numeric
+set = Memanipulasi variabel shell dan fungsi
+sftp = Secure File Transfer Program
+shift = Pergeseran parameter posisi
+shopt = Pilihan shell
+shutdown = Shutdown atau restart linux
+sleep = Delay/penundaan untuk jangka waktu tertentu
+slocate = Cari file
+sort = Mengurutkan file teks
+source = Jalankan perintah dari file .”
+split = Split file ke dalam fixed-potong
+ssh = Secure Shell client (remote login program)
+strace = Trace sistem panggilan dan sinyal
+su = Gantikan identitas pengguna
+sudo = Jalankan perintah sebagai user lain
+sum = Mencetak checksum untuk file
+symlink = Buatlah nama baru untuk file
+sync = Sinkronisasi data pada disk dengan memori</p>
+
+<h1 id="t">T</h1>
+<p>tail = Output bagian terakhir file
+tar = Tape Archiver
+tee = Redirect output ke beberapa file
+test = Evaluasi ekspresi kondisional
+time = Program Mengukur waktu running
+times = User dan sistem waktu
+touch = Ubah file timestamps
+top = Daftar proses yang berjalan pada sistem
+traceroute = Trace Route to Host
+trap = Jalankan perintah ketika sebuah sinyal adalah set (Bourne)
+tr = Translate, squeeze, dan / atau menghapus karakter
+true = Tidak melakukan apapun, berhasil
+tsort = Topologi sort
+tty = Print filename dari terminal pada stdin
+type = menjelaskan perintah</p>
+
+<h1 id="u">U</h1>
+<p>ulimit = Batasi pengguna resources (sumber daya)
+umask = Para pengguna menciptakan file tersembunyi
+umount = Unmount (tidak menaiki) perangkat
+unalias = Hapus alias
+uname = Informasi sistem print
+unexpand = Convert spasi untuk tab
+Uniq = Uniquify file
+unit = Mengkonversi unit dari satu skala ke yang lain
+unset = Hapus variabel atau nama fungsi
+unshar = Uraikan catatan arsip shell
+until = Mengeksekusi perintah (sampai error)
+useradd = Membuat akun user baru
+usermod = Memodifikasi akun user
+users = Daftar para pengguna yang sekarang ini login
+uuencode = Encode file biner
+uudecode = Decode file yang dibuat oleh uuencode</p>
+
+<h1 id="v">V</h1>
+<p>v = Daftar isi direktori Verbosely ( ls-l-b ‘)
+vdir = Daftar isi direktori Verbosely ( ls-l-b ‘)
+vi = Text Editor
+vim = Text Editor
+vmstat = Laporan statistik memori virtual</p>
+
+<h1 id="w">W</h1>
+<p>watch = Mengeksekusi / menampilkan sebuah program secara berkala
+wc = Cetak byte, kata, dan baris menghitung
+whereis = Cari pengguna $ path, halaman manual dan file source untuk program
+which = Cari pengguna $ path untuk file program
+while = Jalankan perintah
+who = Cetak semua nama pengguna yang sedang log in
+whoami = Cetak pengguna saat ini dan nama id ( `id-un ‘)
+wget = Ambil halaman web atau file melalui HTTP, HTTPS atau FTP
+write = Mengirim pesan ke pengguna lain</p>
+
+<h1 id="x">X</h1>
+<p>xargs = Jalankan utility, melewati daftar argumen yang dibangun
+xdg-open = Buka file atau URL dalam aplikasi yang disukai pengguna.</p>
+
+<h1 id="y">Y</h1>
+<p>yes = Cetak string sampai di interrupt</p>
+
+<h1 id="z">Z</h1>
+<p>zip = Paket zip dan kompres (arsip) file</p>
+
+<h1 id="simbol">Simbol</h1>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.</code> = Skrip menjalankan perintah shell yang sekarang</li>
+  <li><code class="language-plaintext highlighter-rouge">!!</code> = Jalankan perintah terakhir lagi</li>
+  <li><code class="language-plaintext highlighter-rouge">###</code> = Komentar / Remark</li>
+  <li><code class="language-plaintext highlighter-rouge">./</code> = Perintah menjalankan program</li>
+  <li><code class="language-plaintext highlighter-rouge">;</code> = menjalan perintah sebelah kiri hasil prosesnya gagal ataupun berhasil makan tetap akan dilanjutkan ke proses sebelah kanan</li>
+  <li><code class="language-plaintext highlighter-rouge">&amp;&amp;</code> = ketika proses sebelah kiri gagal maka proses selanjutnya atau sebelah kanan tidak akan berjalan</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&amp;</code> = membuat perintah berjalan di latar belakang.<br />
+  Jalankan satu perintah di latar belakang:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt update &amp;
+</code></pre></div>    </div>
+
+    <p>Jalankan dua perintah di latar belakang, secara bersamaan:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>apt update &amp; apt upgrade &amp; 
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">|</code> = sangat berguna di mana output dari perintah pertama bertindak sebagai masukan untuk perintah kedua. Misalnya, pipeline output dari <code class="language-plaintext highlighter-rouge">ls -l</code> ke <code class="language-plaintext highlighter-rouge">less</code> dan lihat output dari perintah.</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tecmint @ localhost : ~ $ ls -l | less
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="hal-menarik-lainnya">Hal Menarik Lainnya</h1>
+<ul>
+  <li>
+    <p>Untuk melihat isi trash</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls ~/.local/share/Trash
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Untuk menghapus file dan folder di trash</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf ~/.local/share/Trash/files
+rm -rf ~/.local/share/Trash/files/*
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h1 id="referensi">Referensi</h1>
+<ul>
+  <li><a href="http://blog.unnes.ac.id/sidiq/2017/02/13/kumpulan-perintah-linux-di-terminal-lengkap/">http://blog.unnes.ac.id/sidiq/2017/02/13/kumpulan-perintah-linux-di-terminal-lengkap/</a></li>
+</ul>
+
+</div>
+</div>
+        </div>
+        <section>
+            <div class="p-3">
+                <hr>
+<footer class="site-footer h-card">
+<div class="text-center">Final Afriola 2023</div>
+
+</footer>
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
