@@ -1,0 +1,27 @@
+---
+layout: base
+title: archive
+---
+
+<!-- ini menampilkan daftar post -->
+<h3>Latest Posts</h3>
+<hr class="mt-0">
+{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+<h5 class="mb-3 mt-0"><i class="nf nf-fa-calendar"></i> {{ year.name }}</h5>
+<ul>
+  {% for post in year.items %}
+  <li>
+    <div class="d-flex justify-content-between">
+      <div class="mb-0"><a class="text-white text-decoration-none" href="{{ post.url }}">{{ post.title }}</a></div>
+      <div class="fw-light small">{{post.date | date: "%Y%m%d"}}</div>
+    </div>
+    <hr class="m-0 mt-0">
+    {% for tag in post.tags %}
+    <span class="badge bg-warning fw-normal rounded-0 p-1 rounded-1 mb-2 small"><a
+        class="text-black text-decoration-none" href="/page/tag#{{tag}}">{{ tag | capitalize}}</a></span>
+    {% endfor %}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
