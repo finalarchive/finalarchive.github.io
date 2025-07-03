@@ -1,0 +1,5 @@
+* [Beranda](/)
+* [Tentang Kami](/about)
+* [Daftar Postingan](/posts/)
+  - [Tips dan Trik Docsify](/posts/post_2)
+  - [Postingan Pertama Saya](/posts/post_1)
