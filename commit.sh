@@ -24,6 +24,8 @@ categories=$(echo "$entries" | cut -d'|' -f1 | sort -u)
 while read -r category; do
   echo "" >> "$OUTPUT_FILE"
   echo "#### ${category^}" >> "$OUTPUT_FILE"
+  echo "---" >> "$OUTPUT_FILE"
+  echo "" >> "$OUTPUT_FILE"
 
   echo "$entries" | grep "^$category|" | sort -t'|' -k2,2r | while IFS='|' read -r _ tanggal rel_path; do
     filename=$(basename "$rel_path" .md)
