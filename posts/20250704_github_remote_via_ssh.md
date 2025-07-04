@@ -1,24 +1,26 @@
-# GITHUB REMOTE VIA SSH
+# GITHUB
 
-## Generate SSH Key
+## REMOTE VIA SSH
+
+### Generate SSH Key
 ```bash
 ssh-keygen
 ```
 
-## Tambahkan SSH Key ke GitHub
-1. Salin key:
+### Tambahkan SSH Key ke GitHub
++ Salin key:
 
 ```bash
 cat ~/.ssh/id_rsa.pub
 ```
-2. Buka GitHub → Profile → **Settings** → **SSH and GPG keys** → **New SSH Key**
++ Buka GitHub → Profile → **Settings** → **SSH and GPG keys** → **New SSH Key**
 
-3. Paste dan beri nama sesuai perangkat (misal: Laptop Final)
++ Paste dan beri nama sesuai perangkat (misal: Laptop Final)
 
-## Ganti Remote Git dari HTTPS ke SSH (Optional tapi Wajib)
+### Ganti Remote Git dari HTTPS ke SSH (Optional tapi Wajib)
 Mengganti URL remote repository GitHub dari protokol HTTPS ke SSH untuk memudahkan proses push/pull tanpa harus memasukkan username atau token setiap kali.
 
-**1. Cek Remote Saat Ini**
++ **Cek Remote Saat Ini**
 ```bash
 git remote -v
 ```
@@ -29,7 +31,7 @@ origin  https://github.com/USERNAME/REPO.git (fetch)
 origin  https://github.com/USERNAME/REPO.git (push)
 ```
 
-**2. Ubah Remote ke SSH**
++ **Ubah Remote ke SSH**
 
 Gunakan perintah berikut:
 
@@ -42,7 +44,7 @@ Contoh:
 git remote set-url origin git@github.com:finalarchive/finalarchive.github.io.git
 ```
 
-**3. Verifikasi Perubahan**
++ **Verifikasi Perubahan**
 ```bash
 git remote -v
 ```
@@ -53,7 +55,7 @@ origin  git@github.com:finalarchive/finalarchive.github.io.git (fetch)
 origin  git@github.com:finalarchive/finalarchive.github.io.git (push)
 ```
 
-**4. Uji Koneksi SSH ke GitHub (Opsional)**
++ **Uji Koneksi SSH ke GitHub (Opsional)**
 ```bash
 ssh -T git@github.com
 ```
@@ -81,5 +83,3 @@ Cara pakai:
 chmod +x commit.sh
 ./commit.sh
 ```
-
-Ref: AI
