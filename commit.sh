@@ -4,7 +4,7 @@
 POST_DIR="./posts"
 
 # File output (_sidebar.md atau daftar.md sesuai kebutuhan)
-OUTPUT_FILE="_sidebar.md"
+OUTPUT_FILE="README.md"
 
 # Header opsional
 echo "* [Beranda](/README.md)" > "$OUTPUT_FILE"
@@ -20,7 +20,7 @@ for file in "$POST_DIR"/*.md; do
   title=$(echo "$name" | sed -r 's/[-_]/ /g' | sed -r 's/\b(.)/\u\1/g')
 
   # Tambahkan ke file markdown
-  echo "  * [$title](/post/$name)" >> "$OUTPUT_FILE"
+  echo "  * [$title](/posts/$name)" >> "$OUTPUT_FILE"
 done
 
 echo "Sidebar berhasil dibuat ke $OUTPUT_FILE"
