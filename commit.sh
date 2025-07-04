@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Folder tempat file .md berada
-POST_DIR="./post"
+POST_DIR="./posts"
 
 # File output (_sidebar.md atau daftar.md sesuai kebutuhan)
 OUTPUT_FILE="_sidebar.md"

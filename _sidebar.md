@@ -1,3 +1,5 @@
 * [Beranda](/README.md)
 * [Postingan]
-  * [*](/post/*)
+  * [Cara](/post/Cara)
+  * [Docsify](/post/docsify)
+  * [Github Remote Via Ssh](/post/github_remote_via_ssh)
