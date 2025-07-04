@@ -1,14 +1,12 @@
 # GITHUB REMOTE VIA SSH
 
-20250704 #Final
-
 ---
-### Generate SSH Key
+## Generate SSH Key
 ```bash
 ssh-keygen
 ```
 
-### Tambahkan SSH Key ke GitHub
+## Tambahkan SSH Key ke GitHub
 1. Salin key:
 
 ```bash
@@ -18,7 +16,7 @@ cat ~/.ssh/id_rsa.pub
 
 3. Paste dan beri nama sesuai perangkat (misal: Laptop Final)
 
-### Ganti Remote Git dari HTTPS ke SSH (Optional tapi Wajib)
+## Ganti Remote Git dari HTTPS ke SSH (Optional tapi Wajib)
 Mengganti URL remote repository GitHub dari protokol HTTPS ke SSH untuk memudahkan proses push/pull tanpa harus memasukkan username atau token setiap kali.
 
 **1. Cek Remote Saat Ini**
@@ -66,7 +64,7 @@ Jika berhasil, akan muncul:
 Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-### Push Otomatis dengan Timestamp (Script Bash)
+## Push Otomatis dengan Timestamp (Script Bash)
 ```bash
 nano commit.sh
 ```
@@ -86,4 +84,4 @@ chmod +x commit.sh
 ```
 
 ---
-### Ref: AI
+Ref: AI

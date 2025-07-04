@@ -10,7 +10,10 @@ footer {
   z-index: 999;
 }
 
-/* Spacer agar konten tidak tertutup footer */
-.content-footer-space {
-  height: 50px; /* Atur sesuai tinggi footer kamu */
+.page_toc ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.page_toc li {
+  margin-bottom: 4px;
 }
