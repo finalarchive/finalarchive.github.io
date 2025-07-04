@@ -50,4 +50,6 @@ footer {
 
 .markdown-section h3::before {
   content: counter(h2-counter) "." counter(h3-counter) " ";
-  pos
+}
+
+
