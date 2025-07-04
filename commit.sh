@@ -1,7 +1,5 @@
 #!/bin/bash
-#!/bin/bash
 
-# Folder tempat file .md berada
 POST_DIR="./posts"
 OUTPUT_FILE="README.md"
 
@@ -10,24 +8,22 @@ echo "# ARCHIVE" > "$OUTPUT_FILE"
 echo "Berikut adalah daftar semua postingan yang telah saya buat:" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
-# Ambil semua file .md, sort descending berdasarkan tanggal
-find "$POST_DIR" -type f -name "*.md" | sort -r | while read -r file; do
-  # Ambil nama file tanpa path dan ekstensi
-  filename=$(basename -- "$file")
-  name="${filename%.*}"
-
-  # Misal: 20250704_docsify → 20250704 + docsify
-  tanggal="${name%%_*}" # Ambil bagian sebelum underscore
-  judul_raw="${name#*_}" # Ambil bagian setelah underscore
-
-  # Ubah judul ke format kapital awal tiap kata
+# Ambil semua file, format: "20250704_docsify"
+# Urutkan berdasarkan: tanggal descending, lalu judul ascending
+find "$POST_DIR" -type f -name "*.md" | while read -r f; do
+  basename "$f" .md
+done | sort -k1.1,1.8r -k1.10 | while read -r name; do
+  tanggal="${name%%_*}"
+  judul_raw="${name#*_}"
+  
+  # Kapitalisasi judul
   judul=$(echo "$judul_raw" | sed -r 's/[-_]/ /g' | sed -r 's/\b(.)/\u\1/g')
 
-  # Buat baris output
   echo "* $tanggal | [$judul](/posts/$name)" >> "$OUTPUT_FILE"
 done
 
-echo "README.md berhasil diperbarui."
+echo "README.md berhasil dibuat dan urut berdasarkan tanggal terbaru."
+
 
 
 # PUSH KE GITHUB
