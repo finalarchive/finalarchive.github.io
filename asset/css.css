@@ -12,5 +12,5 @@ footer {
 
 /* Spacer agar konten tidak tertutup footer */
 .content-footer-space {
-  height: 60px; /* Atur sesuai tinggi footer kamu */
+  height: 50px; /* Atur sesuai tinggi footer kamu */
 }

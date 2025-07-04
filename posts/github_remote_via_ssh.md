@@ -81,7 +81,7 @@ git push origin main
 ```
 Cara pakai:
 ```bash
-chmod +x push_git.sh
+chmod +x commit.sh
 ./commit.sh
 ```
 
