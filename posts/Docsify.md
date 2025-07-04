@@ -1,0 +1,24 @@
+# Docsify
+
+20250704 #Final
+
+---
+
+Docsify adalah generator dokumentasi yang fleksibel dan ringan. Alih-alih membuat file HTML statis, Docsify memuat file Markdown Anda dan menyajikannya sebagai situs web aplikasi tunggal. Ini sangat cocok untuk membuat dokumentasi proyek dengan cepat.
+
+### Prasyarat
+Sebelum memulai, pastikan Anda memiliki Node.js dan npm (Node Package Manager) terinstal di sistem Anda. Anda dapat memeriksanya dengan menjalankan perintah berikut di terminal/command prompt Anda:
+
+```bash
+node -v
+npm -v
+```
+Jika belum terinstal, Anda dapat mengunduhnya dari situs web resmi Node.js: https://nodejs.org/
+
+### Instalasi Docsify
+Instal Docsify CLI (Command Line Interface) secara global
+
+```bash
+npm i docsify-cli -g
+```
+---
