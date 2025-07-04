@@ -1,15 +1,12 @@
+/* FOOTER */
 footer {
-  position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  background: #fff;
   padding: 10px 20px;
-  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
-  z-index: 999;
 }
 
+/* TOS */
 .page_toc ul {
   list-style: disc;
   padding-left: 20px;
@@ -17,3 +14,40 @@ footer {
 .page_toc li {
   margin-bottom: 4px;
 }
+
+/* MODIF H2 dan H3 */
+/* Reset counter untuk h2 dan h3 */
+.markdown-section {
+  counter-reset: h2-counter;
+}
+
+.markdown-section h2 {
+  counter-increment: h2-counter;
+  counter-reset: h3-counter; /* reset h3 setiap h2 baru */
+  position: relative;
+  padding-left: 2em;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  margin-top: 2em;
+}
+
+.markdown-section h2::before {
+  content: counter(h2-counter) ". ";
+  position: absolute;
+  left: 0;
+  color: #555;
+  font-weight: bold;
+}
+
+.markdown-section h3 {
+  counter-increment: h3-counter;
+  position: relative;
+  padding-left: 3em;
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+
+.markdown-section h3::before {
+  content: counter(h2-counter) "." counter(h3-counter) " ";
+  pos
