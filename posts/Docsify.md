@@ -1,4 +1,4 @@
-# Docsify
+# DOCSIFY
 
 20250704 #Final
 
@@ -21,4 +21,9 @@ Instal Docsify CLI (Command Line Interface) secara global
 ```bash
 npm i docsify-cli -g
 ```
+Verifikasi Instalasi
+```bash
+docsify -v
+```
+
 ---
