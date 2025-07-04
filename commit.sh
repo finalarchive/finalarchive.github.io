@@ -7,8 +7,8 @@ POST_DIR="./posts"
 OUTPUT_FILE="README.md"
 
 # Header opsional
-echo "* [Beranda](/README.md)" > "$OUTPUT_FILE"
-echo "* [Postingan]" >> "$OUTPUT_FILE"
+echo "# ARCHIVE" > "$OUTPUT_FILE"
+echo " Berikut adalah daftar semua postingan yang telah saya buat:" >> "$OUTPUT_FILE"
 
 # Loop semua file .md di folder /post
 for file in "$POST_DIR"/*.md; do
