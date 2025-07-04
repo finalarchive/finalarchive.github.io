@@ -42,27 +42,27 @@
         depth: 2,
       },
       toc: {
-    scope: '.markdown-section',
-    headings: 'h1, h2, h3, h4, h5, h6',
-    title: 'Daftar Isi',
-  },
+        scope: '.markdown-section',
+        headings: 'h1, h2, h3, h4, h5, h6',
+        title: 'Daftar Isi',
+      },
       plugins: [
         // Anda bisa menambahkan plugin di sini
-function pageFooter(hook, vm) {
-  var footer = [
-    '<div class="content-footer-space"></div>', // spacer
-    '<footer>',
-    '<span><a href="https://github.com/finalarchive">finalarchive</a> CC BY 2025. </span>',
-    '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
-    '</footer>'
-  ].join('');
+        function pageFooter(hook, vm) {
+          var footer = [
+            '<div class="content-footer-space"></div>', // spacer
+            '<footer>',
+            '<span><a href="https://github.com/finalarchive">finalarchive</a> CC BY 2025. </span>',
+            '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
+            '</footer>'
+          ].join('');
 
-  hook.afterEach(function (html) {
-    return html + footer;
-  });
-}
+          hook.afterEach(function (html) {
+            return html + footer;
+          });
+        }
 
-        
+
       ]
     }
   </script>
