@@ -1,2 +1,3 @@
-* [Archive](/)
-* [About](/about)
+* [Beranda](/README.md)
+* [Postingan]
+  * [*](/post/*)
