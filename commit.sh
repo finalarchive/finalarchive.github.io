@@ -22,7 +22,7 @@ done | sort -k1.1,1.8r -k1.10 | while read -r name; do
   echo "* $tanggal | [$judul](/posts/$name)" >> "$OUTPUT_FILE"
 done
 
-echo "README.md berhasil dibuat dan urut berdasarkan tanggal terbaru."
+echo "README.md berhasil dibuat."
 
 
 
