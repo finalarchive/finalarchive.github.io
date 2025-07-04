@@ -5,7 +5,7 @@ OUTPUT_FILE="README.md"
 
 # Header awal
 echo "# ARCHIVE" > "$OUTPUT_FILE"
-echo "Berikut adalah daftar semua postingan yang telah saya buat:" >> "$OUTPUT_FILE"
+echo "Berikut adalah daftar semua postingan:" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 
 # Ambil semua file, format: "20250704_docsify"
