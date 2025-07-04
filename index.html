@@ -8,39 +8,36 @@
   <meta name="description" content="Description">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
-  <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css" />
   <link rel="stylesheet" href="/asset/style.css">
-
+  <link rel="stylesheet" href="/asset/navbar.css">
 </head>
 
 <body>
+
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: 'FinalArchive', // Nama situs Anda
       loadSidebar: true, // Pastikan ini true untuk memuat _sidebar.md
+      loadNavbar: true,
       coverpage: false, // Atur ke true jika Anda ingin cover page
-      homepage: 'README.md', // Halaman beranda,
+      homepage: 'README.md', // Halaman beranda
+      // docsify-copy-code (defaults)
       copyCode: {
         buttonText: 'Copy',
         errorText: 'Error',
         successText: 'Copied',
       },
       search: { // Aktifkan fungsi pencarian
-        maxAge: 86400000,
+        maxAge: 86400000, // expired time
         paths: 'auto',
         placeholder: 'Cari...',
         noData: 'Tidak ada hasil!',
+        // Headline and paragraph formmat
+        // To avoid search index be too large
         depth: 2,
       },
-      toc: {
-        scope: '.markdown-section',
-        headings: 'h1, h2, h3, h4, h5, h6',
-        title: 'Table Of Content',
-        listType: 'ul'
-      },
-
       plugins: [
         // Anda bisa menambahkan plugin di sini
         function pageFooter(hook, vm) {
@@ -56,15 +53,12 @@
             return html + footer;
           });
         }
-
       ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="https://unpkg.com/docsify-copy-code@2"></script>
-  <script src="https://unpkg.com/docsify-toc@1.0.0/dist/toc.js"></script>
-  
 </body>
 
 </html>

@@ -1,0 +1,50 @@
+.app-nav {
+  position: fixed;
+  background-color: var(--theme-color, #ffffff);
+  width: 100%;
+  margin: 0;
+  margin-right: 0 !important;
+  padding: 5px;
+  color: #000000;
+  transition: 0.2s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.app-nav li {
+  padding: 0;
+}
+
+.app-nav p img:nth-child(1) {
+  width: 24px;
+  float: left;
+}
+
+.app-nav p:nth-child(2) {
+  float: left;
+  font-weight: 600;
+  margin-left: 16px;
+}
+
+.app-nav li ul {
+  color: #000000;
+}
+
+.app-nav .badge {
+  min-width: 85px !important;
+  max-width: 85px;
+  float: right !important;
+  margin-left: 10px;
+}
+
+.search input, .search .clear-button {
+  margin-top: 15%;
+}
+
+section.cover img:first-child {
+  margin-top: 4%;
+}
+@media screen and (max-width: 770px) {
+  .search input, .search .clear-button {
+    margin-top: 0%;
+  }
+}
