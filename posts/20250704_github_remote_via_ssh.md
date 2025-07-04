@@ -1,6 +1,5 @@
 # GITHUB REMOTE VIA SSH
 
----
 ## Generate SSH Key
 ```bash
 ssh-keygen
@@ -83,5 +82,4 @@ chmod +x commit.sh
 ./commit.sh
 ```
 
----
 Ref: AI
