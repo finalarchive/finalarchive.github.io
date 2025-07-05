@@ -1,11 +1,17 @@
 #!/bin/bash
 set -e  # Keluar jika terjadi error
+
 echo "🔄 Memperbarui sistem..."
 sudo apt update
 
 echo "📦 Menginstal dependensi..."
 sudo apt install -y wget gpg curl git
 
+# Menginstal Brave Browser...
+echo "🔄 Menginstal Brave Browser..."
+curl -fsS https://dl.brave.com/install.sh | sh
+
+echo "✅ Instalasi Brave selesai. Jalankan Brave dengan perintah: brave-browser"
 
 # instalasi Visual Studio Code di Ubuntu
 echo "🔑 Mengunduh dan mengatur GPG key Microsoft..."
