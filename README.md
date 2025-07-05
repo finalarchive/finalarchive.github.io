@@ -6,7 +6,7 @@
 ---
 
 * 20250704 | [Docsify](/posts/APP/20250704_docsify.md)
-* 20250704 | [Github](/posts/APP/20250704_github.md)
+* 20250704 | [Git](/posts/APP/20250704_git.md)
 
 #### GNU-Linux
 ---
