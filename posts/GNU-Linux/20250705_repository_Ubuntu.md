@@ -1,4 +1,4 @@
-# Penjelasan Repository Ubuntu
+# REPOSITORY UBUNTU
 
 Repository Ubuntu adalah **kumpulan server** (lokal atau internet) yang menyimpan berbagai paket perangkat lunak (software) yang dapat diinstal di sistem operasi Ubuntu. Saat kamu menginstal aplikasi atau melakukan update di Ubuntu (misalnya dengan `apt install` atau `apt update`), sistem akan mengambil data dari repository ini.
 

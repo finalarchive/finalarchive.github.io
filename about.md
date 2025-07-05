@@ -1,1 +1,5 @@
 # FinalArchive
+
+Website ini saya buat sebagai tempat menyimpan jejak-jejak pikiran dan rasa penasaran saya. Kadang berupa ide sederhana, kadang percobaan yang belum tentu berhasil—tapi semuanya punya cerita. Di sini saya menuliskan apa yang pernah saya pelajari, coba, dan renungkan, sebagai pengingat bahwa saya pernah berjalan di jalur ini.
+
+Suatu hari nanti, kalau anak cucu saya membaca ini, saya ingin mereka tahu: ayah atau kakeknya pernah punya mimpi, pernah belajar dengan sungguh-sungguh, dan pernah menikmati proses memahami dunia dengan cara yang sederhana tapi penuh rasa ingin tahu. Semoga jejak kecil ini bisa jadi penghubung, meski kita hidup di waktu yang berbeda.
