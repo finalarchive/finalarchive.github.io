@@ -1,15 +1,13 @@
 #!/bin/bash
-
-# instalasi Visual Studio Code di Ubuntu
-
 set -e  # Keluar jika terjadi error
-
 echo "🔄 Memperbarui sistem..."
 sudo apt update
 
 echo "📦 Menginstal dependensi..."
-sudo apt install -y wget gpg
+sudo apt install -y wget gpg curl git
 
+
+# instalasi Visual Studio Code di Ubuntu
 echo "🔑 Mengunduh dan mengatur GPG key Microsoft..."
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
 sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
