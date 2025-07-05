@@ -3,20 +3,16 @@
 ## A
 
 ### [**ADS-B**](https://lms.onnocenter.or.id/wiki/index.php/ADS-B)<br>
-
-  *Automatic Dependent Surveillance-Broadcast* (disingkat **ADS-B**) adalah teknologi Pengawasan (Bahasa Inggris: *surveillance*) untuk melacak pesawat terbang sebagai bagian dari Next Generation Air Transportation System (NextGen). Amerika Serikat akan mewajibkan sebagian besar pesawat yang beroperasi di wilayah udaranya untuk dilengkapi dengan beberapa bentuk ADS-B Out pada tanggal 1 Januari 2020.
+`Automatic Dependent Surveillance-Broadcast` (disingkat **ADS-B**) adalah teknologi Pengawasan (Bahasa Inggris: *surveillance*) untuk melacak pesawat terbang sebagai bagian dari Next Generation Air Transportation System (NextGen). Amerika Serikat akan mewajibkan sebagian besar pesawat yang beroperasi di wilayah udaranya untuk dilengkapi dengan beberapa bentuk ADS-B Out pada tanggal 1 Januari 2020.
 
 ### [Analogi](https://id.wikipedia.org/wiki/Analogi)
-
 Analogi adalah persamaan atau persesuaian antara dua benda atau hal yang berlainan.[1] Contoh dari analogi misalnya "jarak antara rumah dan sekolah sangat mirip dengan jarak antara Garut dan Bandung" atau "suaranya sekeras raungan singa".
 
-Dalam ilmu linguistik, analogi yakni proses atau hasil pembentukan unsur bahasa karena pengaruh pola lain dalam bahasa. Contohnya yakni terbentuknya konstruksi neonisasi karena sudah adanya pola yang ada dalam konstruksi mekanisasi.[
 
 ## B
 
 ### Back Azimuth
-
-Sasaran Balik
+`Back Azimuth` adalah arah yang tepat berlawanan dari suatu azimuth (arah). Sederhananya, jika azimuth adalah arah dari titik A ke titik B, maka back azimuth adalah arah dari titik B kembali ke titik A
 
 ### Behavior
 
@@ -78,7 +74,7 @@ Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu keja
 
 ### Misleading
 
-Menyesatkan
+`Misleading` adalah tindakan atau sesuatu yang menyesatkan atau memberikan informasi yang salah, sehingga dapat menyebabkan seseorang salah paham atau mengambil kesimpulan yang keliru.
 
 ## N
 
