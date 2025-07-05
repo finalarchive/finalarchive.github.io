@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # instalasi Visual Studio Code di Ubuntu
-# Disusun oleh ChatGPT
 
 set -e  # Keluar jika terjadi error
 
