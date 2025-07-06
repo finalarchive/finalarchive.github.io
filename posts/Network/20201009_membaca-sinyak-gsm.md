@@ -1,18 +1,3 @@
----
-layout: post
-title:  "Membaca Sinyak GSM"
-date:   2020-10-09 10:55
-tags: [network]
-category: Archive
-description: ""
----
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
-
 # Membaca Sinyal GSM
 Sinyal yang baik itu:<br>
 * RSSI < 70

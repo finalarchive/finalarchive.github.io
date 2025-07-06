@@ -1,18 +1,4 @@
----
-layout: post
-title:  "Install ArchLinux"
-date:   2020-11-14 10:07
-tags: [linux, archlinux]
-category: Archive
-description: ""
----
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
-
+# Install ArchLinux
 
 ## Cek Connection
 

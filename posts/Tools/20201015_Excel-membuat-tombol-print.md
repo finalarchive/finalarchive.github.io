@@ -1,11 +1,5 @@
----
-layout: post
-title:  "Excel : Membuat Tombol Print"
-date:   2020-10-15 18:48
-tags: [aplikasi, msexcel]
-category: Archive
-description: ""
----
+# Excel : Membuat Tombol Print
+
 
 * `Insert` --> `Shapes` --> kemudian pilih Shapes yang berbentuk kotak
 * Klik Kanan `Assign Macro`
@@ -17,7 +11,7 @@ description: ""
   End Sub
    ```
    
-# Syntax Menarik
+## Syntax Menarik
  
 |Code VBA |	Fungsi|
 | :--- | :--- |
@@ -31,5 +25,5 @@ description: ""
 |Range ("A1:F10").PrintOut |	Mencetak data di range A1:F10|
 
 
-# Referensi
+## Referensi
 * <https://www.rumusexcel.com/2014/05/cara-membuat-tombol-cetak-di-excel.html>

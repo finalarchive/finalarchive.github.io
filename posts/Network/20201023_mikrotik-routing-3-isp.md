@@ -1,17 +1,4 @@
----
-layout: post
-title:  "Mikrotik: Routing 3 ISP"
-date:   2020-10-23 09:09
-tags: [network, hostpot, mikrotik]
-category: Archive
-description: ""
----
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
+# Mikrotik: Routing 3 ISP
 
 ## Intro
 Berdasarkan data TOP Sites dari [ALEXA](https://www.alexa.com/topsites/countries/ID), dibawah ini adalah daftar websites yang paling banyak diakses di indonesia

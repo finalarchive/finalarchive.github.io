@@ -1,19 +1,6 @@
----
-layout: post
-title:  "uTorrent Server"
-date:   2020-10-08 15:21
-tags: [linux, ubuntu, aplikasi]
-category: Archive
-description: ""
----
+# uTorrent Server
 
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
-
-# Install Dependency
+## Install Dependency
 Ubuntu 20.04
  ```
  Instal Dependency
@@ -24,7 +11,7 @@ Ubuntu 20.04
  apt install ./libssl1.0.0_1.0.2n-1ubuntu5.4_amd64.deb
 ```
 
-# Download
+## Download
 
 32-Bit
 
@@ -38,18 +25,18 @@ Extrak ke `/opt/`
 
     sudo tar xvf utserver.tar.gz -C /opt/
 
-# Buat Server
+## Buat Server
 Buat symbolic link
  
     sudo ln -s /opt/utorrent-server-alpha-v3_3/utserver /usr/bin/utserver
 
-# Jalankan uTorren Server menggunakan perintah
+## Jalankan uTorren Server menggunakan perintah
  
     utserver -settingspath /opt/utorrent-server-alpha-v3_3/ -daemon
 
 uTorrent akan listen pada 0.0.0.0:8080, -daemon akan menjalankan uTorrent di background.
 
-# Beberapa Konfigurasi Penting
+## Beberapa Konfigurasi Penting
 Akses ke web
 ```
  http://ip-torrent-server:8080/gui
@@ -90,7 +77,7 @@ Jika ada firewall di server Ubuntu Anda, maka Anda harus mengizinkan akses ke po
 
     Connectivity 9090
 
-# Referensi
+## Referensi
 * https://www.linuxbabe.com/ubuntu/install-utorrent-ubuntu-20-04
 * https://www.linuxsec.org/2019/11/cara-install-utorrent-server-di-ubuntu.html
 * https://www.youtube.com/watch? KINNycq1YDA

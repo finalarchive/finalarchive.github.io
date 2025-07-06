@@ -1,22 +1,9 @@
----
-layout: post
-title:  "Operator Shell"
-date:   2020-10-19 15:24
-tags: [linux, ubuntu, cli]
-category: Archive
-description: ""
----
-
+# Operator Shell
 
 Ini disebut operator shell dan ya, ada lebih banyak dari mereka. Saya akan memberikan gambaran singkat tentang yang paling umum di antara dua kelas utama, operator kontrol dan operator pengalihan , dan bagaimana mereka bekerja sehubungan dengan bash shell.
 
-***Daftar Isi***
-{: .no_toc .text-delta }
 
-- TOC
-{:toc}
-
-# Kontrol operator
+## Kontrol operator
 
 Dalam bahasa perintah shell, token yang melakukan fungsi kontrol.
 Ini adalah salah satu dari simbol berikut:
@@ -105,7 +92,7 @@ Output apa pun yang dicetak oleh command1diteruskan sebagai input command2.
 ``;;`` digunakan hanya untuk menandai akhir dari pernyataan kasus . Ksh, bash dan zsh juga mendukung ;&untuk masuk ke kasus berikutnya dan `;;&`(tidak di ATT ksh) untuk melanjutkan dan menguji kasus-kasus berikutnya.
 
 `(`dan `)`digunakan untuk mengelompokkan perintah dan meluncurkannya dalam subkulit. `{` dan `}` juga perintah grup, tetapi jangan meluncurkannya dalam subkulit. Lihat jawaban ini untuk diskusi tentang berbagai jenis kurung, kurung dan kurung kurawal dalam sintaksis shell.
-# Operator Pengalihan
+## Operator Pengalihan
 
 Operator Pengalihan
 
@@ -209,5 +196,5 @@ Itu hanya mencakup operator paling umum dari kerang mirip Bourne. Beberapa shell
 Ksh, bash dan zsh juga memiliki konstruksi <(…), >(…)dan =(…)(yang terakhir zshhanya dalam konstruksi ). Ini bukan pengalihan, tetapi proses substitusi .
 
 
-# Referensi
+## Referensi
 * <https://qastack.id/unix/159513/what-are-the-shells-control-and-redirection-operators>

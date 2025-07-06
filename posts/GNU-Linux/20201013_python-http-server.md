@@ -1,16 +1,10 @@
----
-layout: post
-title:  "Python : Http Server Transfer File Linux - Android"
-date:   2020-10-13 23:19
-tags: [network, web, aplikasi, python]
-category: Archive
-description: ""
----
-# Cek IP
+# Http Server Transfer File Linux - Android
+
+## Cek IP
    
     ifconfig | more
    
-# Buat Server
+## Buat Server
 pindah ke directory yang akan di jadikan server
 
     cd /home/user/
@@ -23,7 +17,7 @@ Paython 3
 
     python3 -m http.server 8000
    
-# Penggunaan
+## Penggunaan
   
     http://[IP SERVER]:8000
 
@@ -31,5 +25,5 @@ ex
 
     http://192.168.100.1:8000
    
-# Referensi
+## Referensi
  * <https://docs.python.org/2/library/simplehttpserver.html>

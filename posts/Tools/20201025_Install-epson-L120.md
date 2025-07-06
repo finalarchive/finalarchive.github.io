@@ -1,17 +1,4 @@
----
-layout: post
-title:  "Install Paket Printer Epson L120"
-date:   2020-10-25 21:18
-tags: [linux, ubuntu, aplikasi]
-category: Archive
-description: ""
----
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
+# Install Paket Printer Epson L120
 
 ## Persiapan
 ```

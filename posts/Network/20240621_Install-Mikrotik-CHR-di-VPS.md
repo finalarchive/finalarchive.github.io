@@ -1,18 +1,4 @@
----
-layout: post
-title:  "Install Mikrotik CHR di VPS"
-date:   2024-06-21 23:28
-tags: [Mikrotik, Server, VPS]
-category: Archive
-description: ""
----
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
-
+# Install Mikrotik CHR di VPS
 
 ## Install
 ```

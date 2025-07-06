@@ -1,25 +1,11 @@
----
-layout: post
-title:  "RT/RW Net"
-date:   2020-10-09 09:11
-tags: [network]
-category: Archive
-description: ""
----
+# Optimalisasi Modem GSM
 
 [**RT/RW-Net**](https://lms.onnocenter.or.id/wiki/index.php/RT/RW-net) adalah jaringan komputer swadaya masyarakat dalam ruang lingkup wilayah yang kecil, melalui jalur kabel atau Wireless 2.4 Ghz.
 
 Istilah RT/RW-net pertama kali digunakan sekitar tahun 1996-an oleh para mahasiswa di Universitas Muhammadyah Malang (UMM), seperti Nasar, Muji yang menyambungkan kos-kos-an mereka ke kampus UMM yang tersambung ke jaringan AI3 Indonesia melalui GlobalNet di Malang dengan gateway Internet di ITB. Sambungan antara RT/RW-net di kos-kosan ke UMM dilakukan menggunakan walkie talkie di VHF band 2 meter pada kecepatan 1200bps
 
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
-
-
-# Layanan ISP (Internet Service Provider)
-## Mobile Access
+## Layanan ISP (Internet Service Provider)
+### Mobile Access
 Mobile Access merupakan layanan akses internet yang dapat di peroleh secara mudah dan praktis melalui perangkat telepon seluler. untuk menggunakan layanan ini, memerlukan telepon seluler atau modem mobile akses baik yang bertipe GSM atau CDMA untuk bisa menggunakan layanan ini.
 
 ### Modem 4G Router (Sumber Internet)
@@ -91,8 +77,8 @@ Antena yang terbaik dari segi gain dan penerimaanya adalah antena tipe grid tanp
 
 ## Fiber Optik
 
-# Mikrotik (Management)
-# AP (Access Point)  untuk menyebarkan sinyal.
+## Mikrotik (Management)
+## AP (Access Point)  untuk menyebarkan sinyal.
 
 # Pranala Menarik
 * [Membaca Kekuatan Signal GSM](/2020/10/membaca-sinyak-gsm)

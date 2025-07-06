@@ -1,17 +1,10 @@
----
-layout: post
-title:  "Perintah Dasar Linux"
-date:   2020-10-19 14:04
-tags: [linux, ubuntu, cli]
-category: Archive
-description: ""
----
+# Perintah Dasar Linux
 
-#### [**A**](#a) - [**B**](#b) - [**C**](#c) - [**D**](#d) - [**E**](#e) - [**F**](#f) - [**G**](#g) - [**H**](#h) - [**I**](#i) - [**J**](#j) - [**K**](#k) - [**L**](#l) - [**M**](#m) - [**N**](#n) - [**O**](#p) - [**P**](#p) - [**Q**](#q) - [**R**](#r) - [**S**](#s) - [**T**](#t) - [**U**](#u) - [**V**](#v) - [**W**](#w) - [**X**](#x) - [**Y**](#y) - [**Z**](#z)
+[**A**](#a) - [**B**](#b) - [**C**](#c) - [**D**](#d) - [**E**](#e) - [**F**](#f) - [**G**](#g) - [**H**](#h) - [**I**](#i) - [**J**](#j) - [**K**](#k) - [**L**](#l) - [**M**](#m) - [**N**](#n) - [**O**](#p) - [**P**](#p) - [**Q**](#q) - [**R**](#r) - [**S**](#s) - [**T**](#t) - [**U**](#u) - [**V**](#v) - [**W**](#w) - [**X**](#x) - [**Y**](#y) - [**Z**](#z)
 
 Berikut ini kumpulan lengkap perintah dasar-dasar linux di terminal :
 
-# A
+## A
 adduser = Tambah pengguna ke sistem
 addgroup = Tambah grup ke sistem
 alias = Buat sebuah alias
@@ -20,7 +13,7 @@ apt-get = Cari dan menginstal paket perangkat lunak (Debian)
 aspell = Pemeriksa Ejaan
 awk = Cari dan Ganti teks, database sort / validate / index
 
-# B
+## B
 basename = Strip direktori dan akhiran dari nama file
 bash = GNU Bourne-Again Shell
 bc = Arbitrary bahasa kalkulator presisi
@@ -29,7 +22,7 @@ break = Keluar dari sebuah loop
 builtin = Jalankan shell builtin
 bzip2 = Compress atau dekompresi file bernama (s)
 
-# C
+## C
 cal = Tampilkan kalender
 case = kondisional melakukan perintah
 cat = Menampilkan isi file
@@ -52,7 +45,7 @@ crontab = Jadwalkan perintah untuk menjalankan di lain waktu
 csplit = Split file ke dalam konteks – potongan ditentukan
 cut = membagi file menjadi beberapa bagian
 
-# D
+## D
 date = Menampilkan atau mengubah tanggal & waktu
 dc = Desk Kalkulator
 dd = Mengkonversi dan menyalin file, menulis header disk, boot record
@@ -69,7 +62,7 @@ dirs = Tampilkan daftar direktori yang diingat
 dmesg = Mencetak pesan-pesan kernel & driver
 du = Perkiraan penggunaan kapasitas file
 
-# E
+## E
 echo = Tampilkan pesan di layar
 egrep = Cari file untuk baris yang sesuai dengan ekspresi yang diperpanjang
 eject = Mengeluarkan media removable
@@ -84,7 +77,7 @@ expand = Convert tab ke spasi
 eksport = Set variabel lingkungan
 expr = Evaluasi ekspresi
 
-# F
+## F
 false = Tidak melakukan apa-apa, tidak berhasil
 fdformat = Tingkat rendah format sebuah floppy disk
 fdisk = tabel partisi manipulator untuk Linux
@@ -102,21 +95,21 @@ ftp = File Transfer Protocol
 fungsi = Tentukan fungsi macro
 fuser = Identifikasi / memutuskan proses yang sedang mengakses file
 
-# G
+## G
 gawk = Cari dan Ganti teks dalam file
 getopts = Menguraikan parameter sesuai posisi
 grep = Cari file untuk baris yang cocok dengan pola tertentu
 group = Cetak nama grup pada pengguna
 gzip = Compress atau dekompresi nama file
 
-# H
+## H
 hash = Mengingat seluruh pathname dari sebuah nama argumen
 head = Output bagian pertama dari file
 help = Tampilkan bantuan untuk perintah built-in
 history = Perintah history
 hostname = Cetak atau mengatur nama sistem
 
-# I
+## I
 id = Cetak user dan grup id
 if = melakukan perintah kondisional
 ifconfig = Konfigurasi antarmuka jaringan
@@ -125,14 +118,14 @@ ifup = Memulai antarmuka jaringan keatas
 import = Menangkap layar server X dan menyimpan sebuah gambar ke file
 install = Menyalin file dan mengatur atribut
 
-# J
+## J
 join = gabung garis pada field umum
 
-# K
+## K
 kill = Memberhentikan proses yang sedang berjalan
 killall = Memberhentikan proses oleh nama
 
-# L
+## L
 less = Tampilan output satu layar pada satu waktu
 let = Melakukan aritmatika pada variabel shell
 ln = Membuat hubungan antara file
@@ -150,7 +143,7 @@ lprm = Hapus pekerjaan dari antrian print
 ls = List informasi tentang file
 lsof = List membuka file
 
-# M
+## M
 make = Sekelompok Kompilasi ulang dari program
 man = Bantuan manual
 mkdir = Membuat folder baru
@@ -163,7 +156,7 @@ mtools = Memanipulasi file MS-DOS
 mv = Memindahkan atau mengubah nama file atau direktori
 mmv = Pindahkan massa dan mengubah nama (file)
 
-# N
+## N
 netstat = Informasi Jaringan
 nice = Mengatur prioritas perintah atau pekerjaan
 nl = Nomor baris dan menulis file
@@ -171,11 +164,11 @@ nohup = Jalankan perintah kebal terhadap hangups
 nslookup = Query Internet menyebut server secara interaktip
 notify-send = Mengirim desktop notifications
 
-# O
+## O
 open = membuka file dalam aplikasi default
 op = Operator akses
 
-# P
+## P
 passwd Memodifikasi password user
 paste = Menggabungkan baris file
 pathchk = Periksa nama file portabilitas
@@ -190,12 +183,12 @@ ps = Status Proses
 pushd = Simpan dan kemudian mengubah direktori sekarang
 pwd = Mengetahui direktori kita berada
 
-# Q
+## Q
 quota = Tampikan penggunaan disk dan membatasinya
 quotacheck = Meneliti sistem file untuk penggunaan disk
 quotactl = Set kuota disk
 
-# R
+## R
 ram = perangkat disk ram
 rcp = Salin file antara dua mesin
 read = Membaca baris dari standar input
@@ -211,7 +204,7 @@ rm = Menghapus file
 rmdir = Remove folder
 rsync = Remote file copy (Synchronize file pohon)
 
-# S
+## S
 screen = Multiplex terminal, run remote shells via ssh
 scp = Secure copy (remote file copy)
 sdiff = Menggabungkan dua file secara interaktif
@@ -236,7 +229,7 @@ sum = Mencetak checksum untuk file
 symlink = Buatlah nama baru untuk file
 sync = Sinkronisasi data pada disk dengan memori
 
-# T
+## T
 tail = Output bagian terakhir file
 tar = Tape Archiver
 tee = Redirect output ke beberapa file
@@ -253,7 +246,7 @@ tsort = Topologi sort
 tty = Print filename dari terminal pada stdin
 type = menjelaskan perintah
 
-# U
+## U
 ulimit = Batasi pengguna resources (sumber daya)
 umask = Para pengguna menciptakan file tersembunyi
 umount = Unmount (tidak menaiki) perangkat
@@ -271,14 +264,14 @@ users = Daftar para pengguna yang sekarang ini login
 uuencode = Encode file biner
 uudecode = Decode file yang dibuat oleh uuencode
 
-# V
+## V
 v = Daftar isi direktori Verbosely ( ls-l-b ‘)
 vdir = Daftar isi direktori Verbosely ( ls-l-b ‘)
 vi = Text Editor
 vim = Text Editor
 vmstat = Laporan statistik memori virtual
 
-# W
+## W
 watch = Mengeksekusi / menampilkan sebuah program secara berkala
 wc = Cetak byte, kata, dan baris menghitung
 whereis = Cari pengguna $ path, halaman manual dan file source untuk program
@@ -289,17 +282,17 @@ whoami = Cetak pengguna saat ini dan nama id ( `id-un ‘)
 wget = Ambil halaman web atau file melalui HTTP, HTTPS atau FTP
 write = Mengirim pesan ke pengguna lain
 
-# X
+## X
 xargs = Jalankan utility, melewati daftar argumen yang dibangun
 xdg-open = Buka file atau URL dalam aplikasi yang disukai pengguna.
 
-# Y
+## Y
 yes = Cetak string sampai di interrupt
 
-# Z
+## Z
 zip = Paket zip dan kompres (arsip) file
 
-# Simbol
+## Simbol
 
 - `.` = Skrip menjalankan perintah shell yang sekarang
 - `!!` = Jalankan perintah terakhir lagi
@@ -320,7 +313,7 @@ zip = Paket zip dan kompres (arsip) file
 
       tecmint @ localhost : ~ $ ls -l | less
 
-# Hal Menarik Lainnya
+## Hal Menarik Lainnya
 * Untuk melihat isi trash
 
       ls ~/.local/share/Trash
@@ -332,5 +325,5 @@ zip = Paket zip dan kompres (arsip) file
 
 
 
-# Referensi
+## Referensi
 * <http://blog.unnes.ac.id/sidiq/2017/02/13/kumpulan-perintah-linux-di-terminal-lengkap/>

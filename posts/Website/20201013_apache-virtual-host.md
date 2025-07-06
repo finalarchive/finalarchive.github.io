@@ -1,11 +1,5 @@
----
-layout: post
-title:  "Apache : Virtual Host"
-date:   2020-10-13 12:36
-tags: [linux, aplikasi, web]
-category: Archive
-description: ""
----
+# Apache : Virtual Host
+
 
 Apache memungkinkan kita untuk menjalankan beberapa situs dalam sebuah server apache.<br>
 Ubuntu menggunakan dua (2) directory untuk virtual host, yaitu:
@@ -14,13 +8,6 @@ Ubuntu menggunakan dua (2) directory untuk virtual host, yaitu:
 `/etc/apache2/sites-enabled`
 
 Folder `site-enabled` berisi symlink ke `site-available`, dengan cara ini kita dapat mengkonfigurasi dengan aman di `site-available` jika di disable dengan cara menghilangkan symlink.
-
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
 
 # File Konfigurasi Virtual Host
 

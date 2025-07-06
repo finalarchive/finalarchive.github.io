@@ -1,18 +1,5 @@
----
-title:  "Interfaces up/down"
-date:   2020-10-08 16:29
-tags: [linux, ubuntu, network]
-category: Archive
-description: ""
----
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
-
-# 1. Mengunakan ip
+# Interfaces up/down
+## 1. Mengunakan ip
 
 #### Cek network yang tersedia
 
@@ -27,7 +14,7 @@ description: ""
     ip link set dev eth0 up
     ip link set dev eth0 down
 
-# 2. Mengunakan Ifconfig
+## 2. Mengunakan Ifconfig
 
 #### Cek network yang tersedia
     ifconfig -a

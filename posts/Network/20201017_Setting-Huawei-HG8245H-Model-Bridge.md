@@ -1,17 +1,4 @@
----
-layout: post
-title:  "Setting Huawei HG8245H Model Bridge"
-date:   2020-10-17 23:20
-tags: [network, hostpot]
-category: Archive
-description: ""
----
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
+# Setting Huawei HG8245H Model Bridge
 
 ## Login Sebagi Super User
 

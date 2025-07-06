@@ -1,19 +1,6 @@
----
-layout: post
-title:  "Pengunaan Alias di Bash"
-date:   2020-10-24 17:13
-tags: [linux, bash, cli]
-category: Archive
-description: ""
----
+# Pengunaan Alias di Bash
+ 
 Alias Bash adalah shortcut untuk mempermudah kita mengakses perintah terminal melalui kata yang lebih mudah diingat dan juga lebih singkat.
-
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
 
 ## Membuat Alias Bash
 

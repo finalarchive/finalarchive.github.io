@@ -1,18 +1,4 @@
----
-title:  "Directory Linux (Ubuntu)"
-date:   2020-10-08 12:13
-tags: [linux, ubuntu]
-category: Archive
-description: ""
----
-
-***Daftar Isi***
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
-
-# Directory Ubuntu
+# Directory Linux (Ubuntu)
 
 | <center> Directory </center> | | <center> Discripsi </center> | 
 | :--- | :--- | :--- |
