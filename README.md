@@ -5,6 +5,8 @@
 #### GNU-Linux
 ---
 
+* 20250707 | [Membuat Shortcut Desktop Di Ubuntu](/posts/GNU-Linux/20250707_Membuat_shortcut_desktop_di_ubuntu.md)
+* 20250707 | [Membuat Shortcut Di Desktop Ubuntu](/posts/GNU-Linux/20250707_membuat_shortcut_di_desktop_ubuntu.md)
 * 20250705 | [Repository Ubuntu](/posts/GNU-Linux/20250705_repository_Ubuntu.md)
 * 20201115 | [I3wm](/posts/GNU-Linux/20201115_i3wm.md)
 * 20201114 | [Install Archlinux](/posts/GNU-Linux/20201114_install-archlinux.md)
@@ -12,7 +14,6 @@
 * 20201024 | [Pengunaan Aliash Di Bash](/posts/GNU-Linux/20201024_pengunaan-aliash-di-bash.md)
 * 20201019 | [Operator Shell](/posts/GNU-Linux/20201019_Operator-shell.md)
 * 20201019 | [Perintah Dasar Linux](/posts/GNU-Linux/20201019_perintah-dasar-linux.md)
-* 20201013 | [Python Http Server](/posts/GNU-Linux/20201013_python-http-server.md)
 * 20201008 | [Directory Linux Ubuntu](/posts/GNU-Linux/20201008_directory-linux-ubuntu.md)
 * 20201008 | [Disable Enable Auto Sleep Ubuntu](/posts/GNU-Linux/20201008_disable-enable-auto-sleep-ubuntu.md)
 * 20201008 | [Interfaces Up Down](/posts/GNU-Linux/20201008_interfaces-up-down.md)
@@ -31,7 +32,8 @@
 #### Programming_Language
 ---
 
-* 20250704 | [Pythone Dasar](/posts/Programming_Language/20250704_pythone_dasar.md)
+* 20250707 | [Pythone Dasar](/posts/Programming_Language/20250707_pythone_dasar.md)
+* 20201013 | [Python Http Server](/posts/Programming_Language/20201013_python-http-server.md)
 
 #### Tools
 ---

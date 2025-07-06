@@ -6,7 +6,7 @@ Alias Bash adalah shortcut untuk mempermudah kita mengakses perintah terminal me
 
 Pertama, buka file ~/.bashrc lalu pastika baris berikut tidak dikomentari:
 
-```
+```bash
 if [ -f ~/.bash_aliases ]; then
 . ~/.bash_aliases
 fi
@@ -32,13 +32,13 @@ Simpan lalu jalankan perintah berikut di terminal.
 Terkadang Anda mungkin perlu membuat alias yang menerima satu atau lebih argumen, di situlah fungsi bash menjadi berguna.
 
 Sintaks untuk membuat fungsi bash sangat mudah. Mereka dapat dideklarasikan dalam dua format berbeda:
-```
+```bash
 function_name () {
   [perintah]
 }
 ```
 atau
-```
+```bash
 function function_name {
   [perintah]
 }
@@ -49,7 +49,7 @@ Mari kita buat fungsi bash sederhana yang akan membuat direktori (dengan perinta
 
     nano ~/.bashrc
 
-```
+```bash
 mkcd ()
 {
   mkdir -p -- "$1" && cd -P -- "$1"
