@@ -1,10 +1,12 @@
 # Install ArchLinux
+## Mengunakan `archinstall` (recomanedasi)
 
-## Cek Connection
+## Cara Manual
+### Cek Connection
 
   ip a
 
-## Memilih Mirrorlist
+### Memilih Mirrorlist
 
 Sinkronisasi Database 
   
@@ -28,7 +30,7 @@ Sinkron Database
 	
     pacman -Syy
 
-## Buat partisi
+### Buat partisi
 	
 cek partisi
 	
@@ -59,7 +61,7 @@ sda      8:0    0     8G  0 disk
 sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt
 ```
 
-## Format partisi
+### Format partisi
 	mkfs.ext4 /dev/sda1
 	lsblk
 
@@ -84,10 +86,10 @@ sda      8:0    0     8G  0 disk
 sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt  
 ```
 
-## Install base paket dari Arch Linux dan beberapa paket pendukung
+### Install base paket dari Arch Linux dan beberapa paket pendukung
 	pacstrap /mnt base linux linux-firmware vim sudo [amd-ucode / intel-ucode]
 
-## Mounting semua partisi yang telah dibuat secara permanen
+### Mounting semua partisi yang telah dibuat secara permanen
 	genfstab -U /mnt >> /mnt/etc/fstab
 	cat /mnt/etc/fstab
 
@@ -100,10 +102,10 @@ sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt
 UUID=8b29657e-14fd-422c-82fa-21ee1ab6614e       /               ext4            rw,relatime     0 1
 ```
 
-## Beralih ke mode root untuk mengatur instalasi sistem baru
+### Beralih ke mode root untuk mengatur instalasi sistem baru
 	arch-chroot /mnt
 
-## Set Language dan Time Zone
+### Set Language dan Time Zone
 Set Time Zone
 	
     ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -165,7 +167,7 @@ LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=
 ```
 
-## Set Hostname dan Host
+### Set Hostname dan Host
 Set Hostname
 
 	  echo “arch” > /etc/hostname
@@ -181,9 +183,9 @@ add
 127.0.1.1 arch.localdomain arch
 ```
 
-## Setting Password dan User
+### Setting Password dan User
 
-#### Set password root
+##### Set password root
 
 	  passwd root
 
@@ -193,12 +195,12 @@ Retype new password:
 passwd: password updated successfully
 ```
 
-#### Tambah User
+##### Tambah User
 buat group 'sudo' terlebih dahulu
 
 	groupadd sudo
 
-#### Buat user
+##### Buat user
 	useradd -m -g users -G sudo,storage,wheel,power,input,network final
 
 set password user final
@@ -219,17 +221,17 @@ edit
 <pre>
 ...
 ...
-## Uncomment to allow members of group sudo to execute any command
+### Uncomment to allow members of group sudo to execute any command
 <mark>%sudo ALL=(ALL) ALL</mark>
 ...
 ...
 </pre>
 
-## Install Paket Bootloader and Networking tools:
+### Install Paket Bootloader and Networking tools:
 	pacman -S grub networkmanager network-manager-applet dialog mtools dosfstools base-devel linux-headers reflector git cups xdg-utils xdg-user-dirs
 
 
-## Install boot loader GRUB
+### Install boot loader GRUB
 Grub Install
 
 	grub-install --target=i386-pc /dev/sda
@@ -240,7 +242,7 @@ Grub configuration file
 
 
 
-## Activate servis for nex reboot
+### Activate servis for nex reboot
 
 Network
 
@@ -250,12 +252,12 @@ Printer
 
 	systemctl enable org.cups.cupsd
 
-## Return to the installer, unmount all partitions and reboot
+### Return to the installer, unmount all partitions and reboot
     exit
     umount -a
     reboot
 
-## Aktifkan dukungan 32 bit Architecture
+### Aktifkan dukungan 32 bit Architecture
 	sudo vim /etc/pacman.conf
 
 edit
@@ -275,31 +277,31 @@ Include = /etc/pacman.d/mirrorlist
 ...
 </pre>
 
-## Install Package Manager AUR Yay (Yet another Yaourt)
+### Install Package Manager AUR Yay (Yet another Yaourt)
 	cd /home/final/Downloads/
 	pacman -Syy
 	git clone https://aur.archlinux.org/yay.git
 	cd yay
 	makepkg -si
 	
-## install grafhic Card Driver
-#### Mesa Driver
+### install grafhic Card Driver
+##### Mesa Driver
 Paket yang menyediakan dukungan terhadap DRI (Direct Reading Infrastructur) driver untuk akselerasi gambar 3D
 
 	sudo pacman -S mesa
 
-#### DDX Driver (xf86-vidio)
+##### DDX Driver (xf86-vidio)
 dukungan terhadap DDX driver (yang menyediakan akselarasi gambar 2D pada Xorg)
 
 	pacman -S xf86-video-intel
 
-## Setting Terminal
-#### Install ST sttruck
+### Setting Terminal
+##### Install ST sttruck
 install Emulator Terimanl
 
 	yay -Sy st
 
-#### Install ZSH Shell
+##### Install ZSH Shell
 Referensi : <https://computingforgeeks.com/installingconfiguring-and-customizing-zsh-on-linux/>
 
 Install Shell
@@ -335,14 +337,14 @@ edit
 
 save and exit
 
-##### Install Oh My Zsh
+###### Install Oh My Zsh
 	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 seteh install akan ada pilihan tema yang terletak di `~/.oh-my-zsh/themes/`
 
 Terdapat juga direktori plugin untuk melihat semua plugin yang tersedia `ls -lh ~/.oh-my-zsh/plugins`
 
-##### Install Oh My Zsh themes for Zsh
+###### Install Oh My Zsh themes for Zsh
 kita akan memasang tema `honukai.zsh-theme` di `~/.oh-my-zsh/themes/` dan mengcofigurasinnya di `.zshrc`
 
 	cd /home/final/Downloads
