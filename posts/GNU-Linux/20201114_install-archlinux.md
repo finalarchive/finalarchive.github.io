@@ -293,7 +293,7 @@ add
 
 ### Setting Password dan User
 
-##### password root
+#### password root
 
 	  passwd root
 
@@ -303,12 +303,12 @@ Retype new password:
 passwd: password updated successfully
 ```
 
-##### bah User
+#### bah User
 buat group 'sudo' terlebih dahulu
 
 	groupadd sudo
 
-##### t user
+#### t user
 	useradd -m -g users -G sudo,storage,wheel,power,input,network final
 
 set password user final
@@ -393,23 +393,23 @@ Include = /etc/pacman.d/mirrorlist
 	makepkg -si
 	
 ### install grafhic Card Driver
-##### a Driver
+#### a Driver
 Paket yang menyediakan dukungan terhadap DRI (Direct Reading Infrastructur) driver untuk akselerasi gambar 3D
 
 	sudo pacman -S mesa
 
-##### Driver (xf86-vidio)
+#### Driver (xf86-vidio)
 dukungan terhadap DDX driver (yang menyediakan akselarasi gambar 2D pada Xorg)
 
 	pacman -S xf86-video-intel
 
 ### Setting Terminal
-##### tall ST sttruck
+#### tall ST sttruck
 install Emulator Terimanl
 
 	yay -Sy st
 
-##### tall ZSH Shell
+#### tall ZSH Shell
 Referensi : <https://computingforgeeks.com/installingconfiguring-and-customizing-zsh-on-linux/>
 
 Install Shell
@@ -445,14 +445,14 @@ edit
 
 save and exit
 
-###### tall Oh My Zsh
+##### tall Oh My Zsh
 	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 seteh install akan ada pilihan tema yang terletak di `~/.oh-my-zsh/themes/`
 
 Terdapat juga direktori plugin untuk melihat semua plugin yang tersedia `ls -lh ~/.oh-my-zsh/plugins`
 
-###### tall Oh My Zsh themes for Zsh
+##### tall Oh My Zsh themes for Zsh
 kita akan memasang tema `honukai.zsh-theme` di `~/.oh-my-zsh/themes/` dan mengcofigurasinnya di `.zshrc`
 
 	cd /home/final/Downloads
