@@ -114,6 +114,6 @@ Kondisi gagal pertumbuhan pada anak (pertumbuhan tubuh dan otak) akibat kekurang
 
 ## X
 
-## Y#
+## Y
 
-# Z
+## Z
