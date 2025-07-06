@@ -102,20 +102,11 @@ pip uninstall nama_paket
 ```
 ---
 
-
-## Membuat Virtual Environment
+## Virtual Environment
 
 > Virtual Environment (Lingkungan Virtual) adalah cara untuk mengisolasi proyek Python agar tidak bercampur antar paket.
 
-### Contoh:
-Misal nama proyek kamu adalah `projek-saya`.
-
-1. Buka terminal / CMD, masuk ke folder proyek:
-   ```bash
-   cd path\ke\projek-saya
-   ```
-
-2. Buat virtual environment:
+**1. Buat virtual environment**
    ```bash
    python -m venv env
    ```
@@ -126,9 +117,7 @@ Misal nama proyek kamu adalah `projek-saya`.
 | `venv`              | Nama modul yang dijalankan. Modul `venv` digunakan untuk **membuat virtual environment**.                                 |
 | `env` | Nama folder/direktori virtual environment yang akan dibuat. Bisa kamu ganti jadi nama lain, misalnya `env`, `myenv`, dll. |
 
-
-
-3. Aktifkan virtual environment:
+**2. Aktifkan virtual environment**
 
    - **Windows (CMD):**
      ```cmd
@@ -143,7 +132,7 @@ Misal nama proyek kamu adalah `projek-saya`.
      source env/bin/activate
      ```
 
-4. Jika berhasil, prompt akan berubah seperti:
+Jika berhasil, prompt akan berubah seperti:
    ```
    (env) C:\projek-saya>
    ```
@@ -152,13 +141,12 @@ Misal nama proyek kamu adalah `projek-saya`.
 
 > Setelah virtual environment aktif, kamu bisa install paket seperti biasa
 
-### Menonaktifkan Virtual Environment
+**3. Menonaktifkan Virtual Environment**
 
 Setelah selesai, keluar dari environment dengan:
 ```bash
 deactivate
 ```
-
 ---
 
 ## Ringkasan Perintah
