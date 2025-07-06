@@ -28,10 +28,10 @@
 * 20201009 | [Optimalisasi Modem GSM](/posts/Network/20201009_Optimalisasi_modem_GSM.md)
 * 20201009 | [Membaca Sinyak Gsm](/posts/Network/20201009_membaca-sinyak-gsm.md)
 
-#### Programming Language
+#### Programming_Language
 ---
 
-* 20250704 | [Pythone Dasar](/posts/Programming Language/20250704_pythone_dasar.md)
+* 20250704 | [Pythone Dasar](/posts/Programming_Language/20250704_pythone_dasar.md)
 
 #### Tools
 ---
