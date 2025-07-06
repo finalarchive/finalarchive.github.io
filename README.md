@@ -5,7 +5,6 @@
 #### GNU-Linux
 ---
 
-* 20250707 | [Membuat Shortcut Desktop Di Ubuntu](/posts/GNU-Linux/20250707_Membuat_shortcut_desktop_di_ubuntu.md)
 * 20250707 | [Membuat Shortcut Di Desktop Ubuntu](/posts/GNU-Linux/20250707_membuat_shortcut_di_desktop_ubuntu.md)
 * 20250705 | [Repository Ubuntu](/posts/GNU-Linux/20250705_repository_Ubuntu.md)
 * 20201115 | [I3wm](/posts/GNU-Linux/20201115_i3wm.md)
