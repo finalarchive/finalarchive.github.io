@@ -1,6 +1,114 @@
 # Install ArchLinux
-## Mengunakan `archinstall` (recomanedasi)
 
+## 📘 Panduan Install Arch Linux dengan `archinstall` 
+
+- `archinstall` adalah installer semi-otomatis yang fleksibel dan sangat cocok bagi pengguna baru Arch.
+- Bisa dikustomisasi lebih lanjut dengan file konfigurasi JSON untuk otomatisasi penuh.
+
+### 🖥️ Persiapan Awal
+
+1. **Download ISO Arch Linux**  
+   Kunjungi [https://archlinux.org/download](https://archlinux.org/download)
+
+2. **Buat USB Bootable**
+   - **Windows**: Gunakan [Rufus](https://rufus.ie)
+   - **Linux/macOS**:
+     ```bash
+     sudo dd if=archlinux-*.iso of=/dev/sdX bs=4M status=progress && sync
+     ```
+
+3. **Boot dari USB ke Arch Linux Live ISO**
+
+
+### ⚙️ Menjalankan Installer
+
+Setelah masuk ke terminal live Arch Linux:
+
+```bash
+archinstall
+```
+
+Akan muncul tampilan menu teks interaktif (TUI).
+
+
+### 🧩 Langkah-Langkah di Menu `archinstall`
+
+#### Language
+- Pilih bahasa: `en_US` (rekomendasi)
+
+#### Keyboard Layout
+- Pilih layout keyboard: `us` (default)
+
+#### Mirror Region
+- Pilih lokasi terdekat, contoh: `Indonesia`
+
+#### Disk Configuration
+- Pilih disk (contoh: `/dev/sda`)
+- Pilih `Wipe all selected drives` untuk partisi otomatis
+- Filesystem: `ext4`
+- Encryption: opsional
+
+#### Bootloader
+- Pilih `systemd-boot` (untuk UEFI) atau `GRUB` (untuk fleksibilitas/dual boot)
+
+#### Swap
+- Pilih: `Swap to file` (umum dan disarankan)
+
+#### Hostname
+- Masukkan nama komputer (hostname)
+
+#### Root Password
+- Buat password untuk user `root`
+
+#### User Account
+- Tambahkan user baru
+- Aktifkan `sudo` dan masukkan password
+
+#### Profile
+- Pilih Desktop Environment (misal: `KDE`, `GNOME`, `i3`) atau `Minimal`
+
+#### Networking
+- Biarkan default (`systemd-networkd`)
+
+#### Audio
+- Pilih `pipewire` (modern dan direkomendasikan)
+
+#### Kernel
+- Pilih jenis kernel: `linux` (biasa), `linux-lts` (lebih stabil)
+
+#### Additional Packages
+- Opsional: masukkan nama-nama paket yang ingin langsung diinstal, contoh:
+  ```
+  firefox nano git neofetch
+  ```
+
+#### Mulai Instalasi
+- Pilih **Install**
+- Proses berjalan otomatis
+
+
+### ✅ Setelah Instalasi
+
+Setelah instalasi selesai:
+- Pilih **Reboot**
+- **Cabut USB Installer**
+- Boot ke Arch Linux yang baru terinstal
+
+
+### 🔧 Setelah Booting
+
+#### Update sistem
+```bash
+sudo pacman -Syu
+```
+
+#### (Opsional) Install yay (AUR helper)
+```bash
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
 ## Cara Manual
 ### Cek Connection
 
@@ -17,7 +125,7 @@ Install reflector
     pacman -S reflector
 
 Pilih 5 mirror dengan kualitas kecepatan download yang bagus
-```	
+```bash
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 ```
@@ -36,7 +144,7 @@ cek partisi
 	
     lsblk
 
-```
+```bash
 NAME  MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 loop0   7:0    0 556.2M  1 loop /run/archiso/sfs/airootfs
 sda     8:0    0     8G  0 disk
@@ -53,7 +161,7 @@ cek hasil
 
 	lsblk
 
-```
+```bash
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 loop0    7:0    0 556.2M  1 loop /run/archiso/sfs/airootfs
 sda      8:0    0     8G  0 disk
@@ -65,7 +173,7 @@ sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt
 	mkfs.ext4 /dev/sda1
 	lsblk
 
-```
+```bash
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 loop0    7:0    0 556.2M  1 loop /run/archiso/sfs/airootfs
 sda      8:0    0     8G  0 disk
@@ -78,7 +186,7 @@ mount `/dev/sda1` ke `/mnt`
     mount /dev/sda1 /mnt
     lsblk
 
-```
+```bash
 NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
 loop0    7:0    0 556.2M  1 loop /run/archiso/sfs/airootfs
 sda      8:0    0     8G  0 disk
@@ -93,7 +201,7 @@ sr0     11:0    1   679M  0 rom  /run/archiso/bootmnt
 	genfstab -U /mnt >> /mnt/etc/fstab
 	cat /mnt/etc/fstab
 
-```
+```bash
 # Static information about the filesystems.
 # See fstab(5) for details.
 
@@ -150,7 +258,7 @@ cek konfigurasi
 
 	cat /etc/locale.conf
 
-```
+```bash
 LANG=en_US.UTF-8
 LC_CTYPE="en_US.UTF-8"
 LC_NUMERIC="en_US.UTF-8"
@@ -177,7 +285,7 @@ set Host
 	  vim /etc/host
 
 add
-```
+```bash
 127.0.0.1 localhost
 ::1       localhost
 127.0.1.1 arch.localdomain arch
@@ -185,7 +293,7 @@ add
 
 ### Setting Password dan User
 
-##### Set password root
+##### password root
 
 	  passwd root
 
@@ -195,12 +303,12 @@ Retype new password:
 passwd: password updated successfully
 ```
 
-##### Tambah User
+##### bah User
 buat group 'sudo' terlebih dahulu
 
 	groupadd sudo
 
-##### Buat user
+##### t user
 	useradd -m -g users -G sudo,storage,wheel,power,input,network final
 
 set password user final
@@ -285,23 +393,23 @@ Include = /etc/pacman.d/mirrorlist
 	makepkg -si
 	
 ### install grafhic Card Driver
-##### Mesa Driver
+##### a Driver
 Paket yang menyediakan dukungan terhadap DRI (Direct Reading Infrastructur) driver untuk akselerasi gambar 3D
 
 	sudo pacman -S mesa
 
-##### DDX Driver (xf86-vidio)
+##### Driver (xf86-vidio)
 dukungan terhadap DDX driver (yang menyediakan akselarasi gambar 2D pada Xorg)
 
 	pacman -S xf86-video-intel
 
 ### Setting Terminal
-##### Install ST sttruck
+##### tall ST sttruck
 install Emulator Terimanl
 
 	yay -Sy st
 
-##### Install ZSH Shell
+##### tall ZSH Shell
 Referensi : <https://computingforgeeks.com/installingconfiguring-and-customizing-zsh-on-linux/>
 
 Install Shell
@@ -337,14 +445,14 @@ edit
 
 save and exit
 
-###### Install Oh My Zsh
+###### tall Oh My Zsh
 	sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 seteh install akan ada pilihan tema yang terletak di `~/.oh-my-zsh/themes/`
 
 Terdapat juga direktori plugin untuk melihat semua plugin yang tersedia `ls -lh ~/.oh-my-zsh/plugins`
 
-###### Install Oh My Zsh themes for Zsh
+###### tall Oh My Zsh themes for Zsh
 kita akan memasang tema `honukai.zsh-theme` di `~/.oh-my-zsh/themes/` dan mengcofigurasinnya di `.zshrc`
 
 	cd /home/final/Downloads
