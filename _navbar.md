@@ -1,5 +1,5 @@
 <!-- _navbar.md -->
 
 * [**Archive**](/README.md)
-* [**Leksikon**](/Leksikon.md)
+* [**Word List**](/word_list.md)
 * [**About**](/about.md)
