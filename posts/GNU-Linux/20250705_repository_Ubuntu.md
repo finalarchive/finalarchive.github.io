@@ -2,7 +2,6 @@
 
 Repository Ubuntu adalah **kumpulan server** (lokal atau internet) yang menyimpan berbagai paket perangkat lunak (software) yang dapat diinstal di sistem operasi Ubuntu. Saat kamu menginstal aplikasi atau melakukan update di Ubuntu (misalnya dengan `apt install` atau `apt update`), sistem akan mengambil data dari repository ini.
 
----
 
 ## 🔧 Struktur dan Jenis Repository Ubuntu
 
@@ -26,7 +25,6 @@ Secara umum, Ubuntu memiliki empat komponen utama repository berdasarkan **lisen
 - **Isi:** Software dengan lisensi **terbatas** atau **tidak bebas**, seperti codec MP3 atau aplikasi tertentu.
 - **Dukungan:** Tidak didukung Canonical.
 
----
 
 ## 📁 Contoh Baris Repository di `/etc/apt/sources.list`
 
@@ -42,7 +40,6 @@ deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
 
 > `lsb_release -c` cek codemane ubuntu
 
----
 
 ## 🌐 Jenis Repository Berdasarkan Tujuan
 
@@ -56,15 +53,12 @@ deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
 
 > Penggunaan <br>`deb http://archive.ubuntu.com/ubuntu focal-`**Jenis Repository** `main restricted universe multiverse`
 
----
 
 ## 📥 Proses Umum Akses Repository
 
 1. **`apt update`** – Mengambil info terbaru dari daftar paket di repository.
 2. **`apt install nama_paket`** – Mengunduh dan memasang paket dari repository.
 3. **`apt upgrade`** – Memperbarui semua paket yang sudah diinstal.
-
----
 
 ## 🔒 Mirror Lokal & Kustom
 
