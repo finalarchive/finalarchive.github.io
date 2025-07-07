@@ -1,5 +1,5 @@
 # FinalArchive
-***FinalArchive*** adalah tempat saya menyimpan arsip pemikiran/catatan dari jejak rasa penasaran dan percobaan yang pernah saya jalani. Nama ini saya ambil dari gabungan dua makna: *Final*, yang merupakan nama saya, dan *Archive*, sebagai isyarat dari sebuah tempat penyimpanan yang abadi. Bisa juga dimaknai sebagai *“arsip terakhir”* bukan karena semuanya selesai, tapi karena di sinilah saya menyimpannya agar tidak hilang.
+***FinalArchive*** adalah frasa yang saya gunakan untuk menyebut tempat penyimpanan arsip pemikiran—catatan dari jejak rasa penasaran dan percobaan yang pernah saya jalani. Nama ini saya ambil dari gabungan dua makna: *Final*, yang merupakan nama saya, dan *Archive*, sebagai isyarat akan sebuah tempat penyimpanan yang abadi. Ia juga bisa dimaknai sebagai **“arsip terakhir”** bukan karena segalanya telah selesai, tetapi karena di sinilah saya memilih untuk menyimpannya, agar tak hilang begitu saja.
 
 ## Alasan Blog Ini di Buat
 Blog ini saya buat untuk menyimpan jejak pikiran dan rasa penasaran. Kadang hanya ide sederhana, kadang percobaan yang belum tentu berhasil, tapi semuanya punya cerita. Di sini saya menuliskan hal-hal yang pernah saya pelajari, coba, dan renungkan. Siapa tahu suatu saat nanti akan berguna. Setidaknya, ini jadi pengingat bahwa saya pernah melewati jalan ini.
