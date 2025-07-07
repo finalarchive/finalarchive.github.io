@@ -42,6 +42,9 @@ tanpa perasaan
 Framing adalah membingkai sebuah peristiwa, atau dengan kata lain framing digunakan untuk mengetahui bagaimana perspektif atau cara pandang yang digunakan wartawan atau media massa ketika menyeleksi isu dan menulis berita
 Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu kejadian tidak diingkari secara total, melainkan dibelokkan secara halus, dengan memberikan penonjolan pada aspek tertentu.[2] Penonjolan aspek-aspek tertentu dari isu berkaitan dengan penulisan fakta.[3] Ketika aspek tertentu dari suatu peristiwa dipilih, bagaimana aspek tersebut ditulis.[3] Hal ini sangat berkaitan dengan pamakaian diksi atau kata, kalimat, gambar atau foto, dan citra tertentu untuk ditampilkan kepada khalayak
 
+### Frasa
+`Frasa` adalah gabungan dua kata atau lebih yang membentuk satu kesatuan makna, namun tidak memiliki subjek dan predikat. Dengan kata lain, frasa bukanlah kalimat lengkap dan tidak dapat berdiri sendiri sebagai sebuah pernyataan. Ia hanya berfungsi sebagai bagian dari kalimat.
+
 ## G
 
 ## H
