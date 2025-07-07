@@ -1,3 +1,6 @@
+# Daftar Word List
+Disini saya menyimpan semua kosakata atau istilah yang saya perlukan
+
 [**A**](#a) - [**B**](#b) - [**C**](#c) - [**D**](#d) - [**E**](#e) - [**F**](#f) - [**G**](#g) - [**H**](#h) - [**I**](#i) - [**J**](#j) - [**K**](#k) - [**L**](#l) - [**M**](#m) - [**N**](#n) - [**O**](#p) - [**P**](#p) - [**Q**](#q) - [**R**](#r) - [**S**](#s) - [**T**](#t) - [**U**](#u) - [**V**](#v) - [**W**](#w) - [**X**](#x) - [**Y**](#y) - [**Z**](#z)
 
 ## A
