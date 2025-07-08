@@ -1,0 +1,48 @@
+# Tutorial Install Wireshark di Ubuntu 24.04
+
+Wireshark adalah aplikasi open source untuk menganalisis lalu lintas jaringan (network packet analyzer) yang sangat populer.
+
+## 1. Update Sistem
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+## 2. Install Wireshark
+
+```bash
+sudo apt install wireshark -y
+```
+
+## 3. Konfigurasi Hak Akses (Opsional)
+Agar bisa capture paket tanpa sudo:
+
+```bash
+sudo dpkg-reconfigure wireshark-common
+sudo usermod -aG wireshark $USER
+```
+- Pilih "Yes" saat diminta mengizinkan non-superuser capture paket.
+- Logout dan login kembali agar grup wireshark aktif.
+
+## 4. Jalankan Wireshark
+
+- Dari menu aplikasi, cari dan buka **Wireshark**
+- Atau lewat terminal:
+
+```bash
+wireshark
+```
+
+## 5. Tips Penggunaan
+- Pilih interface jaringan yang ingin di-capture.
+- Gunakan filter (misal: `ip.addr == 192.168.1.1` atau `tcp.port == 80`) untuk memudahkan analisis.
+- Simpan hasil capture untuk analisa lebih lanjut.
+
+---
+
+**Catatan:**
+- Untuk penggunaan di server/headless, bisa gunakan `tshark` (Wireshark versi CLI):
+  ```bash
+  sudo apt install tshark
+  ```
+- Dokumentasi resmi: https://www.wireshark.org/docs/
