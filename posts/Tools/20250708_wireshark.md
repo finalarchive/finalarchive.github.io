@@ -38,6 +38,25 @@ wireshark
 - Gunakan filter (misal: `ip.addr == 192.168.1.1` atau `tcp.port == 80`) untuk memudahkan analisis.
 - Simpan hasil capture untuk analisa lebih lanjut.
 
+## 6. Uninstall / Menghapus Wireshark
+
+Jika ingin menghapus Wireshark dari Ubuntu, gunakan perintah berikut:
+
+```bash
+sudo apt remove --purge wireshark -y
+sudo apt autoremove -y
+```
+
+- `remove --purge` akan menghapus paket beserta konfigurasi.
+- `autoremove` membersihkan dependensi yang tidak diperlukan lagi.
+
+Jika Anda juga menginstall tshark dan ingin menghapusnya:
+
+```bash
+sudo apt remove --purge tshark -y
+sudo apt autoremove -y
+```
+
 ---
 
 **Catatan:**
@@ -45,4 +64,6 @@ wireshark
   ```bash
   sudo apt install tshark
   ```
+
+  
 - Dokumentasi resmi: https://www.wireshark.org/docs/
