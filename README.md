@@ -42,6 +42,7 @@
 #### Tools
 ---
 
+* 20250708 | [Ventoy](/posts/Tools/20250708_ventoy.md)
 * 20250708 | [Wireshark](/posts/Tools/20250708_wireshark.md)
 * 20250704 | [Docsify](/posts/Tools/20250704_docsify.md)
 * 20250704 | [Git](/posts/Tools/20250704_git.md)
