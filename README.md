@@ -17,6 +17,11 @@
 * 20201008 | [Disable Enable Auto Sleep Ubuntu](/posts/GNU-Linux/20201008_disable-enable-auto-sleep-ubuntu.md)
 * 20201008 | [Interfaces Up Down](/posts/GNU-Linux/20201008_interfaces-up-down.md)
 
+#### Media_Sosial
+---
+
+* 20250708 | [Instagram Ukuran Ideal Feed Dan Story Instagram](/posts/Media_Sosial/20250708_Instagram_Ukuran_Ideal_Feed_dan_Story_Instagram.md)
+
 #### Network
 ---
 
