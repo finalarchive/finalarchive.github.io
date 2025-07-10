@@ -36,15 +36,16 @@ Setelah proses selesai, **restart** komputer Anda agar perubahan diterapkan.
 
 ## 🔧 Cara Manual (Optional)
 ### Aktifkan fitur WSL dan Virtual Machine Platform
-```powershell```
+```powershell
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
-### Komputer
+
 ### Set default versi ke WSL2
 ```powershell
 wsl --set-default-version 2
 ```
+
 ### Install distro (misal: Ubuntu)
 ```powershell
 wsl --install -d 

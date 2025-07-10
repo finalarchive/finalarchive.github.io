@@ -25,10 +25,27 @@ Perilaku
   >Covert Behavior : Perilaku tidak tampak/tersembunyi
   
 ## C
+### CTA: *Call To Action*
+`CTA` adalah singkatan dari *Call To Action*, yang dalam bahasa Indonesia berarti ajakan untuk bertindak.
 
-### Expressionless
+**Pengertian CTA**
+CTA adalah elemen (bisa berupa teks, tombol, gambar, atau link) yang digunakan untuk mendorong audiens melakukan tindakan tertentu yang diinginkan oleh pembuat konten, seperti:
 
-tanpa perasaan
+Membeli produk
+
+Menghubungi jasa
+
+Mengisi formulir
+
+Mengunduh eBook
+
+Mengikuti akun media sosial
+
+Mengunjungi website, dll
+
+
+### Carousel
+Dalam konteks media sosial **(seperti Instagram, Facebook, LinkedIn)**, `carousel` adalah jenis postingan yang memungkinkan pengguna membagikan beberapa foto atau video dalam satu unggahan yang bisa digeser ke kiri atau kanan oleh penonton.
 
 ## D
 
@@ -37,6 +54,11 @@ tanpa perasaan
 [**Defidensi**](https://kbbi.web.id/dependensi) (Bahasa Inggris: *Deficiency*) : Keadaan bergantung kepada orang lain karena belum dapat hidup sendiri. Di Linux, dependensi berarti paket lain yang dibutuhkan untuk menjalankan sebuah paket.
 
 ## E
+### Engagement
+`Engagement` adalah ukuran interaksi audiens terhadap suatu konten, produk, atau brand. Dalam konteks media sosial, engagement merujuk pada seberapa banyak dan seberapa aktif orang merespons konten yang kita bagikan.
+
+### Expressionless
+`Expressionless` adalah istilah dalam bahasa Inggris yang berarti tanpa ekspresi atau datar—tidak menunjukkan emosi melalui wajah, suara, atau bahasa tubuh.
 
 ## F
 
@@ -111,6 +133,17 @@ Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu keja
 Kondisi gagal pertumbuhan pada anak (pertumbuhan tubuh dan otak) akibat kekurangan gizi dalam waktu yang lama. Sehingga, anak lebih pendek atau perawakan pendek dari anak normal seusianya dan memiliki keterlambatan dalam berpikir. Umumnya disebabkan asupan makan yang tidak sesuai dengan kebutuhan gizi.
   
 ## T
+### Trust
+`Trust` atau `kepercayaan` adalah keyakinan atau rasa aman seseorang terhadap integritas, kemampuan, atau niat baik pihak lain—baik individu, organisasi, maupun merek.
+
+## Tone
+`Tone` adalah nada atau sikap yang digunakan dalam sebuah komunikasi, baik itu tulisan, lisan, maupun visual. Tone mencerminkan perasaan atau suasana yang ingin disampaikan oleh pembuat pesan kepada audiens.
+
+*Contoh sederhana:*
+Kalau kamu menulis dengan tone formal, maka bahasanya rapi, sopan, dan profesional.
+
+Kalau kamu menulis dengan tone santai, maka bahasanya lebih akrab, seperti ngobrol sama teman.
+
 
 ## U
 
