@@ -75,6 +75,10 @@ Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu keja
 ## H
 
 ## I
+### Interpretasi
+`Interpretasi` adalah proses menjelaskan, memahami, atau menafsirkan makna dari sesuatu. Sesuatu yang diinterpretasi bisa berupa teks, data, ucapan, perilaku, peristiwa, karya seni, atau fenomena apa pun yang membutuhkan pemahaman lebih dalam.
+
+Ini bukan sekadar mengulang informasi, tapi lebih ke arah memberi makna pribadi atau penjelasan berdasarkan pemahaman dan konteks.
 
 ### Insecure
 [Insecure](https://www.alodokter.com/sering-merasa-insecure-ini-cara-mengatasinya) adalah istilah untuk menggambarkan perasaan tidak aman yang membuat seseorang merasa gelisah, takut, malu, hingga tidak percaya diri
