@@ -77,8 +77,19 @@ Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu keja
 ## I
 
 ### Insecure
-
 [Insecure](https://www.alodokter.com/sering-merasa-insecure-ini-cara-mengatasinya) adalah istilah untuk menggambarkan perasaan tidak aman yang membuat seseorang merasa gelisah, takut, malu, hingga tidak percaya diri
+
+### Insightful
+`Insightful` (berwawasan luas atau mendalam) berarti memberikan pemahaman baru, mendalam, atau tak terduga tentang suatu topik. Sesuatu yang insightful membantu seseorang melihat hal-hal dari perspektif yang berbeda atau memahami inti masalah dengan lebih jelas. Ini bukan hanya tentang menyajikan fakta, tetapi juga tentang memberikan interpretasi atau koneksi yang belum terpikirkan sebelumnya.
+
+**Contoh:**
+- Sebuah laporan pasar yang insightful tidak hanya menyajikan data penjualan, tetapi juga menjelaskan mengapa tren tertentu terjadi dan apa implikasinya di masa depan.
+- Komentar dari seorang kolega yang insightful membantu Anda melihat solusi untuk masalah yang selama ini membingungkan Anda.
+
+### Inklusif
+`Inklusif` (menyeluruh, merangkul, atau melibatkan) berkaitan dengan keterlibatan dan keberagaman. Sesuatu yang inklusif berarti mengakomodasi, menerima, dan melibatkan semua orang atau kelompok, tanpa memandang latar belakang, perbedaan, atau karakteristik mereka. Tujuannya adalah menciptakan lingkungan di mana setiap individu merasa dihargai, diakui, dan memiliki kesempatan yang sama untuk berpartisipasi.
+
+**Fokus utama:** Menciptakan lingkungan yang menerima keberagaman dan memastikan semua orang merasa termasuk serta memiliki akses yang setara.
 
 ## J
 
@@ -117,6 +128,12 @@ Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu keja
 ## Q
 
 ## R
+### Relatable
+`Relatable` (mudah dikaitkan atau dihubungkan) berarti sesuatu yang mudah dipahami atau dirasakan oleh audiens karena sesuai dengan pengalaman, perasaan, atau situasi mereka sendiri. Ketika sesuatu itu relatable, audiens merasa "ini persis seperti yang saya alami" atau "saya bisa mengerti perasaan itu."
+
+**Contoh**
+- Sebuah presentasi tentang tantangan kerja yang relatable akan menggunakan contoh-contoh yang sering dialami oleh karyawan, sehingga mereka bisa mengidentifikasi diri dengan situasi tersebut.
+- Kisah seorang pembicara yang relatable membuat audiens merasa terhubung secara emosional dan lebih mudah menerima pesan yang disampaikan
 
 ## S
 
