@@ -1,5 +1,5 @@
 # Interfaces up/down
-## 1. Mengunakan ip
+## Mengunakan ip
 
 #### Cek network yang tersedia
 
@@ -14,7 +14,7 @@
     ip link set dev eth0 up
     ip link set dev eth0 down
 
-## 2. Mengunakan Ifconfig
+## Mengunakan Ifconfig
 
 #### Cek network yang tersedia
     ifconfig -a
