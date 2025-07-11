@@ -25,10 +25,27 @@ Perilaku
   >Covert Behavior : Perilaku tidak tampak/tersembunyi
   
 ## C
+### CTA: *Call To Action*
+`CTA` adalah singkatan dari *Call To Action*, yang dalam bahasa Indonesia berarti ajakan untuk bertindak.
 
-### Expressionless
+**Pengertian CTA**
+CTA adalah elemen (bisa berupa teks, tombol, gambar, atau link) yang digunakan untuk mendorong audiens melakukan tindakan tertentu yang diinginkan oleh pembuat konten, seperti:
 
-tanpa perasaan
+Membeli produk
+
+Menghubungi jasa
+
+Mengisi formulir
+
+Mengunduh eBook
+
+Mengikuti akun media sosial
+
+Mengunjungi website, dll
+
+
+### Carousel
+Dalam konteks media sosial **(seperti Instagram, Facebook, LinkedIn)**, `carousel` adalah jenis postingan yang memungkinkan pengguna membagikan beberapa foto atau video dalam satu unggahan yang bisa digeser ke kiri atau kanan oleh penonton.
 
 ## D
 
@@ -37,6 +54,11 @@ tanpa perasaan
 [**Defidensi**](https://kbbi.web.id/dependensi) (Bahasa Inggris: *Deficiency*) : Keadaan bergantung kepada orang lain karena belum dapat hidup sendiri. Di Linux, dependensi berarti paket lain yang dibutuhkan untuk menjalankan sebuah paket.
 
 ## E
+### Engagement
+`Engagement` adalah ukuran interaksi audiens terhadap suatu konten, produk, atau brand. Dalam konteks media sosial, engagement merujuk pada seberapa banyak dan seberapa aktif orang merespons konten yang kita bagikan.
+
+### Expressionless
+`Expressionless` adalah istilah dalam bahasa Inggris yang berarti tanpa ekspresi atau datar—tidak menunjukkan emosi melalui wajah, suara, atau bahasa tubuh.
 
 ## F
 
@@ -53,10 +75,25 @@ Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu keja
 ## H
 
 ## I
+### Interpretasi
+`Interpretasi` adalah proses menjelaskan, memahami, atau menafsirkan makna dari sesuatu. Sesuatu yang diinterpretasi bisa berupa teks, data, ucapan, perilaku, peristiwa, karya seni, atau fenomena apa pun yang membutuhkan pemahaman lebih dalam.
+
+Ini bukan sekadar mengulang informasi, tapi lebih ke arah memberi makna pribadi atau penjelasan berdasarkan pemahaman dan konteks.
 
 ### Insecure
-
 [Insecure](https://www.alodokter.com/sering-merasa-insecure-ini-cara-mengatasinya) adalah istilah untuk menggambarkan perasaan tidak aman yang membuat seseorang merasa gelisah, takut, malu, hingga tidak percaya diri
+
+### Insightful
+`Insightful` (berwawasan luas atau mendalam) berarti memberikan pemahaman baru, mendalam, atau tak terduga tentang suatu topik. Sesuatu yang insightful membantu seseorang melihat hal-hal dari perspektif yang berbeda atau memahami inti masalah dengan lebih jelas. Ini bukan hanya tentang menyajikan fakta, tetapi juga tentang memberikan interpretasi atau koneksi yang belum terpikirkan sebelumnya.
+
+**Contoh:**
+- Sebuah laporan pasar yang insightful tidak hanya menyajikan data penjualan, tetapi juga menjelaskan mengapa tren tertentu terjadi dan apa implikasinya di masa depan.
+- Komentar dari seorang kolega yang insightful membantu Anda melihat solusi untuk masalah yang selama ini membingungkan Anda.
+
+### Inklusif
+`Inklusif` (menyeluruh, merangkul, atau melibatkan) berkaitan dengan keterlibatan dan keberagaman. Sesuatu yang inklusif berarti mengakomodasi, menerima, dan melibatkan semua orang atau kelompok, tanpa memandang latar belakang, perbedaan, atau karakteristik mereka. Tujuannya adalah menciptakan lingkungan di mana setiap individu merasa dihargai, diakui, dan memiliki kesempatan yang sama untuk berpartisipasi.
+
+**Fokus utama:** Menciptakan lingkungan yang menerima keberagaman dan memastikan semua orang merasa termasuk serta memiliki akses yang setara.
 
 ## J
 
@@ -95,6 +132,12 @@ Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu keja
 ## Q
 
 ## R
+### Relatable
+`Relatable` (mudah dikaitkan atau dihubungkan) berarti sesuatu yang mudah dipahami atau dirasakan oleh audiens karena sesuai dengan pengalaman, perasaan, atau situasi mereka sendiri. Ketika sesuatu itu relatable, audiens merasa "ini persis seperti yang saya alami" atau "saya bisa mengerti perasaan itu."
+
+**Contoh**
+- Sebuah presentasi tentang tantangan kerja yang relatable akan menggunakan contoh-contoh yang sering dialami oleh karyawan, sehingga mereka bisa mengidentifikasi diri dengan situasi tersebut.
+- Kisah seorang pembicara yang relatable membuat audiens merasa terhubung secara emosional dan lebih mudah menerima pesan yang disampaikan
 
 ## S
 
@@ -111,6 +154,17 @@ Framing merupakan metode penyajian realitas di mana kebenaran tentang suatu keja
 Kondisi gagal pertumbuhan pada anak (pertumbuhan tubuh dan otak) akibat kekurangan gizi dalam waktu yang lama. Sehingga, anak lebih pendek atau perawakan pendek dari anak normal seusianya dan memiliki keterlambatan dalam berpikir. Umumnya disebabkan asupan makan yang tidak sesuai dengan kebutuhan gizi.
   
 ## T
+### Trust
+`Trust` atau `kepercayaan` adalah keyakinan atau rasa aman seseorang terhadap integritas, kemampuan, atau niat baik pihak lain—baik individu, organisasi, maupun merek.
+
+## Tone
+`Tone` adalah nada atau sikap yang digunakan dalam sebuah komunikasi, baik itu tulisan, lisan, maupun visual. Tone mencerminkan perasaan atau suasana yang ingin disampaikan oleh pembuat pesan kepada audiens.
+
+*Contoh sederhana:*
+Kalau kamu menulis dengan tone formal, maka bahasanya rapi, sopan, dan profesional.
+
+Kalau kamu menulis dengan tone santai, maka bahasanya lebih akrab, seperti ngobrol sama teman.
+
 
 ## U
 
