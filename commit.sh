@@ -36,7 +36,7 @@ while read -r category; do
 done <<< "$categories"
 
 echo ""
-echo -e "\e[42mREADME.md berhasil dibuat.\e[0m"
+echo -e "\e[97;42mREADME.md berhasil dibuat.\e[0m"
 
 
 # PUSH KE GITHUB
