@@ -36,7 +36,8 @@
 #### Programming_Language
 ---
 
-* 20250707 | [Pythone Dasar](/posts/Programming_Language/20250707_pythone_dasar.md)
+* 20250716 | [Pythone Dasar](/posts/Programming_Language/20250716_pythone_Dasar.md)
+* 20250707 | [Pythone Install](/posts/Programming_Language/20250707_pythone_Install.md)
 * 20201013 | [Python Http Server](/posts/Programming_Language/20201013_python-http-server.md)
 
 #### Tools
