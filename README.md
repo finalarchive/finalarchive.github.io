@@ -56,6 +56,11 @@
 * 20201008 | [Samba](/posts/Tools/20201008_samba.md)
 * 20201008 | [Utorrent Server](/posts/Tools/20201008_utorrent-server.md)
 
+#### WINDOWS
+---
+
+* 20250716 | [Update Windows 10 Ke Windows 11(Lapto Jadul)](/posts/WINDOWS/20250716_Update_Windows_10_ke_Windows_11(Lapto_Jadul).md)
+
 #### Website
 ---
 
