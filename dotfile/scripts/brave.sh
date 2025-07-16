@@ -1,8 +1,9 @@
 #!/bin/bash
-set -e  # Keluar jika terjadi error
+# LABEL: Brave
+# CATEGORY: Browser
+# WAJIB: no
 
-echo "🔄 Memperbarui sistem..."
-sudo apt update
+set -e  # Keluar jika terjadi error
 
 # Menginstal Brave Browser...
 echo "🔄 Menginstal Brave Browser..."

@@ -1,8 +1,9 @@
 #!/bin/bash
-set -e  # Keluar jika terjadi error
+# LABEL: Visual Studio Code
+# CATEGORY: Editor
+# WAJIB: no
 
-echo "🔄 Memperbarui sistem..."
-sudo apt update
+set -e  # Keluar jika terjadi error
 
 # instalasi Visual Studio Code di Ubuntu
 echo "🔑 Mengunduh dan mengatur GPG key Microsoft..."
