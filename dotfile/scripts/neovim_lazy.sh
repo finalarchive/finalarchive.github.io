@@ -82,19 +82,31 @@ EOF
 
 echo "🌐 Membuat plugins/lsp.lua..."
 cat > "$NVIM_DIR/lua/plugins/lsp.lua" << 'EOF'
+-- Memastikan Mason terinstal dan diatur
 require("mason").setup()
 
+-- Mengatur mason-lspconfig untuk menginstal server LSP yang diperlukan
+-- Pastikan nama server di 'ensure_installed' sesuai dengan nama yang digunakan di lspconfig
 require("mason-lspconfig").setup {
-  ensure_installed = { "html", "cssls", "tsserver" }, -- tetap tsserver di sini untuk download
+  ensure_installed = { "html", "cssls", "ts_ls" }, -- Mengubah "tsserver" menjadi "ts_ls"
 }
 
+-- Memuat modul lspconfig
 local lspconfig = require("lspconfig")
+-- Mendapatkan kapabilitas default dari cmp_nvim_lsp untuk autokomplet
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
--- LSP Setup
-lspconfig.html.setup { capabilities = capabilities }
-lspconfig.cssls.setup { capabilities = capabilities }
-lspconfig.ts_ls.setup { capabilities = capabilities } -- GANTI dari tsserver ke ts_ls
+-- Pengaturan LSP untuk setiap bahasa
+-- Setiap server LSP diatur dengan kapabilitas yang sama
+lspconfig.html.setup {
+  capabilities = capabilities -- Mengatur kapabilitas untuk HTML LSP
+}
+lspconfig.cssls.setup {
+  capabilities = capabilities -- Mengatur kapabilitas untuk CSS LSP
+}
+lspconfig.ts_ls.setup {
+  capabilities = capabilities -- Mengatur kapabilitas untuk TypeScript LSP (ts_ls)
+}
 EOF
 
 echo "🤖 Membuat plugins/cmp.lua..."
