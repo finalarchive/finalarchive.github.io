@@ -5,6 +5,8 @@ OUTPUT_FILE="README.md"
 
 # Header awal
 echo "# ARCHIVE" > "$OUTPUT_FILE"
+echo "**Tools Generator**" >> "$OUTPUT_FILE"
+echo "- <a href=\"/tools/prompt.html\" target=\"_blank\">🎯 Prompt Generator</a>" >> "$OUTPUT_FILE"
 echo "**Berikut adalah daftar semua postingan:**" >> "$OUTPUT_FILE"
 echo "" >> "$OUTPUT_FILE"
 

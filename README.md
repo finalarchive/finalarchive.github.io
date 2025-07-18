@@ -1,4 +1,6 @@
 # ARCHIVE
+**Tools Generator**
+- <a href="/tools/prompt.html" target="_blank">🎯 Prompt Generator</a>
 **Berikut adalah daftar semua postingan:**
 
 
@@ -30,8 +32,8 @@
 * 20240621 | [Install Mikrotik CHR Di VPS](/posts/Network/20240621_Install-Mikrotik-CHR-di-VPS.md)
 * 20201024 | [Mikhmon](/posts/Network/20201024_mikhmon.md)
 * 20201017 | [Setting Huawei HG8245H Model Bridge](/posts/Network/20201017_Setting-Huawei-HG8245H-Model-Bridge.md)
-* 20201009 | [Membaca Sinyak Gsm](/posts/Network/20201009_membaca-sinyak-gsm.md)
 * 20201009 | [Optimalisasi Modem GSM](/posts/Network/20201009_Optimalisasi_modem_GSM.md)
+* 20201009 | [Membaca Sinyak Gsm](/posts/Network/20201009_membaca-sinyak-gsm.md)
 
 #### Programming_Language
 ---
@@ -57,13 +59,13 @@
 * 20201008 | [Samba](/posts/Tools/20201008_samba.md)
 * 20201008 | [Utorrent Server](/posts/Tools/20201008_utorrent-server.md)
 
+#### WINDOWS
+---
+
+* 20250716 | [Update Windows 10 Ke Windows 11(Lapto Jadul)](/posts/WINDOWS/20250716_Update_Windows_10_ke_Windows_11(Lapto_Jadul).md)
+
 #### Website
 ---
 
 * 20201013 | [Apache Virtual Host](/posts/Website/20201013_apache-virtual-host.md)
 * 20201012 | [Xampp](/posts/Website/20201012_xampp.md)
-
-#### WINDOWS
----
-
-* 20250716 | [Update Windows 10 Ke Windows 11(Lapto Jadul)](/posts/WINDOWS/20250716_Update_Windows_10_ke_Windows_11(Lapto_Jadul).md)

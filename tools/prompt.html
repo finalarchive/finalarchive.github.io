@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Prompt Generator Otomatis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      background: #f7f7f7;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 30px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎯 Prompt Generator Otomatis</h2>
+
+  <label for="role">1. Peran AI:</label>
+  <input type="text" id="role" placeholder="Contoh: Kamu adalah seorang ahli SEO profesional">
+
+  <label for="task">2. Tugas Utama:</label>
+  <input type="text" id="task" placeholder="Contoh: Tolong bantu saya menulis artikel tentang...">
+
+  <label for="output">3. Output yang Diinginkan:</label>
+  <input type="text" id="desiredOutput" placeholder="Contoh: Artikel sepanjang 500 kata...">
+
+  <label for="tone">4. Gaya/Tone:</label>
+  <input type="text" id="tone" placeholder="Contoh: Gaya bahasa santai dan storytelling">
+
+  <label for="format">5. Format Output:</label>
+  <input type="text" id="format" placeholder="Contoh: Format paragraf dengan heading H2">
+
+  <label for="rules">6. Aturan Tambahan (opsional):</label>
+  <textarea id="rules" rows="3" placeholder="Contoh: Hindari istilah teknis, jangan gunakan AI atau ChatGPT di dalam teks"></textarea>
+
+  <label for="example">7. Contoh (opsional):</label>
+  <textarea id="example" rows="3" placeholder="Contoh input/output jika ada"></textarea>
+
+  <button onclick="generatePrompt()">✨ Buat Prompt</button>
+
+  <div id="output"></div>
+
+  <script>
+    function generatePrompt() {
+      const role = document.getElementById('role').value;
+      const task = document.getElementById('task').value;
+      const desiredOutput = document.getElementById('desiredOutput').value;
+      const tone = document.getElementById('tone').value;
+      const format = document.getElementById('format').value;
+      const rules = document.getElementById('rules').value;
+      const example = document.getElementById('example').value;
+
+      let prompt = "";
+      if (role) prompt += role.trim() + "\n";
+      if (task) prompt += task.trim() + "\n";
+      if (desiredOutput) prompt += "Berikan output berupa " + desiredOutput.trim() + ".\n";
+      if (tone) prompt += "Gunakan gaya bahasa " + tone.trim() + ".\n";
+      if (format) prompt += "Tampilkan dalam format " + format.trim() + ".\n";
+      if (rules) prompt += rules.trim() + "\n";
+      if (example) prompt += "Contoh:\n" + example.trim() + "\n";
+
+      document.getElementById('output').innerText = prompt;
+    }
+  </script>
+</body>
+</html>
