@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>🎯 Prompt Generator</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
       background-color: #f8f9fa;
@@ -14,20 +14,19 @@
       border-radius: 12px;
       padding: 2rem;
     }
-    .form-label {
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-    .section-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-    }
     textarea, select, input {
       font-size: 0.95rem;
+      resize: vertical;
     }
     #output {
       font-size: 0.95rem;
       background: #f1f3f5;
+      white-space: pre-wrap;
+    }
+    @media (max-width: 576px) {
+      .card-custom {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -35,7 +34,29 @@
   <div class="container py-5">
     <div class="bg-white shadow-sm card-custom">
       <h2 class="mb-1">🎯 Prompt Generator</h2>
-      <p class="text-muted mb-4">Versi 1.0.0 beta — Buat prompt AI yang powerful dan terstruktur</p>
+      <p class="text-muted mb-4">Versi 1.0 Beta— Prompt AI powerful dan real-time</p>
+
+      <!-- Mode Prompt -->
+      <div class="mb-3">
+        <label for="modeSelect" class="form-label">🎛 Mode Prompt</label>
+        <select class="form-select form-select-sm" id="modeSelect">
+          <option value="">-- Pilih Mode Prompt --</option>
+          <option value="Creative">Creative</option>
+          <option value="Analisis Data">Analisis Data</option>
+          <option value="Pemrograman">Pemrograman</option>
+          <option value="Pemasaran">Pemasaran</option>
+        </select>
+      </div>
+
+      <!-- Bahasa Output -->
+      <div class="mb-3">
+        <label for="language" class="form-label">🌐 Bahasa Output</label>
+        <select class="form-select form-select-sm" id="language">
+          <option value="">-- Pilih Bahasa Output --</option>
+          <option value="Bahasa Indonesia">Bahasa Indonesia</option>
+          <option value="English">English</option>
+        </select>
+      </div>
 
       <!-- Peran AI -->
       <div class="mb-4">
@@ -47,6 +68,7 @@
           <option value="Seorang programmer JavaScript">Programmer JavaScript</option>
           <option value="Seorang web developer expert">Web Developer</option>
           <option value="Seorang UI (User Interface) Designer expert">UI Designer</option>
+          <option value="Seorang Network Engineer expert">Network Engineer</option>
           <option value="Seorang arsitek modern">Arsitek</option>
           <option value="Seorang Business Architect expert">Business Architect</option>
           <option value="other">Lainnya...</option>
@@ -55,25 +77,25 @@
         <small id="roleDescription" class="text-muted mt-2 d-block"></small>
       </div>
 
-      <!-- Tugas Utama -->
+      <!-- Tugas -->
       <div class="mb-3">
         <label for="task" class="form-label">📝 Tugas Utama</label>
-        <textarea class="form-control form-control-sm" id="task" rows="2" placeholder="Contoh: Tulis artikel tentang pentingnya desain UI dalam aplikasi mobile..."></textarea>
+        <textarea class="form-control form-control-sm" id="task" rows="2" placeholder="Contoh: Tulis artikel tentang pentingnya desain UI..."></textarea>
       </div>
 
-      <!-- Output yang Diinginkan -->
+      <!-- Output -->
       <div class="mb-3">
         <label for="desiredOutput" class="form-label">📦 Output yang Diinginkan</label>
-        <textarea class="form-control form-control-sm" id="desiredOutput" rows="2" placeholder="Contoh: Artikel sepanjang 500 kata, ringkas dan padat..."></textarea>
+        <textarea class="form-control form-control-sm" id="desiredOutput" rows="2" placeholder="Contoh: Artikel sepanjang 500 kata..."></textarea>
       </div>
 
-      <!-- Gaya/Tone -->
+      <!-- Gaya -->
       <div class="mb-3">
         <label for="tone" class="form-label">🎨 Gaya Bahasa / Tone</label>
-        <textarea class="form-control form-control-sm" id="tone" rows="2" placeholder="Contoh: Gaya bahasa santai dan menggunakan storytelling..."></textarea>
+        <textarea class="form-control form-control-sm" id="tone" rows="2" placeholder="Contoh: Gaya bahasa santai, storytelling..."></textarea>
       </div>
 
-      <!-- Format Output -->
+      <!-- Format -->
       <div class="mb-3">
         <label for="formatSelect" class="form-label">📐 Format Output</label>
         <select class="form-select form-select-sm" id="formatSelect" onchange="toggleCustomFormat()">
@@ -89,43 +111,41 @@
         <input type="text" class="form-control form-control-sm mt-2 d-none" id="customFormat" placeholder="Tulis format lainnya..." />
       </div>
 
-      <!-- Aturan Tambahan -->
+      <!-- Aturan -->
       <div class="mb-3">
         <label for="rules" class="form-label">⚙️ Aturan Tambahan <small class="text-muted">(opsional)</small></label>
-        <textarea class="form-control form-control-sm" id="rules" rows="2" placeholder="Contoh: Hindari istilah teknis, jangan sebut 'AI' di teks..."></textarea>
+        <textarea class="form-control form-control-sm" id="rules" rows="2" placeholder="Contoh: Hindari istilah teknis..."></textarea>
       </div>
 
       <!-- Contoh -->
       <div class="mb-4">
         <label for="example" class="form-label">🔍 Contoh Input/Output <small class="text-muted">(opsional)</small></label>
-        <textarea class="form-control form-control-sm" id="example" rows="3" placeholder="Contoh: Input: Buat artikel tentang X... Output: Artikel berjudul 'Y'..."></textarea>
+        <textarea class="form-control form-control-sm" id="example" rows="3" placeholder="Contoh: Input: Buat artikel tentang X... Output: Artikel berjudul Y..."></textarea>
       </div>
 
-      <!-- Tombol Generate -->
-      <div class="d-grid mb-4">
-        <button class="btn btn-success btn-lg" onclick="generatePrompt()">✨ Buat Prompt</button>
+      <!-- Tombol -->
+      <div class="d-flex gap-2 mb-3">
+        <button class="btn btn-success w-100" onclick="generatePrompt()">✨ Generate Prompt</button>
+        <button class="btn btn-outline-primary" onclick="downloadPrompt()">⬇️ Download</button>
+        <button class="btn btn-outline-secondary" onclick="copyToClipboard()">📋 Salin</button>
       </div>
 
-      <!-- Output dan Copy -->
-      <div class="mb-3">
-        <div class="d-flex justify-content-between align-items-center mb-2">
-          <h5 class="mb-0 section-title">📋 Hasil Prompt</h5>
-          <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard()">Salin</button>
-        </div>
-        <pre id="output" class="border rounded p-3"></pre>
-      </div>
+      <!-- Output -->
+      <h5 class="section-title">📋 Hasil Prompt</h5>
+      <pre id="output" class="border rounded p-3"><code></code></pre>
     </div>
   </div>
 
   <script>
     const roleDescriptions = {
-      "Seorang ahli SEO profesional": "Mengoptimasi konten agar lebih mudah ditemukan di Google.",
-      "Seorang content writer berpengalaman": "Menulis konten menarik dan sesuai target audiens.",
-      "Seorang programmer JavaScript": "Membangun fitur web interaktif dengan JavaScript.",
-      "Seorang web developer expert": "Mengembangkan website dari frontend hingga backend.",
-      "Seorang arsitek modern": "Mendesain bangunan yang fungsional dan estetis.",
-      "Seorang Business Architect expert": "Merancang sistem bisnis dan proses kerja yang efisien.",
-      "Seorang UI (User Interface) Designer expert": "Merancang antarmuka yang intuitif dan estetis untuk pengguna."
+      "Seorang ahli SEO profesional": "Mengoptimasi konten agar mudah ditemukan di Google.",
+      "Seorang content writer berpengalaman": "Menulis konten menarik dan sesuai audiens.",
+      "Seorang programmer JavaScript": "Membangun fitur web interaktif.",
+      "Seorang web developer expert": "Mengembangkan frontend dan backend.",
+      "Seorang arsitek modern": "Mendesain bangunan fungsional dan estetis.",
+      "Seorang Business Architect expert": "Merancang sistem bisnis efisien.",
+      "Seorang UI (User Interface) Designer expert": "Desain antarmuka yang user-friendly.",
+      "Seorang Network Engineer expert": "Mengelola infrastruktur jaringan handal."
     };
 
     function toggleCustomRole() {
@@ -148,37 +168,64 @@
     }
 
     function generatePrompt() {
-      const role = document.getElementById('roleSelect').value === 'other'
-        ? document.getElementById('customRole').value.trim()
-        : document.getElementById('roleSelect').value;
+      const role = document.getElementById('roleSelect').value === 'other' ?
+        document.getElementById('customRole').value.trim() :
+        document.getElementById('roleSelect').value;
 
       const task = document.getElementById('task').value.trim();
       const desiredOutput = document.getElementById('desiredOutput').value.trim();
       const tone = document.getElementById('tone').value.trim();
-      const format = document.getElementById('formatSelect').value === 'other'
-        ? document.getElementById('customFormat').value.trim()
-        : document.getElementById('formatSelect').value;
+      const format = document.getElementById('formatSelect').value === 'other' ?
+        document.getElementById('customFormat').value.trim() :
+        document.getElementById('formatSelect').value;
 
       const rules = document.getElementById('rules').value.trim();
       const example = document.getElementById('example').value.trim();
+      const mode = document.getElementById('modeSelect').value;
+      const lang = document.getElementById('language').value;
 
       let prompt = "";
+      if (mode) prompt += `🎛 Mode: ${mode}\n`;
       if (role) prompt += `Kamu adalah ${role}.\n`;
-      if (task) prompt += `${task}\n`;
-      if (desiredOutput) prompt += `Berikan output berupa ${desiredOutput}.\n`;
-      if (tone) prompt += `Gunakan gaya bahasa ${tone}.\n`;
-      if (format) prompt += `Tampilkan dalam format ${format}.\n`;
-      if (rules) prompt += `${rules}\n`;
-      if (example) prompt += `Contoh:\n${example}\n`;
+      if (task) prompt += `Tugasmu: ${task}\n`;
+      if (desiredOutput) prompt += `Output yang diminta: ${desiredOutput}\n`;
+      if (format) prompt += `Format: ${format}\n`;
+      if (tone) prompt += `Gaya bahasa: ${tone}\n`;
+      if (rules) prompt += `Instruksi tambahan: ${rules}\n`;
+      if (lang) prompt += `Tulis dalam bahasa: ${lang}\n`;
+      if (example) prompt += `Contoh:\n${example}`;
 
       document.getElementById('output').innerText = prompt;
     }
 
     function copyToClipboard() {
-      navigator.clipboard.writeText(document.getElementById('output').innerText).then(() => {
+      const output = document.getElementById('output');
+      const range = document.createRange();
+      range.selectNode(output);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+
+      navigator.clipboard.writeText(output.innerText).then(() => {
         alert("✅ Prompt berhasil disalin!");
+        window.getSelection().removeAllRanges();
       });
     }
+
+    function downloadPrompt() {
+      const text = document.getElementById('output').innerText;
+      const blob = new Blob([text], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'prompt.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Auto update prompt saat user mengetik
+    document.querySelectorAll("textarea, select, input").forEach(el => {
+      el.addEventListener("input", generatePrompt);
+    });
   </script>
 </body>
 </html>
