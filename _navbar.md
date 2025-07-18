@@ -2,5 +2,5 @@
 
 * [**Archive**](/README.md)
 * [**Word List**](/word_list.md)
-* [**Tools**](/tools/prompt.html)
+* [**Tools**](/tools/index.md)
 * [**About**](/about.md)
