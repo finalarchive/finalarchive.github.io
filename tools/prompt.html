@@ -2,90 +2,129 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Prompt Generator Otomatis</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      background: #f7f7f7;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    #output {
-      margin-top: 30px;
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      white-space: pre-wrap;
-    }
-  </style>
+  <title>🎯 Prompt Generator Otomatis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-  <h2>🎯 Prompt Generator Otomatis</h2>
+<body class="bg-light py-4">
+  <div class="container">
+    <div class="bg-white p-4 rounded shadow-sm">
+      <h2 class="mb-2">🎯 Prompt Generator</h2>
+      <small>Versi 1.0.0 beta</small>
+      <br>
+      <p class="text-muted mb-4">Generator prompt otomatis untuk membantu membuat prompt yang lebih baik dan terstruktur.</p>
 
-  <label for="role">1. Peran AI:</label>
-  <input type="text" id="role" placeholder="Contoh: Kamu adalah seorang ahli SEO profesional">
+      <!-- Peran AI -->
+      <div class="mb-3">
+        <label for="roleSelect" class="form-label fw-bold">Peran AI</label>
+        <select class="form-select form-select-sm" id="roleSelect" onchange="toggleCustomRole()">
+          <option value="">-- Pilih Peran --</option>
+          <option value="Seorang ahli SEO profesional">Ahli SEO</option>
+          <option value="Seorang content writer berpengalaman">Content Writer</option>
+          <option value="Seorang programmer JavaScript">Programmer JavaScript</option>
+          <option value="Seorang arsitek modern">Arsitek</option>
+          <option value="other">Lainnya...</option>
+        </select>
+        <input class="form-control form-control-sm mt-2 d-none" id="customRole" placeholder="Tulis peran lainnya..." />
+      </div>
 
-  <label for="task">2. Tugas Utama:</label>
-  <input type="text" id="task" placeholder="Contoh: Tolong bantu saya menulis artikel tentang...">
+      <!-- Tugas Utama -->
+      <div class="mb-3">
+        <label for="task" class="form-label fw-bold">Tugas Utama</label>
+        <textarea class="form-control form-control-sm" id="task" rows="2" placeholder="Contoh: Tolong bantu saya menulis artikel tentang..."></textarea>
+      </div>
 
-  <label for="output">3. Output yang Diinginkan:</label>
-  <input type="text" id="desiredOutput" placeholder="Contoh: Artikel sepanjang 500 kata...">
+      <!-- Output yang Diinginkan -->
+      <div class="mb-3">
+        <label for="desiredOutput" class="form-label fw-bold">Output yang Diinginkan</label>
+        <textarea class="form-control form-control-sm" id="desiredOutput" rows="2" placeholder="Contoh: Artikel sepanjang 500 kata..."></textarea>
+      </div>
 
-  <label for="tone">4. Gaya/Tone:</label>
-  <input type="text" id="tone" placeholder="Contoh: Gaya bahasa santai dan storytelling">
+      <!-- Gaya/Tone -->
+      <div class="mb-3">
+        <label for="tone" class="form-label fw-bold">Gaya / Tone</label>
+        <textarea class="form-control form-control-sm" id="tone" rows="2" placeholder="Contoh: Gaya bahasa santai dan storytelling"></textarea>
+      </div>
 
-  <label for="format">5. Format Output:</label>
-  <input type="text" id="format" placeholder="Contoh: Format paragraf dengan heading H2">
+      <!-- Format Output -->
+      <div class="mb-3">
+        <label for="formatSelect" class="form-label fw-bold">Format Output</label>
+        <select class="form-select form-select-sm" id="formatSelect" onchange="toggleCustomFormat()">
+          <option value="">-- Pilih Format Output --</option>
+          <option value="Bullet point">Bullet point</option>
+          <option value="Paragraf panjang">Paragraf panjang</option>
+          <option value="List bernomor">List bernomor</option>
+          <option value="Heading dan subheading">Heading dan subheading</option>
+          <option value="Tabel">Tabel</option>
+          <option value="Kode blok">Kode blok</option>
+          <option value="other">Lainnya...</option>
+        </select>
+        <input class="form-control form-control-sm mt-2 d-none" id="customFormat" placeholder="Tulis format lainnya..." />
+      </div>
 
-  <label for="rules">6. Aturan Tambahan (opsional):</label>
-  <textarea id="rules" rows="3" placeholder="Contoh: Hindari istilah teknis, jangan gunakan AI atau ChatGPT di dalam teks"></textarea>
+      <!-- Aturan Tambahan -->
+      <div class="mb-3">
+        <label for="rules" class="form-label fw-bold">Aturan Tambahan (opsional)</label>
+        <textarea class="form-control form-control-sm" id="rules" rows="2" placeholder="Contoh: Hindari istilah teknis, jangan gunakan AI atau ChatGPT di dalam teks"></textarea>
+      </div>
 
-  <label for="example">7. Contoh (opsional):</label>
-  <textarea id="example" rows="3" placeholder="Contoh input/output jika ada"></textarea>
+      <!-- Contoh -->
+      <div class="mb-3">
+        <label for="example" class="form-label fw-bold">Contoh (opsional)</label>
+        <textarea class="form-control form-control-sm" id="example" rows="4" placeholder="Contoh input/output jika ada"></textarea>
+      </div>
 
-  <button onclick="generatePrompt()">✨ Buat Prompt</button>
+      <!-- Tombol Generate -->
+      <div class="d-grid gap-2">
+        <button class="btn btn-success" onclick="generatePrompt()">✨ Generate Prompt</button>
+      </div>
 
-  <div id="output"></div>
+      <!-- Output dan Copy -->
+      <div class="mt-4">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h5 class="fw-bold mb-0">Hasil Prompt:</h5>
+          <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard()">📋 Salin Prompt</button>
+        </div>
+        <pre id="output" class="bg-light border rounded p-3" style="white-space: pre-wrap;"></pre>
+      </div>
+    </div>
+  </div>
 
+  <!-- Script -->
   <script>
+    function toggleCustomRole() {
+      const select = document.getElementById('roleSelect');
+      const input = document.getElementById('customRole');
+      input.classList.toggle('d-none', select.value !== 'other');
+      if (select.value === 'other') input.focus();
+    }
+
+    function toggleCustomFormat() {
+      const select = document.getElementById('formatSelect');
+      const input = document.getElementById('customFormat');
+      input.classList.toggle('d-none', select.value !== 'other');
+      if (select.value === 'other') input.focus();
+    }
+
     function generatePrompt() {
-      const role = document.getElementById('role').value;
+      const roleSelect = document.getElementById('roleSelect');
+      const customRole = document.getElementById('customRole').value.trim();
+      const role = roleSelect.value === 'other' ? customRole : roleSelect.value;
+
       const task = document.getElementById('task').value;
       const desiredOutput = document.getElementById('desiredOutput').value;
       const tone = document.getElementById('tone').value;
-      const format = document.getElementById('format').value;
+
+      const formatSelect = document.getElementById('formatSelect');
+      const customFormat = document.getElementById('customFormat').value.trim();
+      const format = formatSelect.value === 'other' ? customFormat : formatSelect.value;
+
       const rules = document.getElementById('rules').value;
       const example = document.getElementById('example').value;
 
       let prompt = "";
-      if (role) prompt += role.trim() + "\n";
+      if (role) prompt += "Kamu adalah " + role + ".\n";
       if (task) prompt += task.trim() + "\n";
       if (desiredOutput) prompt += "Berikan output berupa " + desiredOutput.trim() + ".\n";
       if (tone) prompt += "Gunakan gaya bahasa " + tone.trim() + ".\n";
@@ -94,6 +133,13 @@
       if (example) prompt += "Contoh:\n" + example.trim() + "\n";
 
       document.getElementById('output').innerText = prompt;
+    }
+
+    function copyToClipboard() {
+      const output = document.getElementById('output').innerText;
+      navigator.clipboard.writeText(output).then(() => {
+        alert("Prompt berhasil disalin ke clipboard!");
+      });
     }
   </script>
 </body>
