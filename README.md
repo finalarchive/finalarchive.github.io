@@ -45,6 +45,7 @@
 ---
 
 * 20250810 | [WSL (Windows Subsystem For Linux)](/posts/Tools/20250810_WSL_(Windows_Subsystem_for_Linux).md)
+* 20250723 | [Connec Mikrotik Dengan N8n](/posts/Tools/20250723_connec_mikrotik_dengan_n8n.md)
 * 20250708 | [Ventoy](/posts/Tools/20250708_ventoy.md)
 * 20250708 | [Wireshark](/posts/Tools/20250708_wireshark.md)
 * 20250704 | [Docsify](/posts/Tools/20250704_docsify.md)
