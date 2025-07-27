@@ -79,8 +79,8 @@ Perintah:
 ```bash
 sudo ufw allow 2222/tcp     # ganti 2222 dengan port SSH kamu
 sudo ufw allow 80,443/tcp   # web port kalau pakai web server
-sudo ufw enable
-sudo ufw status
+sudo ufw enable             # mengaktifkan ufw
+sudo ufw status             # cek status
 ```
 >Tujuan:
 >Menutup semua akses yang tidak perlu. Hanya port yang kamu izinkan yang bisa diakses.
