@@ -81,7 +81,9 @@ Update record tertentu dengan JSON body.
 
 Contoh menambahkan komentar pada IP:
 ```bash
-curl -k -u admin: -X PATCH https://10.155.101.214/rest/ip/address/*3   --data '{"comment": "test"}' -H "content-type: application/json"
+curl -k -u admin: -X PATCH https://10.155.101.214/rest/ip/address/*3   
+--data '{"comment": "test"}' 
+-H "content-type: application/json"
 ```
 
 ## PUT
@@ -89,7 +91,9 @@ Tambah record baru.
 Contoh menambahkan IP ke interface `dummy`:
 
 ```bash
-curl -k -u admin: -X PUT https://10.155.101.214/rest/ip/address   --data '{"address": "192.168.111.111", "interface": "dummy"}' -H "content-type: application/json"
+curl -k -u admin: -X PUT https://10.155.101.214/rest/ip/address   
+--data '{"address": "192.168.111.111", "interface": "dummy"}' 
+-H "content-type: application/json"
 ```
 
 ## DELETE
@@ -131,7 +135,8 @@ POST https://router/rest/interface/print
 
 Gabungan query + proplist:
 ```bash
-POST https://router/rest/ip/address/print   --data '{".proplist": [".id","address","interface"], ".query": ["network=192.168.111.111","dynamic=true","#|"]}'
+POST https://router/rest/ip/address/print   
+--data '{".proplist": [".id","address","interface"], ".query": ["network=192.168.111.111","dynamic=true","#|"]}'
 ```
 
 ## Timeout
@@ -141,7 +146,8 @@ POST https://router/rest/ip/address/print   --data '{".proplist": [".id","addres
 Solusi: batasi command dengan parameter.  
 Contoh `ping` hanya 4 kali:
 ```bash
-curl -k -u admin: -X POST https://10.155.101.214/rest/ping   --data '{"address":"10.155.101.1","count":"4"}'
+curl -k -u admin: -X POST https://10.155.101.214/rest/ping   
+--data '{"address":"10.155.101.1","count":"4"}'
 ```
 
 ## Errors
@@ -156,47 +162,66 @@ Contoh hapus interface:
 
 ### Membuat log entry
 ```bash
-curl -k -u <username>:<password> -X POST http://<ip-address>/rest/execute   --data '{"script":"/log/info test"}' -H "content-type: application/json"
+curl -k -u <username>:<password> -X POST http://<ip-address>/rest/execute   
+--data '{"script":"/log/info test"}' 
+-H "content-type: application/json"
 ```
 
 ### Jalankan script
 ```bash
-curl -k -u <username>:<password> https://<ip-address>/rest/system/script/run   --data '{".id":"*1"}' -H "content-type: application/json"
+curl -k -u <username>:<password> https://<ip-address>/rest/system/script/run   
+--data '{".id":"*1"}' 
+-H "content-type: application/json"
 ```
 
 ### Monitor LTE sekali jalan
 ```bash
-curl -k -u <username>:<password> https://<ip-address>/rest/interface/lte/monitor   -d '{"numbers":"0", "once":""}' -H "content-type: application/json"
+curl -k -u <username>:<password> https://<ip-address>/rest/interface/lte/monitor   
+-d '{"numbers":"0", "once":""}' 
+-H "content-type: application/json"
 ```
 
 ### Monitor WiFi sekali jalan
 ```bash
-curl -k -u <username>:<password> -X POST "http://<ip-address>/rest/interface/wifi/monitor"   -H "Content-Type: application/json" -d '{ "numbers": "wifi1", "once":"" }'
+curl -k -u <username>:<password> -X POST "http://<ip-address>/rest/interface/wifi/monitor"   
+-H "Content-Type: application/json" 
+-d '{ "numbers": "wifi1", "once":"" }'
 ```
 
 ### Export konfigurasi
 ```bash
-curl -k -u <username>:<password> https://<ip-address>/rest/export   --data '{"compact":"","file":"test.rsc"}' -H "content-type: application/json"
+curl -k -u <username>:<password> https://<ip-address>/rest/export   
+--data '{"compact":"","file":"test.rsc"}' 
+-H "content-type: application/json"
 ```
 
 ### Pindah posisi firewall rule
 ```bash
-curl -k -u <username>:<password> -X POST http://<ip-address>/rest/ip/firewall/nat/move   --data '{".id":"*9",".id":"*C"}' -H "content-type: application/json"
+curl -k -u <username>:<password> -X POST http://<ip-address>/rest/ip/firewall/nat/move   
+--data '{".id":"*9",".id":"*C"}' 
+-H "content-type: application/json"
 ```
 
 ### Update firmware LTE
 ```bash
-curl -k -u <username>:<password> -X POST 'http://<ip-address>/rest/interface/lte/firmware-upgrade'   --data '{"number":"lte2"}' -H "content-type: application/json"
+curl -k -u <username>:<password> -X POST 'http://<ip-address>/rest/interface/lte/firmware-upgrade'   
+--data '{"number":"lte2"}' 
+-H "content-type: application/json"
 ```
 
 ### Ambil OID dari /system resource
 ```bash
-curl -k -u <username>:<password> -X POST http://<ip-address>/rest/system/resource/print   --data '{"oid":""}' -H "content-type: application/json"
+curl -k -u <username>:<password> -X POST http://<ip-address>/rest/system/resource/print   
+--data '{"oid":""}' 
+-H "content-type: application/json"
 ```
 
 ### Gunakan fetch untuk jalankan REST API ke Router lain
 ```bash
-/tool fetch http-method=post url="http://<ip-address>/rest/execute"   http-data="{\"script\":\"/log info fetchtest\"}"   http-header-field="Content-Type:application/json" output=user   user=<username> password=<password>
+/tool fetch http-method=post url="http://<ip-address>/rest/execute"
+http-data="{\"script\":\"/log info fetchtest\"}"
+http-header-field="Content-Type:application/json"
+output=user user=<username> password=<password>
 ```
 
 ## Catatan Penting
