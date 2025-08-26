@@ -85,6 +85,24 @@ sudo ufw status             # cek status
 >Tujuan:
 >Menutup semua akses yang tidak perlu. Hanya port yang kamu izinkan yang bisa diakses.
 
+### Non Aktif IPv6 di UFW Config
+Edit file konfigurasi UFW:
+
+```bash
+sudo nano /etc/default/ufw
+```
+Pastikan baris ini:
+
+```bash
+IPV6=no
+```
+Restar ufw untuk menyimpan perubahan
+```bash
+sudo ufw disable
+sudo ufw enable
+```
+
+
 ## Cek Port yang Terbuka
 Perintah:
 

@@ -27,6 +27,7 @@
 #### Network
 ---
 
+* 20250827 | [Mikrotik Rest Api](/posts/Network/20250827_mikrotik_rest_api.md)
 * 20250706 | [Mikrotik Packet Flow](/posts/Network/20250706_mikrotik_packet_flow.md)
 * 20250705 | [Miktorik](/posts/Network/20250705_miktorik.md)
 * 20240621 | [Install Mikrotik CHR Di VPS](/posts/Network/20240621_Install-Mikrotik-CHR-di-VPS.md)
